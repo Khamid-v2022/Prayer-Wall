@@ -9,6 +9,7 @@ class Pray_m extends CI_Model
 	public function get_list($where = NULL){
 		if($where)
 			$this->db->where($where);
+		$this->db->order_by('created_at', 'DESC');
 		return $this->db->get($this->table)->result_array();
 	}
 
@@ -31,19 +32,16 @@ class Pray_m extends CI_Model
 		return $this->db->insert_id();
 	}
 
-	// public function get_companies(){
-	// 	$query = "SELECT a.*, b.count 
-	// 	FROM (
-	// 		SELECT * 
-	// 		FROM admin WHERE ROLE = '1') a 
-	// 	LEFT JOIN (
-	// 		SELECT company_id, COUNT(id) AS COUNT 
-	// 		FROM admin WHERE ROLE != '0' 
-	// 		GROUP BY company_id) b 
-	// 	ON a.company_id = b.company_id";
-	// 	$result = $this->db->query($query);
-	// 	return $result->result_array();
-	// }
+	public function update_note($info, $where){
+		$this->db->where($where);
+		$this->db->update($this->table, $info);
+	}
+
+	public function delete_note($where){
+		$this->db->where($where);
+		$this->db->delete($this->table);
+	}
+
 }
 
 ?>
