@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Admin extends MY_Controller {
+class Manage extends MY_Controller {
 
 	public function __construct()
     {
@@ -13,7 +13,7 @@ class Admin extends MY_Controller {
 	{
 		$data['prayer_list'] = $this->pray_m->get_list();
 
-		$this->load->view('admin', $data);
+		$this->load->view('manage', $data);
 
 	}
 

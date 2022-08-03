@@ -26,7 +26,7 @@ $(function() {
         .then((willDelete) => {
           if (willDelete) {
             var id = $(this).parents('tr').attr('note_id');
-            var url = site_url + 'admin/delete_note';
+            var url = site_url + 'manage/delete_note';
             $.post(url, 
                 {
                     id: id
@@ -53,7 +53,7 @@ $(function() {
 });
 
 function submit_modal_form(){
-    var url = site_url + 'admin/update_note';
+    var url = site_url + 'manage/update_note';
 
     $.post(url, 
         {

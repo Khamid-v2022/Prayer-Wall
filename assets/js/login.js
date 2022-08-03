@@ -21,7 +21,7 @@ function login(){
             password: $("#password").val()
         }, function(resp){
             if(resp == 'yes')
-                window.location.href = site_url + 'admin';
+                window.location.href = site_url + 'manage';
             else{
                 alert("wrong info");
             }

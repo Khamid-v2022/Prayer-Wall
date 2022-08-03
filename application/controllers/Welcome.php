@@ -1,12 +1,24 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
+require __DIR__ . '/../../vendor/autoload.php';
+
+use League\Oauth2\Client\Provider\GenericProvider;
+use GuzzleHttp\Client;
+
+
+const OAUTH_URL = 'https://auth.aweber.com/oauth2/';
+const TOKEN_URL = 'https://auth.aweber.com/oauth2/token';
+
+
+
 class Welcome extends CI_Controller {
 
 	public function __construct()
     {
         parent::__construct();
         $this->load->model('pray_m');
+        $this->load->model('subscriber_m');
     }
 
 	public function index()
@@ -18,6 +30,12 @@ class Welcome extends CI_Controller {
 		$this->load->view('header');
 		$this->load->view('welcome', $data);
 		$this->load->view('footer');
+	}
+	
+	public function get_subscribers(){
+	    $where['is_send'] = 'no';
+		$list = $this->subscriber_m->get_list($where);
+		echo json_encode($list);
 	}
 
 	public function verify_email(){
@@ -62,7 +80,147 @@ class Welcome extends CI_Controller {
 		$request['email'] = strtolower($request['email']);
 		$request['created_at'] = date('Y-m-d H:i:s');
 		$this->pray_m->add_pray_note($request);
-
+		
+        // 		subscriber check
+        $where['email'] = $request['email'];
+        $subscriber = $this->subscriber_m->get_item($where);
+        if(empty($subscriber)){
+            // add subscriber
+            $info['name'] = $request['first_name'];
+            $info['email'] = $request['email'];
+            
+            $this->subscriber_m->add_item($info);
+            
+            $this->sendAWeber($info);
+            $this->sendConvetkit($info);
+        }
+    
 		echo 'ok';
 	}
+	
+	public function sendAWeber($info){
+	   // refresh token update
+        $this->getRefreshToken();
+        
+        // get Credentials
+	    $credentials = parse_ini_file('credentials.ini');
+        $accessToken = $credentials['accessToken'];
+
+	    $list_name = 'Angel Prayers';
+	    $tag_name = array(AWEBER_TAG_NAME);
+	    
+	    $client = new GuzzleHttp\Client();
+	    $BASE_URL = 'https://api.aweber.com/1.0/';
+	    
+	    // get all the accounts entries
+        $accounts = $this->getCollection($client, $accessToken, $BASE_URL . 'accounts');
+        $accountUrl = $accounts[0]['self_link'];
+        
+        // get all the list entries for the first account
+        $listsUrl = $accounts[0]['lists_collection_link'];
+        $lists = $this->getCollection($client, $accessToken, $listsUrl);
+        
+        
+        // $foundLists = $lists->find(array('name' => $list_name));
+        $my_list = [];
+        
+        foreach($lists as $item){
+            if($item['name'] == $list_name){
+                $my_list = $item;
+            }
+        }
+        
+        $subsUrl = $my_list['subscribers_collection_link'];
+        
+        $data = array(
+            'email' => $info['email'],
+            'name' => $info['name'],
+            'tags' => $tag_name
+        );
+        $body = $client->post($subsUrl, [
+                'json' => $data, 
+                'headers' => ['Authorization' => 'Bearer ' . $accessToken]
+            ]);
+    
+        // get the subscriber entry using the Location header from the post request
+        $subscriberUrl = $body->getHeader('Location')[0];
+        $subscriberResponse = $client->get($subscriberUrl,
+            ['headers' => ['Authorization' => 'Bearer ' . $accessToken]])->getBody();
+        $subscriber = json_decode($subscriberResponse, true);
+        
+	}
+	
+	
+	private function getCollection($client, $accessToken, $url) {
+        $collection = array();
+        while (isset($url)) {
+            $request = $client->get($url,
+                ['headers' => ['Authorization' => 'Bearer ' . $accessToken]]
+            );
+            $body = $request->getBody();
+            $page = json_decode($body, true);
+            $collection = array_merge($page['entries'], $collection);
+            $url = isset($page['next_collection_link']) ? $page['next_collection_link'] : null;
+        }
+        return $collection;
+    }
+	
+
+    private function getRefreshToken(){
+        $credentials = parse_ini_file('credentials.ini', true);
+        if(sizeof($credentials) == 0 ||
+           !array_key_exists('clientId', $credentials) ||
+           !array_key_exists('clientSecret', $credentials) ||
+           !array_key_exists('accessToken', $credentials) ||
+           !array_key_exists('refreshToken', $credentials)) {
+            echo "No credentials.ini exists, or file is improperly formatted.\n";
+            echo "Please create new credentials.";
+            exit();
+        }
+        $client = new GuzzleHttp\Client();
+        $clientId = $credentials['clientId'];
+        $clientSecret = $credentials['clientSecret'];
+        $response = $client->post(
+            TOKEN_URL, [
+                'auth' => [
+                    $clientId, $clientSecret
+                ],
+                'json' => [
+                    'grant_type' => 'refresh_token',
+                    'refresh_token' => $credentials['refreshToken']
+                ]
+            ]
+        );
+        $body = $response->getBody();
+        $newCreds = json_decode($body, true);
+        $accessToken = $newCreds['access_token'];
+        $refreshToken = $newCreds['refresh_token'];
+        
+        $fp = fopen('credentials.ini', 'wt');
+        fwrite($fp,
+        "clientId = {$clientId}
+        clientSecret = {$clientSecret}
+        accessToken = {$accessToken}
+        refreshToken = {$refreshToken}");
+        fclose($fp);
+        chmod('credentials.ini', 0600);
+    }
+    
+    
+    public function sendConvetkit($info){
+        
+        $api = new \ConvertKit_API\ConvertKit_API(CONVERTKIT_API_KEY, CONVERTKIT_API_SECRET);
+        
+        $options = [
+        			'email'      => $info['email'],
+        			'name'      => $info['name'],
+        			'tags'       => CONVERTKIT_TAG_ID
+        			
+        		];
+        
+        $subscribed = $api->form_subscribe(CONVERTKIT_FORM_ID, $options);
+        
+        return true;
+        
+    }
 }
