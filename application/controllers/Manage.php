@@ -32,4 +32,6 @@ class Manage extends MY_Controller {
 		
 		echo 'ok';
 	}
+
+		
 }

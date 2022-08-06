@@ -2,6 +2,23 @@ body {
     margin:  0;
 }
 
+::-webkit-scrollbar {
+    height: 12px;
+    width: 5px;
+    background: #eee;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #999;
+    -webkit-border-radius: 1ex;
+    -webkit-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.75);
+}
+
+::-webkit-scrollbar-corner {
+    background: #eee;
+}
+
+
 @font-face {
     font-family: 'Dancing Script Regular';
     font-style: normal;
@@ -34,10 +51,6 @@ body {
     font-family: "Dancing Script", cursive;
     font-weight: 700;
     font-size:  4rem;
-}
-
-@media (max-width: 600px){
-    font-size: 2.5rem;
 }
 
 .main .heading p {
@@ -148,4 +161,69 @@ form > * {
     .btn-post-msg {
         padding: 12px 38px;
     }
+}
+
+
+
+
+.footer {
+    background: rgba(00, 204, 255, .5);
+    color: #333333;
+    font-family: "Montserrat", Sans-serif;
+    font-weight: 400;
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.footer-over {
+    background-image: url(https://angelgraceblessing.com/wp-content/uploads/2022/07/new_sky.webp);
+    opacity: 0.5;
+    transition: background 0.3s, border-radius 0.3s, opacity 0.3s;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.footer .nav ul {
+    list-style: none;
+    display: flex;
+}
+@media (max-width: 600px){
+    .footer .nav ul {
+        display: block;
+    }
+    .footer .nav ul li {
+        display: block;
+    }
+}
+.footer .nav ul li {
+    display: flex;
+
+}
+
+.footer .nav ul li::hover {
+    text-decoration: underline;
+}
+
+.footer .nav ul li a {
+    padding: 15px 30px;
+    text-decoration: none; 
+    color: black;
+    font-size: 16px;   
+}
+
+.footer .nav ul li a::hover {
+    text-decoration: none;
+}
+
+.copyright {
+    font-size: 16px;   
+}
+.footer-desc {
+    font-size: 12px;
 }

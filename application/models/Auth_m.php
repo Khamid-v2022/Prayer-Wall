@@ -11,6 +11,11 @@ class Auth_m extends CI_Model
 			$this->db->where($where);
 		return $this->db->get($this->table)->row_array();
 	}
+
+	public function update_info($info, $where){
+		$this->db->where($where);
+		$this->db->update($this->table, $info);
+	}
 }
 
 ?>

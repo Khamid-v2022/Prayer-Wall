@@ -7,7 +7,7 @@
   <title>Pray</title>
   
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="icon" href="<?=base_url()?>assets/img/favicon.png" sizes="32x32">
+  <link rel="icon" href="<?=base_url()?>assets/img/favicon.ico" sizes="32x32">
 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   <script type="text/javascript" src="<?=base_url()?>assets/plugin/js/jquery.min.js"></script>
@@ -45,6 +45,7 @@
             <th>Name</th>
             <th>Email</th>
             <th>Note</th>
+            <th>Publish</th>
             <th>Actions</th>
           </tr>
         </thead>
@@ -56,6 +57,9 @@
               <td><?=$item['first_name']?></td>
               <td><?=$item['email']?></td>
               <td><?=$item['note']?></td>
+               <td>
+                  <input type="checkbox" <?=$item['is_publish']=="yes"?"checked":""?> disabled>
+              </td>
               <td>
                 <a href="#" class="edit-btn" title="Edit">Edit</a>
                 <a href="#" class="delete-btn" title="Delete">Delete</a>
@@ -82,8 +86,8 @@
                     <input type="hidden" id="m_note_id">
                     <textarea class="form-control" placeholder="PRAYER REQUEST" id="m_note" rows=8 autocomplete="off" required></textarea>
                     
-                    <div class="text-center mb-5">
-                        <button type="submit" class="btn btn-post-msg mt-5 btn-primary" name="post_my_msg">Update</button>
+                    <div class="text-center mb-3">
+                        <button type="submit" class="btn mt-3 btn-primary" name="post_my_msg">Update</button>
                     </div>
                 </form>
             </div>

@@ -1,14 +1,14 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-require __DIR__ . '/../../vendor/autoload.php';
+// require __DIR__ . '/../../vendor/autoload.php';
 
-use League\Oauth2\Client\Provider\GenericProvider;
-use GuzzleHttp\Client;
+// use League\Oauth2\Client\Provider\GenericProvider;
+// use GuzzleHttp\Client;
 
 
-const OAUTH_URL = 'https://auth.aweber.com/oauth2/';
-const TOKEN_URL = 'https://auth.aweber.com/oauth2/token';
+// const OAUTH_URL = 'https://auth.aweber.com/oauth2/';
+// const TOKEN_URL = 'https://auth.aweber.com/oauth2/token';
 
 
 
