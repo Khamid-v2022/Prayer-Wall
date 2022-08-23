@@ -322,3 +322,29 @@ form > * {
     top: -25px;
     transition: top 1s ease 0s;
 }
+
+
+.btn-send {
+    font-size: 20px;
+    text-transform: uppercase;
+    fill: #58380f;
+    color: #58380f;
+    background-color: #FEBA3B;
+    border-radius: 15px 15px;
+    font-weight: 600;
+    border: 1px solid #FEBA3B;
+    border-radius: 10px;
+    padding: 1rem 2rem;
+    -webkit-box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 45%);
+    box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 45%);
+}
+.btn-send:hover, .btn-send:active, .btn-send:focus {
+    border: 2px solid white;
+    color: white;
+    background-color: transparent;
+}
+
+.google-ads-place {
+    padding:  10px;
+    text-align: center;
+}
