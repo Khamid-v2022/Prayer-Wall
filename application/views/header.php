@@ -17,6 +17,5 @@
   <script type="text/javascript" src="<?=base_url()?>assets/js/app.js"></script>
   <script type="text/javascript">
     var site_url = "<?=site_url()?>";
-    console.log("SITE_URL:::" + site_url)
   </script>
 </head>

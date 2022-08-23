@@ -29,6 +29,11 @@ $(function() {
         submit_modal_form();
     })
 
+    $(".card_main").on('click', function(){
+        var _url = site_url + "oraclecard/random_article";
+        location.href = _url;
+    })
+
 });
 
 function numberWithCommas(x) {
@@ -50,7 +55,6 @@ function submit(){
     $.post(email_verify_url, {
         email: $("#email").val()
     }, function(resp){ 
-        console.log(resp);
         if(resp == "Valid"){ 
             $(".dpm-response .alert").addClass('d-none');
             $(".dpm-response .alert-success").removeClass('d-none');
@@ -100,7 +104,6 @@ function submit_modal_form(){
     $.post(email_verify_url, {
         email: $("#m_email").val()
     }, function(resp){ 
-        console.log(resp);
         if(resp== "Valid"){ 
             $(".dpm-response .alert").addClass('d-none');
             $(".dpm-response .alert-success").removeClass('d-none');

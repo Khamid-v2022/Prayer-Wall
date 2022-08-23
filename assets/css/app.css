@@ -227,3 +227,98 @@ form > * {
 .footer-desc {
     font-size: 12px;
 }
+
+
+/*oracle card*/
+.card-wrapper {
+    min-height: 500px;
+}
+.deck {
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+    padding: 3rem 11rem 5rem 0rem;
+}
+
+.card_main {
+    position: relative;
+}
+
+.card_main img {
+    position: absolute;
+    max-width: fit-content;
+    transition: top 1s ease 0s;
+}
+
+
+.deck .card-0 {
+    transform: rotate(-16deg);
+    top: 125px;
+}
+
+.deck .card-1 {
+    transform: rotate(-14deg);
+    top: 90px;
+}
+
+.deck .card-2 {
+    transform: rotate(-12deg);
+    top: 60px;
+}
+
+.deck .card-3 {
+    transform: rotate(-10deg);
+    top: 30px;
+}
+
+.deck .card-4 {
+    transform: rotate(-8deg);
+    top: 10px;
+}
+
+.deck .card-5 {
+    transform: rotate(-6deg);
+    top: 6px;
+}
+
+.deck .card-6 {
+    transform: rotate(4deg);
+    top: -5px;
+}
+
+.deck .card-7 {
+    transform: rotate(8deg);
+    top: 0;
+}
+
+.deck .card-8 {
+    transform: rotate(10deg);
+    top: 20px;
+}
+
+.deck .card-9 {
+    transform: rotate(12deg);
+    top: 45px;
+}
+
+.deck .card-10 {
+    transform: rotate(14deg);
+    top: 66px;
+}
+
+.deck .card-11 {
+    transform: rotate(16deg);
+    top: 93px;
+}
+
+@media (max-width: 768px){
+   .deck .card-0, .deck .card-1, .deck .card-2, .deck .card-3, .deck .card-4, .deck .card-5, .deck .card-6, .deck .card-7, .deck .card-8, .deck .card-9, .deck .card-10, .deck .card-11 {
+        transform: none;
+        top: 0;
+        transition: top 1s ease 0s;
+    } 
+}
+
+.card_main:hover img {
+    top: -25px;
+    transition: top 1s ease 0s;
+}

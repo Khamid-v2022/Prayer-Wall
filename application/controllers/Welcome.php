@@ -81,21 +81,23 @@ class Welcome extends CI_Controller {
 		$request['created_at'] = date('Y-m-d H:i:s');
 		$this->pray_m->add_pray_note($request);
 		
-        // 		subscriber check
+        // subscriber check
         $where['email'] = $request['email'];
+        $info['name'] = $request['first_name'];
+        $info['email'] = $request['email'];
+
         $subscriber = $this->subscriber_m->get_item($where);
         if(empty($subscriber)){
-            // add subscriber
-            $info['name'] = $request['first_name'];
-            $info['email'] = $request['email'];
-            
+            // add subscriber            
             $this->subscriber_m->add_item($info);
-            
-            $this->sendAWeber($info);
-            $this->sendConvetkit($info);
         }
-    
-		echo 'ok';
+        
+        echo 'ok';
+
+        // add subscriber
+        $this->sendConvetkit($info);
+        $this->sendAWeber($info);
+		
 	}
 	
 	public function sendAWeber($info){
@@ -137,16 +139,22 @@ class Welcome extends CI_Controller {
             'name' => $info['name'],
             'tags' => $tag_name
         );
-        $body = $client->post($subsUrl, [
+        
+        try { 
+            $body = $client->post($subsUrl, [
                 'json' => $data, 
                 'headers' => ['Authorization' => 'Bearer ' . $accessToken]
             ]);
-    
-        // get the subscriber entry using the Location header from the post request
-        $subscriberUrl = $body->getHeader('Location')[0];
-        $subscriberResponse = $client->get($subscriberUrl,
-            ['headers' => ['Authorization' => 'Bearer ' . $accessToken]])->getBody();
-        $subscriber = json_decode($subscriberResponse, true);
+        
+            // get the subscriber entry using the Location header from the post request
+            $subscriberUrl = $body->getHeader('Location')[0];
+            $subscriberResponse = $client->get($subscriberUrl,
+                ['headers' => ['Authorization' => 'Bearer ' . $accessToken]])->getBody();
+            $subscriber = json_decode($subscriberResponse, true);
+        }
+        catch (Exception $e) {
+            // var_dump($e->getMessage());
+        }
         
 	}
 	
@@ -215,12 +223,10 @@ class Welcome extends CI_Controller {
         			'email'      => $info['email'],
         			'name'      => $info['name'],
         			'tags'       => CONVERTKIT_TAG_ID
-        			
         		];
         
         $subscribed = $api->form_subscribe(CONVERTKIT_FORM_ID, $options);
         
         return true;
-        
     }
 }
