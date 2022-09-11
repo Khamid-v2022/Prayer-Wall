@@ -11,7 +11,7 @@ class Oraclecard extends CI_Controller {
 
 	public function index()
 	{
-		$this->load->view('header');
+		// $this->load->view('header');
 		$this->load->view('oracle_card');
 		$this->load->view('footer');
 	}
