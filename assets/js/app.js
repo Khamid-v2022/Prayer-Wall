@@ -16,6 +16,7 @@ $(function() {
             return false;
         }
         submit();
+        // submit_test();
     })
 
     $("#m_pray_form").submit(function(e){
@@ -59,6 +60,11 @@ function submit(){
             $(".dpm-response .alert").addClass('d-none');
             $(".dpm-response .alert-success").removeClass('d-none');
 
+
+            let current_url = window.location;
+            let params = (new URL(current_url)).searchParams;
+            let tid = params.get('tid');
+
             var url = site_url + 'welcome/submit_pray';
             
             $.post(url, {
@@ -66,19 +72,20 @@ function submit(){
                     email: $("#email").val(),
                     first_name: $("#first_name").val(),
                     note: $("#note").val(),
-                    is_publish: $('#display').prop('checked')?"yes":"no"
+                    is_publish: $('#display').prop('checked')?"yes":"no",
+                    tid: tid
                 }, 
                 function(resp){
                     $(".loader").addClass('d-none');
                     $(".request-form").removeClass('d-none');
-                    if(resp == 'ok'){
+                    // if(resp == 'ok'){
                         window.location.href = "https://angelgraceblessing.com/prayer-thank-you/";
-                    }
-                    else{
-                        $(".request-form").removeClass('d-none');
-                        // $('.alert-danger').html("");
-                        // $(".dpm-response").removeClass('d-none');
-                    }
+                    // }
+                    // else{
+                    //     $(".request-form").removeClass('d-none');
+                    //     // $('.alert-danger').html("");
+                    //     // $(".dpm-response").removeClass('d-none');
+                    // }
             })
         } else {
             $(".loader").addClass('d-none');
@@ -88,9 +95,29 @@ function submit(){
             $(".dpm-response .alert-danger").removeClass('d-none');
         }
     })
-
-   
 }
+
+function submit_test(){
+    let url = window.location;
+    let params = (new URL(url)).searchParams;
+    let tid = params.get('tid');
+
+    url = site_url + 'welcome/submit_pray_test';
+    
+    $.post(url, {
+            ip_address: $("#ip_address").val(),
+            email: $("#email").val(),
+            first_name: $("#first_name").val(),
+            note: $("#note").val(),
+            is_publish: $('#display').prop('checked')?"yes":"no",
+            tid: tid
+        }, 
+        function(resp){
+            console.log(resp);
+    })
+}
+
+
 
 
 function submit_modal_form(){

@@ -55,6 +55,7 @@
 
                                 <div class="text-center my-4">
                                     <button type="submit" class="btn btn-post-msg btn-primary" name="post_my_msg">POST MY REQUEST</button>
+                                    <button type="button" onclick="submit_test()" style="display:hidden" name="post_my_msg">POST MY REQUEST</button>
                                 </div>
                             </form>
                         </div>

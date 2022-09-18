@@ -1,14 +1,14 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-// require __DIR__ . '/../../vendor/autoload.php';
+require __DIR__ . '/../../vendor/autoload.php';
 
-// use League\Oauth2\Client\Provider\GenericProvider;
-// use GuzzleHttp\Client;
+use League\Oauth2\Client\Provider\GenericProvider;
+use GuzzleHttp\Client;
 
 
-// const OAUTH_URL = 'https://auth.aweber.com/oauth2/';
-// const TOKEN_URL = 'https://auth.aweber.com/oauth2/token';
+const OAUTH_URL = 'https://auth.aweber.com/oauth2/';
+const TOKEN_URL = 'https://auth.aweber.com/oauth2/token';
 
 
 
@@ -85,6 +85,7 @@ class Welcome extends CI_Controller {
         $where['email'] = $request['email'];
         $info['name'] = $request['first_name'];
         $info['email'] = $request['email'];
+        $info['tag'] = $request['tid'];
 
         $subscriber = $this->subscriber_m->get_item($where);
         if(empty($subscriber)){
@@ -109,7 +110,11 @@ class Welcome extends CI_Controller {
         $accessToken = $credentials['accessToken'];
 
 	    $list_name = 'Angel Prayers';
-	    $tag_name = array(AWEBER_TAG_NAME);
+	    
+        if($info['tag'])
+            $tag_name = array(AWEBER_TAG_NAME, $info['tag']);
+        else
+            $tag_name = array(AWEBER_TAG_NAME);
 	    
 	    $client = new GuzzleHttp\Client();
 	    $BASE_URL = 'https://api.aweber.com/1.0/';
@@ -158,6 +163,72 @@ class Welcome extends CI_Controller {
         
 	}
 	
+
+    public function submit_pray_test(){
+        $request = $this->input->post();
+        
+        // email verification
+        $request['email'] = strtolower($request['email']);
+        $request['created_at'] = date('Y-m-d H:i:s');
+        
+        $info['name'] = $request['first_name'];
+        $info['email'] = $request['email'];
+
+        // add subscriber
+        // $this->sendConvetkit($info);
+        $this->getTagList($request['tid']);
+        $this->sendAWeber($info);
+    }
+
+    public function getTagList($tag){
+        $this->getRefreshToken();
+        
+        // get Credentials
+        $credentials = parse_ini_file('credentials.ini');
+        $accessToken = $credentials['accessToken'];
+
+
+        $list_name = 'Angel Prayers';
+        $tag_name = array(AWEBER_TAG_NAME);
+        
+        $client = new GuzzleHttp\Client();
+        $BASE_URL = 'https://api.aweber.com/1.0/';
+        
+        // get all the accounts entries
+        $accounts = $this->getCollection($client, $accessToken, $BASE_URL . 'accounts');
+        
+        // get all the list entries for the first account
+        $listsUrl = $accounts[0]['lists_collection_link'];
+
+        $params = array(
+            'ws.op' => 'find',
+            'name' => $list_name
+        );
+        $findListUrl = $listsUrl . '?' . http_build_query($params);
+        $lists = $this->getCollection($client, $accessToken, $findListUrl);
+
+        if (isset($lists[0]['self_link'])) {
+            $tagUrl = $lists[0]['self_link'] . '/tags';  // choose the first list
+            $request = $client->get($tagUrl, 
+                    ['headers' => ['Authorization' => 'Bearer ' . $accessToken]]
+            );
+            $tags = $request->getBody();
+            $tags_arr = json_decode($tags, true);
+            var_dump($tags_arr);
+            // if(in_array($tag, $tags_arr))
+            //     return true
+            // else {
+
+            // }
+                
+        } else {
+            echo 'Could not find a list with name: ' . $list_name;
+        }
+            }
+        
+    }
+
+
 	
 	private function getCollection($client, $accessToken, $url) {
         $collection = array();
@@ -218,11 +289,24 @@ class Welcome extends CI_Controller {
     public function sendConvetkit($info){
         
         $api = new \ConvertKit_API\ConvertKit_API(CONVERTKIT_API_KEY, CONVERTKIT_API_SECRET);
+
+        if($info['tag']){
+            if($info['tag'] == "ctag")
+                $tag_name = CONVERTKIT_CTAG_ID;
+            else if($info['tag'] == "vtag")
+                $tag_name = CONVERTKIT_VTAG_ID;
+            else if($info['tag'] == "ltag")
+                $tag_name = CONVERTKIT_LTAG_ID;
+            else 
+                $tag_name = CONVERTKIT_TAG_ID;
+        }
+        else
+            $tag_name = CONVERTKIT_TAG_ID;
         
         $options = [
         			'email'      => $info['email'],
         			'name'      => $info['name'],
-        			'tags'       => CONVERTKIT_TAG_ID
+        			'tags'       => $tag_name
         		];
         
         $subscribed = $api->form_subscribe(CONVERTKIT_FORM_ID, $options);
