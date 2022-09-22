@@ -2,23 +2,6 @@ body {
     margin:  0;
 }
 
-::-webkit-scrollbar {
-    height: 12px;
-    width: 5px;
-    background: #eee;
-}
-
-::-webkit-scrollbar-thumb {
-    background: #999;
-    -webkit-border-radius: 1ex;
-    -webkit-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.75);
-}
-
-::-webkit-scrollbar-corner {
-    background: #eee;
-}
-
-
 @font-face {
     font-family: 'Dancing Script Regular';
     font-style: normal;
@@ -39,7 +22,7 @@ body {
     background-size: cover;
     background-position: top;
     background-repeat: no-repeat;
-    min-height: 100vh;
+    /*min-height: 100vh;*/
 }
 
 .container {
@@ -163,7 +146,21 @@ form > * {
     }
 }
 
+::-webkit-scrollbar {
+    height: 12px;
+    width: 5px;
+    background: #eee;
+}
 
+::-webkit-scrollbar-thumb {
+    background: #999;
+    -webkit-border-radius: 1ex;
+    -webkit-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.75);
+}
+
+::-webkit-scrollbar-corner {
+    background: #eee;
+}
 
 
 .footer {
@@ -175,6 +172,13 @@ form > * {
     background-position: top;
     background-repeat: no-repeat;
     position: relative;
+    
+}
+
+@media (max-width: 767px){
+    .footer {
+        padding-bottom: 5rem!important;
+    }
 }
 
 .footer-over {
@@ -230,9 +234,11 @@ form > * {
 
 
 /*oracle card*/
+
 .card-wrapper {
     min-height: 500px;
 }
+
 .deck {
     display: grid;
     grid-template-columns: repeat(12,1fr);
@@ -347,4 +353,13 @@ form > * {
 .google-ads-place {
     padding:  10px;
     text-align: center;
+}
+
+
+.paginate_button {
+    padding: 5px 10px;
+    cursor: pointer;
+}
+.paginate_button.current{
+    color: red;
 }

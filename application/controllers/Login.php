@@ -27,7 +27,7 @@ class Login extends CI_Controller {
 
 	public function login(){
 		$req = $this->input->post();
-		$where['admin_id'] = strtolower($req['admin_id']);
+	    $where['admin_id'] = strtolower($req['admin_id']);
 		$where['password'] = sha1($req['password']);
 		
 		$user = $this->auth_m->get_item($where);
@@ -43,9 +43,9 @@ class Login extends CI_Controller {
 
 	public function logout(){
 		$this->session->sess_destroy();
-        redirect('login');
+        redirect('pray/login');
 	}
-
+	
 	public function reset_password(){
 		$req = $this->input->post();
 
