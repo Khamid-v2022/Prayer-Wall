@@ -52,10 +52,56 @@ body {
     margin: 0 auto;
 }
 
+.michael-prayer .form_wrapper {
+    border-radius: 50px!important;
+    background-image: url(../img/body-bg.jpg);
+    background-position: 50% 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding:  20px;
+}
+
+.michael-prayer .form_wrapper .sub-headline{
+    width: 80%;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+}
+
+@media screen and (max-width: 991px) {
+    .michael-prayer .form_wrapper .sub-headline { 
+        width: 100%;
+    }
+}
+.michael-prayer .form_wrapper .sub-headline p {
+    margin-bottom: 0px;
+    padding: 10px 0px;
+    color: #1b1b1b;
+    font-size: 22px;
+    font-weight: 400;
+    text-align: center;
+}
+
 @media (max-width: 1020px) {
     .form_wrapper {
         max-width:  100%;
     }
+}
+
+.topic-img-wrapper {
+    text-align: center;
+}
+
+.topic-img-wrapper img {
+    width: 100%;
+    max-width: 500px;
+}
+
+.submit-form-wrapper {
+    width: 100%;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 form > * {
