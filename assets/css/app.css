@@ -36,6 +36,21 @@ body {
     font-size:  4rem;
 }
 
+.haniel-description {
+    display: block;
+}
+
+@media(min-width: 992px){
+    .haniel-description {
+        display: flex;
+    }
+}
+
+
+.michael-prayer .main .heading h1 {
+    font-size:  3rem;
+}
+
 .main .heading p {
     color: #ab1449;
     font-size: 2rem;
