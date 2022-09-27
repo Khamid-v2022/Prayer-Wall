@@ -165,7 +165,7 @@ function submit_michael_form(){
 
     $(".dpm-response").removeClass('d-none');
 
-    var email_verify_url = site_url + "welcome/verify_email";
+    var email_verify_url = site_url + "hanielPrayer/verify_email";
     
     $(".alert-info").removeClass('d-none');
     $.post(email_verify_url, {
@@ -179,7 +179,7 @@ function submit_michael_form(){
             let params = (new URL(current_url)).searchParams;
             let tid = params.get('tid');
             
-            var url = site_url + 'michaelPrayer/submit_pray';
+            var url = site_url + 'hanielPrayer/submit_pray';
             
             $.post(url, {
                     ip_address: $("#ip_address").val(),

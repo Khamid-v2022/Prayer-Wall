@@ -2,7 +2,7 @@
 
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class MichaelPray_m extends CI_Model
+class HanielPray_m extends CI_Model
 {
 	private $table = "pray_michael";					//Admin table
 	

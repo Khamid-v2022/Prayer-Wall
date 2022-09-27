@@ -10,18 +10,18 @@ use GuzzleHttp\Client;
 const OAUTH_URL = 'https://auth.aweber.com/oauth2/';
 const TOKEN_URL = 'https://auth.aweber.com/oauth2/token';
 
-class MichaelPrayer extends CI_Controller {
+class HanielPrayer extends CI_Controller {
 
     public function __construct()
     {
         parent::__construct();
-        $this->load->model('michaelPray_m');
+        $this->load->model('hanielPray_m');
     }
 
     public function index()
     {
         $this->load->view('header');
-        $this->load->view('michael_prayer');
+        $this->load->view('haniel_prayer');
         $this->load->view('footer');
     }
     
@@ -37,10 +37,10 @@ class MichaelPrayer extends CI_Controller {
         $info['tag'] = $request['tag'];
         $info['ip_address'] = $request['ip_address'];
 
-        $subscriber = $this->michaelPray_m->get_item($where);
+        $subscriber = $this->hanielPray_m->get_item($where);
         if(empty($subscriber)){
             // add subscriber            
-            $this->michaelPray_m->add_item($info);
+            $this->hanielPray_m->add_item($info);
         }
 
         echo 'ok';
@@ -48,6 +48,41 @@ class MichaelPrayer extends CI_Controller {
         // add subscriber
         // $this->sendConvetkit($info);
         $this->sendAWeber($info);
+    }
+
+    public function verify_email(){
+        $req = $this->input->post();
+
+        $email = $req['email'];
+        $api = DEBOUNCE_HANIEL_KEY;
+        $json = json_decode($this->debounce_api_call($email, $api), true);
+        $success = $json['success'];
+        $result = $json['debounce'];
+        if($success != '0'){
+            if($result['code'] == "5"){         // result: "Safe to Send"
+                echo "Valid";
+            } else {
+                echo 'email '.$result['email'].' is '.$result['result'].' because it is '.$result['reason'].'. Result code is: '.$result['code'].'.';
+            }
+            
+        }else{
+            echo 'Error: '.$result['error'];
+        }
+    }
+
+    function debounce_api_call($email, $api) {
+        $ch = curl_init();
+
+        curl_setopt($ch, CURLOPT_AUTOREFERER, TRUE);
+        curl_setopt($ch, CURLOPT_HEADER, 0);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+        curl_setopt($ch, CURLOPT_URL, 'https://api.debounce.io/v1/?api='.$api.'&email='.strtolower($email));
+        curl_setopt($ch, CURLOPT_FOLLOWLOCATION, TRUE);       
+
+        $data = curl_exec($ch);
+        curl_close($ch);
+
+        return $data;
     }
     
     public function sendAWeber($info){
@@ -58,12 +93,12 @@ class MichaelPrayer extends CI_Controller {
         $credentials = parse_ini_file('credentials.ini');
         $accessToken = $credentials['accessToken'];
 
-        $list_name = AWEBER_MICHAEL_LIST_NAME;
+        $list_name = AWEBER_HANIEL_LIST_NAME;
         
         if($info['tag'])
-            $tag_name = array(AWEBER_MICHAEL_TAG_NAME, $info['tag']);
+            $tag_name = array(AWEBER_HANIEL_TAG_NAME, $info['tag']);
         else
-            $tag_name = array(AWEBER_MICHAEL_TAG_NAME);
+            $tag_name = array(AWEBER_HANIEL_TAG_NAME);
         
         $client = new GuzzleHttp\Client();
         $BASE_URL = 'https://api.aweber.com/1.0/';
@@ -170,7 +205,7 @@ class MichaelPrayer extends CI_Controller {
         $options = [
                     'email'      => $info['email'],
                     'name'       => $info['name'],
-                    'tags'       => CONVERTKIT_MICHAEL_TAG_ID
+                    'tags'       => CONVERTKIT_HANIEL_TAG_ID
                 ];
         
         $subscribed = $api->form_subscribe(CONVERTKIT_FORM_ID, $options);
