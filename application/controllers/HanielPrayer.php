@@ -201,11 +201,24 @@ class HanielPrayer extends CI_Controller {
     
     
     public function sendConvetkit($info){      
+        if($info['tag']){
+            if($info['tag'] == "ctag")
+                $tag_name = array(CONVERTKIT_HANIEL_TAG_ID, CONVERTKIT_CTAG_ID);
+            else if($info['tag'] == "vtag")
+                $tag_name = array(CONVERTKIT_HANIEL_TAG_ID, CONVERTKIT_VTAG_ID);
+            else if($info['tag'] == "ltag")
+                $tag_name = array(CONVERTKIT_HANIEL_TAG_ID, CONVERTKIT_LTAG_ID);
+            else 
+                $tag_name = CONVERTKIT_HANIEL_TAG_ID;
+        }
+        else
+            $tag_name = CONVERTKIT_HANIEL_TAG_ID;
+
         $api = new \ConvertKit_API\ConvertKit_API(CONVERTKIT_API_KEY, CONVERTKIT_API_SECRET);
         $options = [
                     'email'      => $info['email'],
                     'name'       => $info['name'],
-                    'tags'       => CONVERTKIT_HANIEL_TAG_ID
+                    'tags'       => $tag_name
                 ];
         
         $subscribed = $api->form_subscribe(CONVERTKIT_FORM_ID, $options);

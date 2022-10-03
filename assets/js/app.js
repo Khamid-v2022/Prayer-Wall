@@ -189,10 +189,10 @@ function submit_michael_form(){
                 }, 
                 function(resp){
             })
-            window.location.href = "https://angelgraceblessing.com/prayer-thank-you/";
+            window.location.href = "https://angelgraceblessing.com/thank-you-prayer/";
         } else {
             $(".loader").addClass('d-none');
-            $(".request-form").removeClass('d-none');
+            $("#michael_pray_form").removeClass('d-none');
             $(".dpm-response .alert").addClass('d-none');
             $(".dpm-response .alert-danger").removeClass('d-none');
         }
