@@ -25,6 +25,10 @@ body {
     /*min-height: 100vh;*/
 }
 
+.main.ourlordmessage {
+     background-image: unset;
+}
+
 .container {
     padding:  1rem;
 }
@@ -391,7 +395,7 @@ form > * {
 }
 
 
-.btn-send {
+.btn-send, .btn-read-message {
     font-size: 20px;
     text-transform: uppercase;
     fill: #58380f;
@@ -423,4 +427,12 @@ form > * {
 }
 .paginate_button.current{
     color: red;
+}
+
+/*our-lord-message page*/
+.read-today-img {
+    background-image: url(../img/new_sky.webp);
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
 }
