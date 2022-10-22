@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name='viewport' content='width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no'>
-  <title>Our Lord Messages</title>
+  <title>Angel Number</title>
   
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="icon" href="<?=base_url()?>assets/img/favicon.ico" sizes="32x32">
@@ -21,11 +21,7 @@
 </head>
 
 <body>
-    <section class="main ourlordmessage">
-        <div class="d-flex justify-content-center pt-3">          
-            <img width="300" height="119" src="<?=base_url()?>assets/img/agb-logo-skyblue.png" alt="">
-        </div>
-
+    <section class="main hear-your-angel">
         <div class="google-ads-place">
             <!-- AGB mother top -->
             <ins class="adsbygoogle"
@@ -38,42 +34,16 @@
                  (adsbygoogle = window.adsbygoogle || []).push({});
             </script>
         </div>
-
-        <div class="text-center py-5" style="background: rgba(00, 204, 255);">
-            <h1 class="text-white font-46">Daily Message of The Day</h2>
-            <h3 class="text-white font-38 mt-3">READ YOUR DAILY DIVINE GUIDANCE</h3>
-            <a href="#card_container" class="btn btn-primary mt-5 btn-send"> PLEASE CLICK OR TAP THE BUTTON BELOW </a>
-        </div>
-        
-        <div class="google-ads-place">
-            <!-- AGB mother middle -->
-            <ins class="adsbygoogle"
-                 style="display:block"
-                 data-ad-client="ca-pub-9926134965337187"
-                 data-ad-slot="4888027575"
-                 data-ad-format="auto"
-                 data-full-width-responsive="true"></ins>
-            <script>
-                 (adsbygoogle = window.adsbygoogle || []).push({});
-            </script>
-        </div>
-        
-        <div class="" id="card_container">  
-            <div class="text-center py-3">
-                <img src="<?=base_url()?>assets/img/separator.png" style="height: 60px; width: auto">
-            </div>
-            <div class="heading text-center mb-5">
-                <h1>Read Today's Devotional...</h1>
-                <div class="read-today-img">
-                    <img loading="lazy" class="img-fluid lord-msg btn-read " src="<?=base_url()?>assets/img/Message-From-The-Lord.png" width="787" height="750" alt="Daily Devotional">
+        <div class="container">
+            <div class="p-4 m-4 bx-desn">
+                <h3 class="magic-bx-heading">Want to know <span class="extra">what Message Your Guardian Angel</span>  has for you?</h3>
+                <p class="magic-bx-sbheading">Click Button Below To Reveal Your Angel Number And Its Hidden Meaning.</p>
+                <div class="wing-box">
+                    <img src="<?=base_url()?>assets/img/angelhelp.gif" class="wing-img">
+                    <button class="send-btn mt-4 angel-number-btn">click here to receive your angel number</button>
                 </div>
-                
-
-                <button class="btn btn-primary mt-5 btn-read btn-read-message">Read Today's Devotional Message</button>
             </div>
-            
         </div>
-
         <div class="google-ads-place">
             <!-- AGB mother bottom -->
             <ins class="adsbygoogle"
