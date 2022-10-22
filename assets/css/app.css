@@ -409,6 +409,11 @@ form > * {
     -webkit-box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 45%);
     box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 45%);
 }
+
+.btn-read {
+    cursor: pointer;
+} 
+
 .btn-send:hover, .btn-send:active, .btn-send:focus {
     border: 2px solid white;
     color: white;

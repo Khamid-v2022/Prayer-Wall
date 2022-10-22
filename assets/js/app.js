@@ -44,7 +44,7 @@ $(function() {
         location.href = _url;
     })
 
-    $(".btn-read-message").on('click', function(){
+    $(".btn-read").on('click', function(){
         var _url = site_url + "OurLordMessage/random_article";
         location.href = _url;
     })
