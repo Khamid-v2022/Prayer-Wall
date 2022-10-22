@@ -39,7 +39,7 @@
                 <h3 class="magic-bx-heading">Want to know <span class="extra">what Message Your Guardian Angel</span>  has for you?</h3>
                 <p class="magic-bx-sbheading">Click Button Below To Reveal Your Angel Number And Its Hidden Meaning.</p>
                 <div class="wing-box">
-                    <img src="<?=base_url()?>assets/img/angelhelp.gif" class="wing-img">
+                    <img src="<?=base_url()?>assets/img/angelhelp.gif" class="wing-img angel-number-btn">
                     <button class="send-btn mt-4 angel-number-btn">click here to receive your angel number</button>
                 </div>
             </div>

@@ -28,8 +28,8 @@
         <div class="container">
             <div class="text-center py-3 title">
                 <h1 class="font-46">Angel Number Reading</h2>
-                <img src="<?=base_url()?>assets/img/angel-wings.png" class="tarot-spread">
-                <p class="font-38 mt-3">Our angels often communicate with us through numbers. If you've been noticing a specific number lately, your guardian angel is trying to send you a message.</p>
+                <img src="<?=base_url()?>assets/img/angelwings.gif" class="tarot-spread">
+                <p class="font-38 mt-3" style="color:black">Numbers are a common way for our angels to contact us.<br/> Your guardian angel is attempting to communicate with you if you have been noticing a particular number lately.</p>
             </div>
         </div>
         
@@ -48,50 +48,65 @@
                      (adsbygoogle = window.adsbygoogle || []).push({});
                 </script>
             </div>
-            <div class="row"> 
+            
+            <div class="row my-5"> 
                 <div class="col-sm-10 mx-auto text-center"> 
                     <h2 class="text-center">Which Angel Number Do You Want To Hear From Today?</h2> 
-                    <p class="mt-3">
-                        <span class="step">Step 1:</span> Navigate through angel number digits from 1 to 9 below</p> 
+                    <p class="mt-3 font-18">
+                        <span class="step">Step 1:</span> Navigate through angel number digits from 1 to 9 below
+                    </p> 
                 </div> 
             </div>
             <div class="col-sm-10 mx-auto mt-3 mb-3">
                 <nav>
-                  <div class="nav nav-tabs" id="nav-tab" role="tablist">
-                    <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">Home</button>
-                    <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Profile</button>
-                    <button class="nav-link" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact" aria-selected="false">Contact</button>
-                  </div>
-                </nav>
-                <div class="tab-content" id="nav-tabContent">
-                  <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">...</div>
-                  <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">...</div>
-                  <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">...</div>
-                </div>
-                <!-- <ul class="nav nav-angel nav-justified" id="numberTab" role="tablist" data-tabs="tabs">
-
-                </ul>
-                <div class="tab-content" id="bumberTabContent">
-                    <p class="text-center mt-5">
-                        Touch one angel number below to see your angel message for today!
-                    </p>
-                    <div class="tab-pane" id="zero" role="tabpanel" aria-labelledby="zero-tab">
+                    <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                    <?php 
+                        for($index = 0; $index < 10; $index++){
+                            echo '<button class="nav-link ';
+                            if($index == 0)
+                                echo 'active';
+                            echo '" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-' . $index . '" type="button" role="tab" aria-controls="nav-' . $index . '" aria-selected="';
+                            if($index == 0)
+                                echo 'true';
+                            else 
+                                echo 'false'; 
+                            echo '">' . $index . '</button>';
+                        }
+                    ?>
                     </div>
-                </div> -->
-            </div>
-        </div>
+                </nav>
+                <p class="text-center mt-5 font-18">
+                    <span class="step">Step 2:</span> Touch one angel number below to see your angel message for today!
+                </p>
+                <div class="tab-content" id="nav-tabContent">
+                    <?php 
+                        for($index = 0; $index < 10; $index++){
+                            echo '<div class="tab-pane fade '; 
+                            if($index == 0)
+                                echo 'show active';
+                            echo  '" id="nav-' . $index . '" role="tabpanel" aria-labelledby="nav-' . $index . '-tab">'; 
 
-        <div class="google-ads-place">
-            <!-- AGB mother bottom -->
-            <ins class="adsbygoogle"
-                 style="display:block"
-                 data-ad-client="ca-pub-9926134965337187"
-                 data-ad-slot="7131047537"
-                 data-ad-format="auto"
-                 data-full-width-responsive="true"></ins>
-            <script>
-                 (adsbygoogle = window.adsbygoogle || []).push({});
-            </script>
+                                foreach($list[$index] as $item){
+                                    echo '<a class="number" href="' . $item['link'] . '">' . $item['number'] . '</a>';
+                                }
+                            echo '</div>';
+                        }
+                    ?>
+                </div>
+            </div>
+
+            <div class="google-ads-place">
+                <!-- AGB mother bottom -->
+                <ins class="adsbygoogle"
+                     style="display:block"
+                     data-ad-client="ca-pub-9926134965337187"
+                     data-ad-slot="7131047537"
+                     data-ad-format="auto"
+                     data-full-width-responsive="true"></ins>
+                <script>
+                     (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+            </div>
         </div>
     </section>
     <script type="text/javascript" async src="//c.pubguru.net/pghb.angelgraceblessing_com.tc.js"></script>

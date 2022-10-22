@@ -448,11 +448,7 @@ form > * {
 
 
 /* Hear your angels page */
-.main.hear-your-angel {
-    background-color: #1f013cd6;
-    background-image: unset;
-    min-height: 100vh;
-}
+
 .hear-your-angel .container {
     max-width: 1140px;
 }
@@ -515,6 +511,7 @@ p.magic-bx-sbheading {
     cursor: pointer;
 }
 
+
 .main.angel-number-v2 .title {
     color: rgba(00, 204, 255);
 }
@@ -531,7 +528,102 @@ p.magic-bx-sbheading {
     display: block;
     position: relative;
     width: 100%;
-    max-width: 500px;
+    max-width: 300px;
     margin: auto;
     opacity: .7;
+}
+
+.step {
+    background: #b7117a;
+    color: #fff;
+    padding: 2px 5px;
+    border-radius: 2px;
+    font-size: 14px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.font-18 {
+    font-size: 18px;
+}
+
+.main.angel-number-v2 nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+
+    border-bottom: 1px solid #e8e8e8;
+    background: #f8f8f8;
+    box-shadow: 0 5px 15px rgb(0 0 0 / 5%);
+    border-radius: 5px;
+}
+
+.main.angel-number-v2 nav .nav {
+    width:  100%;
+}
+.main.angel-number-v2 nav .nav-link {
+    color: #636363 !important;
+    font-family: 'Montserrat',sans-serif;
+    font-weight: 700;
+    font-size: 1.2em;
+
+    flex-basis: 0;
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    text-align: center;
+    border-radius: 5px;
+
+    display: block;
+    padding: 0.5rem 1rem;
+    color: #0d6efd;
+    text-decoration: none;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out;
+}
+
+.main.angel-number-v2 nav .nav-link:hover,
+.main.angel-number-v2 nav .nav-link.active {
+    background: rgba(00, 204, 255);
+    color: #fff !important;
+    transition: .4s;
+    cursor: pointer;
+}
+
+.main.angel-number-v2  .number {
+    padding: 0.5em 1em;
+    background: rgba(00, 204, 255);
+    color: #fff;
+    font-family: 'Montserrat',sans-serif;
+    font-weight: 700;
+    border-radius: 5px;
+    margin: 19px;
+    width: 20%;
+    display: inline-block;
+    text-align: center;
+    box-shadow: 0 0 20px rgb(199 30 255 / 50%);
+}
+
+.main.angel-number-v2 .number, 
+.main.angel-number-v2 .number:focus, 
+.main.angel-number-v2 .number:hover, 
+.main.angel-number-v2 .number:visited {
+    text-decoration: none;
+}
+
+.main.angel-number-v2  .number:hover {
+    background: #b7118a;
+    color: #fff;
+    transition: .4s;
+    -webkit-transition: .4s;
+    box-shadow: 0 0 15px rgb(183 16 138 / 75%);
+}
+
+.angel-number-btn, .hear-your-angel-btn {
+   cursor: pointer;
 }

@@ -36,11 +36,11 @@
         </div>
         <div class="container">
             <div class="p-4 m-4 bx-desn">
-                <h3 class="magic-bx-heading">Want to know <span class="extra">what Message Your Guardian Angel</span>  has for you?</h3>
-                <p class="magic-bx-sbheading">Click Button Below To Reveal Your Angel Number And Its Hidden Meaning.</p>
+                <h3 class="magic-bx-heading">Want To Know <span class="extra">what Message Your Guardian Angel</span>  Has For You?</h3>
+                <p class="magic-bx-sbheading">Click Button Below To Hear What They Have To Say...</p>
                 <div class="wing-box">
-                    <img src="<?=base_url()?>assets/img/angelcall.gif" class="wing-img">
-                    <button class="send-btn mt-4 hear-your-angel-btn">click here to receive your angel number</button>
+                    <img src="<?=base_url()?>assets/img/angelcall.gif" class="wing-img hear-your-angel-btn">
+                    <button class="send-btn mt-4 hear-your-angel-btn">Click Here To Receive Your Angel Message</button>
                 </div>
             </div>
         </div>
