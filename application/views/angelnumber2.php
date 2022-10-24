@@ -26,7 +26,7 @@
             <img width="300" height="119" src="<?=base_url()?>assets/img/agb-logo-skyblue.png" alt="">
         </div>
         <div class="container">
-            <div class="text-center py-3 title">
+            <div class="text-center title">
                 <h1 class="font-46">Angel Number Reading</h2>
                 <img src="<?=base_url()?>assets/img/angelwings.gif" class="tarot-spread">
                 <p class="font-38 mt-3" style="color:black">Numbers are a common way for our angels to contact us.<br/> Your guardian angel is attempting to communicate with you if you have been noticing a particular number lately.</p>
