@@ -60,6 +60,12 @@ $(function() {
     })
 
 
+    $(".quiz-btn").on('click', function(){
+        var quiz_topic = $(this).attr("data-topic");
+        var _url = site_url + "YourAreaPrayer/random_article/" + quiz_topic;
+        location.href = _url;
+    })
+
 });
 
 function numberWithCommas(x) {
