@@ -59,10 +59,14 @@ $(function() {
         location.href = _url;
     })
 
-
     $(".quiz-btn").on('click', function(){
         var quiz_topic = $(this).attr("data-topic");
         var _url = site_url + "YourAreaPrayer/random_article/" + quiz_topic;
+        location.href = _url;
+    })
+
+    $(".archangel-post-btn").on('click', function(){
+        var _url = site_url + "MotherMaryMessage/random_article_angel_message";
         location.href = _url;
     })
 

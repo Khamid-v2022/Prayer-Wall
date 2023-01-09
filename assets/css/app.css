@@ -714,3 +714,101 @@ p.magic-bx-sbheading {
     text-align: center;
     text-shadow: none;
 }
+
+
+/* Mother Mary Message */
+.mother-mary-message {
+    font-family: Lora, serif;
+}
+
+.mother-mary-message p {
+    font-size: 20px;
+}
+
+.mother-mary-message .image img {
+    height: 280px;
+    transition: all .2s ease-in-out;
+}
+
+.mother-mary-message .image img:hover {
+/*     transform: scale(1.2);*/
+}
+
+.mother-mary-message .message-intro {
+    padding: 60px 0;
+    background: #85d3ff;
+}
+
+.mother-mary-message .message-intro .image {
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.mother-mary-message .message-intro .intro .btn {
+    text-transform: uppercase;
+}
+
+.mother-mary-message .btn-rev {
+    padding: 16px 40px;
+    border-radius: 50px;
+    border: none;
+    color: #fff;
+    font-size: 20px;
+} 
+
+.mother-mary-message .angels-category {
+    padding: 60px 0;
+}
+
+.mother-mary-message h3, .mother-mary-message h4 {
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.mother-mary-message .angels-category .angels {
+    max-width: 870px;
+    padding: 20px 0;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.mother-mary-message .angel-icon{
+    width: 200px;
+    padding: 0 10px;
+    display: inline;
+    margin-bottom: 20px;
+    transition: all .2s ease-in-out;
+}
+
+a.archangel-post-btn:hover .angel-icon{
+    transform: scale(1.2);
+}
+
+.mother-mary-message .popular-article {
+    background: #6495ed;
+    padding: 60px 0;
+}
+.mother-mary-message .popular-article h3 {
+    color: white;
+}
+.mother-mary-message .popular-article .col-md-4 .box {
+    height: 100%;
+}
+.mother-mary-message .popular-article .col-md-4 .box .image {
+    padding: 10px;
+    background: #fff;
+    border-radius: 4px 4px 0 0;
+}
+
+.mother-mary-message .popular-article .col-md-4 .box .text {
+    background-color: #01BEF0;
+    padding: 10px;
+    border-radius: 0 0 4px 4px;
+}
+.mother-mary-message .popular-article .col-md-4 .box .text a {
+    color: white;
+    text-decoration: none;
+}
