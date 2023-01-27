@@ -40,7 +40,7 @@
 
 
         <div class="text-center py-5">
-            <h1 class="font-46" style="color: rgba(00, 204, 255)">Choose Area Of Prayer</h2>
+            <h1 class="font-46" style="color: rgba(00, 204, 255)"> Choose Your Area of Prayer </h2>
         </div>
         
         <div class="container">  

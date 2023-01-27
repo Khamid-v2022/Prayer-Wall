@@ -775,7 +775,7 @@ p.magic-bx-sbheading {
     margin-right: auto;
 }
 
-.mother-mary-message .angel-icon{
+.mother-mary-message .angel-icon, .daily-horoscope .horoscope-icon {
     width: 200px;
     padding: 0 10px;
     display: inline;
@@ -783,7 +783,9 @@ p.magic-bx-sbheading {
     transition: all .2s ease-in-out;
 }
 
-a.archangel-post-btn:hover .angel-icon{
+
+
+a.archangel-post-btn:hover .angel-icon, a.horoscope-btn:hover .horoscope-icon{
     transform: scale(1.2);
 }
 
@@ -811,4 +813,62 @@ a.archangel-post-btn:hover .angel-icon{
 .mother-mary-message .popular-article .col-md-4 .box .text a {
     color: white;
     text-decoration: none;
+}
+
+
+/*horoscope*/
+.daily-horoscope-description label.form-label {
+    min-width: 130px;
+    font-weight: 500;
+}
+
+.horoscope-detail-wrapper {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media(min-width: 576px){
+    .horoscope-detail-wrapper {
+        width: 100%;
+    }
+}
+
+.click-here-wrapper {
+    background-color: #ebecff;
+    border-radius: 0.5em;
+    padding: 0.3em;
+}
+
+.click-here-wrapper  p {
+    font-style: normal;
+    font-weight: 400;
+    /* font-size: 18px; */
+    /* line-height: 23px; */
+    display: flex;
+    align-items: center;
+    color: #51596b;
+}
+
+#click-here-btn {
+    /* background: linear-gradient(63.09deg, #5c31f6 -8.38%, #6169f6 39.09%, #bf8cfe 90.68%); */
+    background: rgba(91, 97, 207, 0.9);
+    border-radius: 6px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 19px;
+    color: #fff !important;
+    padding: 11px 21px;
+    display: inline-block;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+.side-horoscopes {
+    max-width: 500px;
+    background-color: #ebecff;
+    border-radius: 0.5em;
+}
+.side-horoscopes .horoscope-icon{
+    width: 150px;
 }

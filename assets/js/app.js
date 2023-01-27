@@ -70,6 +70,17 @@ $(function() {
         location.href = _url;
     })
 
+    $(".horoscope-btn").on('click', function(){
+        var selected_horoscope = $(this).attr("data-name");
+        location.href = site_url + "DailyHoroscope/horoscope/" + selected_horoscope + "/today";
+    })
+
+    $(".horoscope-select-date").on('click', function(){
+        var selected_horoscope = $("#sel_horo").val();
+        var selected_date = $(this).attr("data-date");
+        location.href = site_url + "DailyHoroscope/horoscope/" + selected_horoscope + "/" + selected_date;
+    })
+
 });
 
 function numberWithCommas(x) {
