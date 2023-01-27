@@ -72,7 +72,7 @@
                     </div>
                     <div class="click-here-wrapper mt-4 mb-4">
                         <p data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo" style="margin-bottom: 1px !important;">
-                            <a id="click-here-btn" href="https://angelgraceblessing.com/callofdestiny" style="margin-right: .5em;cursor:pointer">Click here <i class="fa fa-arrow-right"></i>
+                            <a id="click-here-btn" href="https://angelgraceblessing.com/callofdestiny" style="margin-right: .5em;cursor:pointer" target="_blank">Click here <i class="fa fa-arrow-right"></i>
                             </a>
                             For Full Detailed Horoscope Reading
                         </p>
