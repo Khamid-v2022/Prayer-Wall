@@ -11,6 +11,8 @@ class YourAreaPrayer extends CI_Controller {
 
     public function index()
     {
+        $data['title'] = "Prayer Quiz";
+        $this->load->view('header_for_tc', $data);
         $this->load->view('prayer_quiz');
         $this->load->view('footer');
     }

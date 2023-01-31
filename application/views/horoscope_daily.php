@@ -23,9 +23,6 @@
 <body class="daily-horoscope">
     <section class="main">
         <div class="container">
-            <div class="d-flex justify-content-center pt-3">          
-                <img width="300" height="119" src="<?=base_url()?>assets/img/agb-logo-skyblue.png" alt="">
-            </div> 
             <div class="google-ads-place">
                 <!-- angelgrace horoscope top -->
                 <ins class="adsbygoogle"

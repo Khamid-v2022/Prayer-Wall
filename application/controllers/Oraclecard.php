@@ -10,8 +10,9 @@ class Oraclecard extends CI_Controller {
     }
 
     public function index()
-    {
-//      $this->load->view('header');
+    {   
+        $data['title'] = "Oracle Cards";
+        $this->load->view('header_for_tc', $data);
         $this->load->view('oracle_card');
         $this->load->view('footer');
     }

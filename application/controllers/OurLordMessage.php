@@ -11,6 +11,8 @@ class OurLordMessage extends CI_Controller {
 
     public function index()
     {
+        $data['title'] = "Our Lord Messages";
+        $this->load->view('header_for_tc', $data);
         $this->load->view('ourlordmesage');
         $this->load->view('footer');
     }

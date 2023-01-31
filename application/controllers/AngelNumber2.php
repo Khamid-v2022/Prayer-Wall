@@ -14,7 +14,9 @@ class AngelNumber2 extends CI_Controller {
         $list = $this->getAllPosts();
        
         $data['list'] = $list;
-
+        $data['title'] = "Angel Number";
+        
+        $this->load->view('header_for_tc', $data);
         $this->load->view('angelnumber2', $data);
         $this->load->view('footer');
     }

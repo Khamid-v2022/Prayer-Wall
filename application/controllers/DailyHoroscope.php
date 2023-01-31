@@ -10,6 +10,8 @@ class DailyHoroscope extends CI_Controller {
 
     public function index()
     {
+        $data['title'] = "Daily Horoscope";
+        $this->load->view('header_for_tc', $data);
         $this->load->view('horoscope_main');
         $this->load->view('footer');
     }

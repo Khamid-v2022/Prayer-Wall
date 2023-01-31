@@ -11,6 +11,8 @@ class HearYourAngel extends CI_Controller {
 
     public function index()
     {
+        $data['title'] = "Hear Your Angels";
+        $this->load->view('header_for_tc', $data);
         $this->load->view('hearyourangel');
         $this->load->view('footer');
     }
