@@ -49,6 +49,8 @@ class DailyHoroscope extends CI_Controller {
             $data['sel_date'] = $sel_date;
             $data['response'] = $response;
 
+            $data['title'] = "Daily Horoscope";
+            $this->load->view('header_for_tc', $data);
             $this->load->view('horoscope_daily', $data);
             $this->load->view('footer');
         }
