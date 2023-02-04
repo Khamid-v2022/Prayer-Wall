@@ -930,3 +930,46 @@ a.archangel-post-btn:hover .angel-icon, a.horoscope-btn:hover .horoscope-icon{
 .side-horoscopes .horoscope-icon{
     width: 150px;
 }
+
+
+/* chakra affirmation page */
+.chakra-main {
+    text-align: center;
+    max-width: 600px;
+    margin: 50px auto;
+    position: relative;
+}
+.chakra-main .main-img {
+    
+    width: 100%;
+    height: auto;
+    margin-top: 80px;
+    margin-bottom: 80px;
+}
+
+/*@media(max-width: 576px){
+    .chakra-main {
+        height: 500px;
+        width: 500px;
+    }
+}*/
+.chakra-img-wrapper {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%,0);
+}
+.chakra-item-img {
+    width: 100px;
+    height: 100px;
+    margin: 5px 0;
+    transition: all .2s ease-in-out;
+}
+
+.chakra-item-img-wrapper {
+    cursor: pointer;
+}
+
+.chakra-item-img-wrapper:hover .chakra-item-img {
+    transform: scale(1.1);
+}

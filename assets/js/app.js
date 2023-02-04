@@ -81,6 +81,11 @@ $(function() {
         location.href = site_url + "DailyHoroscope/horoscope/" + selected_horoscope + "/" + selected_date;
     })
 
+
+    $(".chakra-item-img-wrapper").on("click", function(){
+        const category_name = $(this).attr("data-category_name");
+        location.href = site_url + "ChakraAffirmations/random_article/" + category_name;
+    })
 });
 
 function numberWithCommas(x) {
