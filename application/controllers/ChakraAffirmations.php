@@ -20,6 +20,11 @@ class ChakraAffirmations extends CI_Controller {
     public function random_article($category_name){
         $posts = $this->pray_m->get_wp_posts_from_category(urldecode($category_name));
         $count = count($posts);
+        if($count == 0){
+            $this->index();
+            return;
+        }
+        
         $index = rand(0, $count - 1);
         $post = $posts[$index];
 
