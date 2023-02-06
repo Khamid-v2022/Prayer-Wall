@@ -29,10 +29,21 @@
       <ul class="nav navbar-nav">
         <li class="nav-item <?=$title=='Oracle Cards'?'active':''?>"><a href="https://angelgraceblessing.com/pray/oraclecard">Our Lady Devotional</a></li>
         <li class="nav-item <?=$title=='Our Lord Messages'?'active':''?>"><a href="https://angelgraceblessing.com/pray/our-lord-message">Our Lord Messages</a></li>
-        <li class="nav-item <?=$title=='Angel Number'?'active':''?>"><a href="https://angelgraceblessing.com/pray/angel-number-v2">Angel Numbers</a></li>
-        <li class="nav-item <?=$title=='Hear Your Angels'?'active':''?>"><a href="https://angelgraceblessing.com/pray/hear-your-angels">Hear Your Angels</a></li>
+
+        <li class="nav-item dropdown <?=$title=='Angel Number' || $title=='Hear Your Angels' ? 'active':''?>">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Hear Your Angels
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown1">
+            <li><a class="dropdown-item <?=$title=='Hear Your Angels'?'active':''?>" href="https://angelgraceblessing.com/pray/hear-your-angels">Hear Your Angels</a></li>
+            <li ><a class="dropdown-item <?=$title=='Angel Number'?'active':''?>" href="https://angelgraceblessing.com/pray/angel-number-v2">Angel Numbers</a></li>
+          </ul>
+        </li>   
+
         <li class="nav-item <?=$title=='Prayer Quiz'?'active':''?>"><a href="https://angelgraceblessing.com/pray/your-area-of-prayer">Your Area of Prayer</a></li>
-        <li class="nav-item <?=$title=='Daily Horoscope'?'active':''?>"><a href="https://angelgraceblessing.com/pray/DailyHoroscope">Daily Horoscope</a></li>
+        <li class="nav-item <?=$title=='Daily Horoscope'?'active':''?>"><a href="https://angelgraceblessing.com/pray/daily-horoscope">Daily Horoscope</a></li>
+        <li class="nav-item <?=$title=='Chakra Affirmation'?'active':''?>"><a href="https://angelgraceblessing.com/pray/chakra-affirmations">Chakra Affirmation</a></li>
+        <li class="nav-item <?=$title=='Earthly Angel Message'?'active':''?>"><a href="https://angelgraceblessing.com/pray/earthly-angel-message">Earthly Angel Message</a></li>
       </ul>
     </nav>
   </section>
@@ -45,23 +56,29 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
+            <li class="nav-item <?=$title=='Oracle Cards'?'active':''?>">
               <a class="nav-link" aria-current="page" href="https://angelgraceblessing.com/pray/oraclecard">Our Lady Devotional</a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item <?=$title=='Our Lord Messages'?'active':''?>">
               <a class="nav-link" href="https://angelgraceblessing.com/pray/our-lord-message">Our Lord Messages</a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item <?=$title=='Angel Number'?'active':''?>">
               <a class="nav-link" href="https://angelgraceblessing.com/pray/angel-number-v2">Angel Numbers</a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item <?=$title=='Hear Your Angels'?'active':''?>">
               <a class="nav-link" href="https://angelgraceblessing.com/pray/hear-your-angels">Hear Your Angels</a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item <?=$title=='Prayer Quiz'?'active':''?>">
               <a class="nav-link" href="https://angelgraceblessing.com/pray/your-area-of-prayer">Your Area of Prayer</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="https://angelgraceblessing.com/pray/DailyHoroscope">Daily Horoscope</a>
+            <li class="nav-item <?=$title=='Daily Horoscope'?'active':''?>">
+              <a class="nav-link" href="https://angelgraceblessing.com/pray/daily-horoscope">Daily Horoscope</a>
+            </li>
+            <li class="nav-item <?=$title=='Chakra Affirmation'?'active':''?>">
+              <a class="nav-link" href="https://angelgraceblessing.com/pray/chakra-affirmations">Chakra Affirmation</a>
+            </li>
+            <li class="nav-item <?=$title=='Earthly Angel Message'?'active':''?>">
+              <a class="nav-link" href="https://angelgraceblessing.com/pray/earthly-angel-message">Earthly Angel Message</a>
             </li>
           </ul>
         </div>

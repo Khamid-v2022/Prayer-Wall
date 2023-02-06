@@ -11,7 +11,7 @@ class ChakraAffirmations extends CI_Controller {
 
     public function index()
     {
-        $data['title'] = "Chakra Affirmations";
+        $data['title'] = "Chakra Affirmation";
         $this->load->view('header_for_tc', $data);
         $this->load->view('chakra-affirmations');
         $this->load->view('footer');
