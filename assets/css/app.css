@@ -988,6 +988,14 @@ a.archangel-post-btn:hover .angel-icon, a.horoscope-btn:hover .horoscope-icon{
     transition: all .2s ease-in-out;
 }
 
+@media(max-width: 576px){ 
+    .chakra-item-img {
+        width: 67px;
+        height: 67px;
+        margin: 2px 0;
+    }
+}
+
 .chakra-item-img-wrapper {
     cursor: pointer;
 }

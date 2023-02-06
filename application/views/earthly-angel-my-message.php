@@ -1,13 +1,14 @@
     <section class="main earthly-angel-message">
         <div class="google-ads-place">
-           <ins class="adsbygoogle"
-                style="display:block"
-                data-ad-client="ca-pub-9926134965337187"
-                data-ad-slot="6920053024"
-                data-ad-format="auto"
-                data-full-width-responsive="true"></ins>
+            <!-- angelgrace earthly message sub page top -->
+            <ins class="adsbygoogle"
+                 style="display:block"
+                 data-ad-client="ca-pub-9926134965337187"
+                 data-ad-slot="5369040858"
+                 data-ad-format="auto"
+                 data-full-width-responsive="true"></ins>
             <script>
-                (adsbygoogle = window.adsbygoogle || []).push({});
+                 (adsbygoogle = window.adsbygoogle || []).push({});
             </script>
         </div>
 
@@ -26,11 +27,10 @@
 
         <div class="google-ads-place">
             <ins class="adsbygoogle"
-                style="display:block"
-                data-ad-client="ca-pub-9926134965337187"
-                data-ad-slot="8727371988"
-                data-ad-format="auto"
-                data-full-width-responsive="true"></ins>
+                 style="display:block"
+                 data-ad-format="autorelaxed"
+                 data-ad-client="ca-pub-9926134965337187"
+                 data-ad-slot="2533611061"></ins>
             <script>
                  (adsbygoogle = window.adsbygoogle || []).push({});
             </script>
