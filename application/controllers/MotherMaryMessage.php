@@ -34,6 +34,8 @@ class MotherMaryMessage extends CI_Controller {
         }
 
         $data['random_posts'] = $result_posts;
+        $data['title'] = "Mother Mary Message of The Day";
+        $this->load->view('header_for_tc', $data);
         $this->load->view('mother_mary_message', $data);
         $this->load->view('footer');
     }
@@ -53,6 +55,8 @@ class MotherMaryMessage extends CI_Controller {
 
     public function messageangels()
     {
+        $data['title'] = "Mother Mary Message of The Day";
+        $this->load->view('header_for_tc', $data);
         $this->load->view('mother-mary-message-angels');
         $this->load->view('footer');
     }

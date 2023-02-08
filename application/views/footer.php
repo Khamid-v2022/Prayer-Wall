@@ -10,7 +10,7 @@
 			</ul>
 		</div>
 		<div class="copyright mb-4">
-			Copyright 2022 | Angel Grace Blessing | All Right Reserved.
+			Angel Grace Blessing | All Right Reserved.
 		</div>
 		<div class="footer-desc mb-3">
 			The information provided on AngelGraceBlessing.com, and in any reports, emails, ebooks, or other materials you might receive from AngelGraceBlessing.com, is for entertainment purposes only. Obviously, we cannot guarantee the accuracy of AngelGraceBlessing.com’s information, and we are not responsible for how you interpret or apply it. If you are struggling with serious problems, including chronic illness, mental instability, or legal issues, please consult with your local registered health care or legal professional as soon as possible. In other words, please use common sense.
