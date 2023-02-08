@@ -86,6 +86,11 @@ $(function() {
         const category_name = $(this).attr("data-category_name");
         location.href = site_url + "ChakraAffirmations/random_article/" + category_name;
     })
+
+    $(".chakra-stone-item").on("click", function(){
+        const category_name = $(this).parents(".chakra-stone-list-item").attr("data-stone_category");
+        location.href = site_url + "ChakraStone/random_article/" + category_name;
+    })
 });
 
 function numberWithCommas(x) {
