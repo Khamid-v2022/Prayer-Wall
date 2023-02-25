@@ -170,6 +170,5 @@
                 </div>
             </div>
         </section>
-        <script type="text/javascript" async src="//c.pubguru.net/pghb.angelgraceblessing_com.tc.js"></script>
     </div>
 </body>
