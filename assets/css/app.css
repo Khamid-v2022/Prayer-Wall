@@ -19,6 +19,15 @@ body {
 
 .top-link-wrapper {
     background-color: #00CCFF;
+    position: fixed;
+    width: 100%;
+    top: 0px;
+    z-index: 100;
+}
+@media(max-width: 992px){
+    .top-link-wrapper .container{
+        font-size: 12px;
+    }
 }
 
 .top-link-wrapper a {
@@ -56,7 +65,12 @@ body {
     color: #00CCFF;
 }
 
+.window-menu, .mobile-menu {
+    margin-top: 50px;
+}
+
 .window-menu .navbar {
+    
     border: solid 1px #636363;
     border-width: 1px 0 1px 0;
     padding: 0;
