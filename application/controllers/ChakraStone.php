@@ -18,6 +18,7 @@ class ChakraStone extends CI_Controller {
     }
 
     public function random_article($category_name){
+        $category_name = str_replace( "-", " ", $category_name);
         $posts = $this->pray_m->get_wp_posts_from_category(urldecode($category_name));
         $count = count($posts);
         if($count == 0){
