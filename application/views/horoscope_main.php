@@ -1,6 +1,9 @@
     <section class="main">
         <div class="container">  
             <div class="d-flex align-items-center  flex-column">
+                <?php if($error){?>
+                    <p class="text-danger"><?=$error?></p>
+                <?php }?>
                 <h1>Horoscopes</h1>
                 <p>What do the Stars have in store for you today? Find out and take a glimpze into your future</p>
             </div>

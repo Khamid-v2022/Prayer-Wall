@@ -8,11 +8,12 @@ class DailyHoroscope extends CI_Controller {
         parent::__construct();
     }
 
-    public function index()
+    public function index($error = NULL)
     {
         $data['title'] = "Daily Horoscope";
+        $data['error'] = $error;
         $this->load->view('header_for_tc', $data);
-        $this->load->view('horoscope_main');
+        $this->load->view('horoscope_main', $data);
         $this->load->view('footer');
     }
     
@@ -42,8 +43,13 @@ class DailyHoroscope extends CI_Controller {
 
         if ($err) {
            $this->index();
+           return;
         } else {
             $response = json_decode($response);
+            if(!isset($response->current_date)){
+                $this->index("Sorry, API not working. Please try again later.");
+                return;
+            }
 
             $data['sel_horo'] = $selected;
             $data['sel_date'] = $sel_date;
