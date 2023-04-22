@@ -19,7 +19,7 @@
             
             <div class="container"> 
                 <div class="angels-category" id="archangels">
-                    <h3>WWhich Mother Mary Do You Wish To Hear From Today?</h3>
+                    <h3>Which Mother Mary Do You Wish To Hear From Today?</h3>
                     <h4>Tap on below to reveal the message for you:</h4>
                     <div class="angels">
                         <a type="button" class="archangel-post-btn">
