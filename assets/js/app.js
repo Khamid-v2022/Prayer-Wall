@@ -38,6 +38,16 @@ $(function() {
         }
         submit_michael_form();
     })
+
+    $("#mm_pray_form").submit(function(e){
+        e.preventDefault();
+        $(".dpm-response").addClass('d-none');
+        $(".dpm-response .alert").addClass('d-none');
+        if (!event.target.checkValidity()) {
+            return false;
+        }
+        submit_mm_form();
+    })
     
     $(".card_main").on('click', function(){
         var _url = site_url + "oraclecard/random_article";
@@ -114,7 +124,6 @@ function submit(){
     $.post(email_verify_url, {
         email: $("#email").val()
     }, function(resp){ 
-        console.log(resp);
         if(resp == "Valid"){ 
             $(".dpm-response .alert").addClass('d-none');
             $(".dpm-response .alert-success").removeClass('d-none');
@@ -242,6 +251,46 @@ function submit_michael_form(){
         } else {
             $(".loader").addClass('d-none');
             $("#michael_pray_form").removeClass('d-none');
+            $(".dpm-response .alert").addClass('d-none');
+            $(".dpm-response .alert-danger").removeClass('d-none');
+        }
+    })   
+}
+
+function submit_mm_form(){
+    $("#mm_pray_form").addClass('d-none');
+    $(".loader").removeClass('d-none');
+
+    $(".dpm-response").removeClass('d-none');
+
+    var email_verify_url = site_url + "mmPrayer/verify_email";
+    
+    $(".alert-info").removeClass('d-none');
+    $.post(email_verify_url, {
+        email: $("#email").val()
+    }, function(resp){ 
+        if(resp == "Valid"){ 
+            $(".dpm-response .alert").addClass('d-none');
+            $(".dpm-response .alert-success").removeClass('d-none');
+
+            let current_url = window.location;
+            let params = (new URL(current_url)).searchParams;
+            let tid = params.get('tid');
+            
+            var url = site_url + 'mmPrayer/submit_pray';
+            
+            $.post(url, {
+                    ip_address: $("#ip_address").val(),
+                    email: $("#email").val(),
+                    first_name: $("#first_name").val(),
+                    tag: tid
+                }, 
+                function(resp){
+            })
+            window.location.href = "https://angelgraceblessing.com/thank-you-prayer/";
+        } else {
+            $(".loader").addClass('d-none');
+            $("#mm_pray_form").removeClass('d-none');
             $(".dpm-response .alert").addClass('d-none');
             $(".dpm-response .alert-danger").removeClass('d-none');
         }
