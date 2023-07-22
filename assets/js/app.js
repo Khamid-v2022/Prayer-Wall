@@ -287,7 +287,8 @@ function submit_mm_form(){
                 }, 
                 function(resp){
             })
-            window.location.href = "https://angelgraceblessing.com/thank-you-prayer/";
+            // window.location.href = "https://angelgraceblessing.com/thank-you-prayer/";
+            window.location.href = "https://angelgraceblessing.com/thank-you-for-getting-your-powerful-mother-mary-prayer/";
         } else {
             $(".loader").addClass('d-none');
             $("#mm_pray_form").removeClass('d-none');
