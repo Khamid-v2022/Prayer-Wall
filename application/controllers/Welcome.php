@@ -75,7 +75,7 @@ class Welcome extends CI_Controller {
         $request = $this->input->post();
         
         
-//      check duplicate note
+        //      check duplicate note
         $where_du['email'] = strtolower($request['email']);
         $where_du['note'] = $request['note'];
         $is_exist = $this->pray_m->get_item($where_du);

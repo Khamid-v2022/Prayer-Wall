@@ -48,6 +48,7 @@ class MmPrayer extends CI_Controller {
         // add subscriber
         $this->sendConvetkit($info);
         $this->sendAWeber($info);
+        $this->sendMailerlite($info);
     }
 
     public function verify_email(){
@@ -224,6 +225,55 @@ class MmPrayer extends CI_Controller {
         $subscribed = $api->form_subscribe(CONVERTKIT_MM_FORM_ID, $options);
         
         return true;    
+    }
+
+
+    public function sendMailerlite($info){
+        $tag_name = array(MAILERLITE_ALL);
+        if($info['tag']){
+            if($info['tag'] == "ctag")
+                $tag_name = array(MAILERLITE_ALL, MAILERLITE_CTAG_ID);
+            else if($info['tag'] == "vtag")
+                $tag_name = array(MAILERLITE_ALL, MAILERLITE_VTAG_ID);
+            else if($info['tag'] == "ltag")
+                $tag_name = array(MAILERLITE_ALL, MAILERLITE_LTAG_ID);
+            else 
+                $tag_name = array(MAILERLITE_ALL);
+        }
+
+        $data = array (
+            'email' => $info['email'],
+            'fields' => array (
+                            "name"=> $info['name']
+                        ),
+            'groups' => $tag_name
+        );
+
+        $jsonData = json_encode($data);
+
+        // API endpoint URL
+        $url = 'https://connect.mailerlite.com/api/subscribers';
+
+        // Initialize cURL session
+        $ch = curl_init($url);
+
+        // Set cURL options for the POST request
+        curl_setopt($ch, CURLOPT_POST, 1);
+        curl_setopt($ch, CURLOPT_POSTFIELDS, $jsonData);
+
+        // Set the appropriate headers
+        curl_setopt($ch, CURLOPT_HTTPHEADER, array(
+            'Authorization: Bearer ' . MAILERLITE_KEY,
+            'Content-Type: application/json', 
+            'Content-Length: ' . strlen($jsonData) 
+        ));
+
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+
+        // Execute the cURL request
+        $response = curl_exec($ch);
+
+        curl_close($ch);
     }
     
 }
