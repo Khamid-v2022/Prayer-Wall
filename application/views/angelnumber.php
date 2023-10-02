@@ -45,18 +45,35 @@
                     <button class="send-btn mt-4 angel-number-btn">click here to receive your angel number</button>
                 </div>
             </div>
+            <div class="mt-5">
+                <p>Angel numbers are a mystical and intriguing phenomenon that has fascinated people for centuries. If you've been seeing a particular number sequence repeatedly, it might be an angel number trying to convey a message to you from the spiritual realm. Each angel number carries its own unique vibration and significance, offering guidance and encouragement in different areas of your life.</p>
+
+                <p>One of the most common angel numbers is 111, which signifies manifestation and new beginnings. This number urges you to stay positive and focused on your goals, as your thoughts and intentions have the power to shape your reality. Seeing 111 is a reminder that you are a co-creator of your own destiny.</p>
+
+                <p>If you frequently come across the number 222, it is a sign of balance and harmony. The angels are assuring you that you are on the right path and that your efforts will yield positive outcomes. This number also highlights the importance of cooperation and collaboration, encouraging you to seek support from others.</p>
+
+                <p>The number 333 is a powerful message from the universe indicating that you are being guided and protected by your guardian angels. It is a reminder to trust your intuition and make decisions aligned with your higher purpose. This angel number encourages you to embrace your inner wisdom and persist in your endeavors.</p>
+
+                <p>When you repeatedly see the number 444, it is a sign of stability and foundation. The angels are reminding you to build a solid and secure foundation for your dreams and goals. This number encourages you to take practical steps towards your ambitions, ensuring that your efforts are grounded and sustainable.</p>
+
+                <p>The number 555 signifies change and transformation. If you keep encountering this number, it indicates that significant changes are on the horizon. Embrace these changes as they are necessary for your personal growth and evolution. The angels are urging you to trust in the universe's plan, even if it seems uncertain.</p>
+
+                <p>Remember, these are just a few examples of angel numbers and their meanings. Pay attention to the number sequences that frequently appear in your life, as they might hold valuable messages and insights tailored specifically for you. Trust in the guidance of your angels as you navigate through life's journey.</p>
+            </div>
+            <div class="mt-5 google-ads-place">
+                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6130278165783644" crossorigin="anonymous"></script>
+                <!-- angel number bottom -->
+                <ins class="adsbygoogle"
+                     style="display:block"
+                     data-ad-client="ca-pub-6130278165783644"
+                     data-ad-slot="8565400125"
+                     data-ad-format="auto"
+                     data-full-width-responsive="true"></ins>
+                <script>
+                     (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+            </div>
         </div>
-        <div class="google-ads-place">
-            <!-- AGB mother bottom -->
-            <ins class="adsbygoogle"
-                 style="display:block"
-                 data-ad-client="ca-pub-9926134965337187"
-                 data-ad-slot="7131047537"
-                 data-ad-format="auto"
-                 data-full-width-responsive="true"></ins>
-            <script>
-                 (adsbygoogle = window.adsbygoogle || []).push({});
-            </script>
-        </div>
+        
     </section>
 </body>
