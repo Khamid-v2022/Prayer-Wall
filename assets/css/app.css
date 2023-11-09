@@ -1225,3 +1225,58 @@ ul.text-msgs {
          font-size: 18px;
     }
 }
+
+
+/* Tarot Card page */
+.tarot-card .card-wrapper {
+    margin: 20px auto;
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    padding: 3rem 9rem 3rem 0rem;
+    min-height: 700px;
+}
+
+.tarot-card .tarot-card-item {
+    position: relative;
+    height: fit-content;
+}
+
+.tarot-card-item-0, .tarot-card-item-6 {
+    margin-top: 300px;
+}
+.tarot-card-item-1, .tarot-card-item-5 {
+    margin-top: 200px;
+}
+.tarot-card-item-2, .tarot-card-item-4 {
+    margin-top: 100px;
+}
+
+.tarot-card-item img {
+    width: fit-content;
+    max-width: 200px;
+    transition: all .2s ease-in-out;
+    position: absolute;
+}
+
+@media (max-width: 768px){
+    .tarot-card-item img {
+        max-width: 150px;
+    }
+    .tarot-cards .card-wrapper {
+        min-height: 600px;
+    }
+}
+
+@media (max-width: 576px){
+    .tarot-card-item img {
+        max-width: 100px;
+    }
+    .tarot-card .card-wrapper {
+        min-height: 500px;
+    }
+}
+
+.tarot-card .tarot-card-item img:hover {
+   transform: scale(1.1);
+}

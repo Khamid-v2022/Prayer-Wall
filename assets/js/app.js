@@ -103,6 +103,11 @@ $(function() {
         category_name = category_name.replaceAll(' ', '-2-');
         location.href = site_url + "ChakraStone/random_article/" + category_name;
     })
+
+    $(".tarot-card-item").on("click", function(){
+        var _url = site_url + "TarotCard/random_article";
+        location.href = _url;
+    })
 });
 
 function numberWithCommas(x) {
