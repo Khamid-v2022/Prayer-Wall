@@ -94,9 +94,11 @@ body {
     background-color: #00CCFF;
 }
 
-.window-menu .navbar .navbar-nav .nav-item.active a {
+.window-menu .navbar .navbar-nav .nav-item.active>a,
+.window-menu .navbar .navbar-nav .nav-item.active ul li a.active {
      color: white;
 }
+
 
 .window-menu .navbar .navbar-nav .nav-item:hover {
     background-color: #00CCFF;
