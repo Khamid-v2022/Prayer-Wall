@@ -38,9 +38,9 @@
                  data-ad-slot="2289784390"
                  data-ad-format="auto"
                  data-full-width-responsive="true"></ins>
-            <script>
+           <!--  <script>
                  (adsbygoogle = window.adsbygoogle || []).push({});
-            </script>
+            </script> -->
         </div>
         
         <div class="text-center py-5" style="background: rgba(00, 204, 255);">
@@ -57,9 +57,9 @@
                  data-ad-slot="4888027575"
                  data-ad-format="auto"
                  data-full-width-responsive="true"></ins>
-            <script>
+           <!--  <script>
                  (adsbygoogle = window.adsbygoogle || []).push({});
-            </script>
+            </script> -->
         </div>
         
         <div class="container" id="card_container">  
@@ -90,9 +90,9 @@
                  data-ad-slot="7131047537"
                  data-ad-format="auto"
                  data-full-width-responsive="true"></ins>
-            <script>
+           <!--  <script>
                  (adsbygoogle = window.adsbygoogle || []).push({});
-            </script>
+            </script> -->
         </div>
     </section>
 </body>

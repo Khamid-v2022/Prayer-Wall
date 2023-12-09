@@ -12,9 +12,9 @@
                     data-ad-slot="4091236364"
                     data-ad-format="auto"
                     data-full-width-responsive="true"></ins>
-                <script>
+               <!--  <script>
                     (adsbygoogle = window.adsbygoogle || []).push({});
-                </script>
+                </script> -->
             </div>
             
             <div class="container"> 
@@ -55,9 +55,9 @@
                         data-ad-format="autorelaxed"
                         data-ad-client="ca-pub-9926134965337187"
                         data-ad-slot="9151991353"></ins>
-                    <script>
+                  <!--   <script>
                         (adsbygoogle = window.adsbygoogle || []).push({});
-                    </script>
+                    </script> -->
                 </div>
             </div>
 

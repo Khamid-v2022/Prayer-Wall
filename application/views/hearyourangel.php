@@ -7,9 +7,9 @@
                  data-ad-slot="2289784390"
                  data-ad-format="auto"
                  data-full-width-responsive="true"></ins>
-            <script>
+           <!--  <script>
                  (adsbygoogle = window.adsbygoogle || []).push({});
-            </script>
+            </script> -->
         </div>
         <div class="container">
             <div class="p-4 m-4 bx-desn">
@@ -55,9 +55,9 @@
                  data-ad-slot="7131047537"
                  data-ad-format="auto"
                  data-full-width-responsive="true"></ins>
-            <script>
+           <!--  <script>
                  (adsbygoogle = window.adsbygoogle || []).push({});
-            </script>
+            </script> -->
         </div>
     </section>
 </body>

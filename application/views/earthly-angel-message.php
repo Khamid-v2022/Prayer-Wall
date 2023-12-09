@@ -7,9 +7,9 @@
                  data-ad-slot="2004510913"
                  data-ad-format="auto"
                  data-full-width-responsive="true"></ins>
-            <script>
+            <!-- <script>
                  (adsbygoogle = window.adsbygoogle || []).push({});
-            </script>
+            </script> -->
         </div>
 
 
@@ -203,9 +203,9 @@
                  data-ad-format="autorelaxed"
                  data-ad-client="ca-pub-9926134965337187"
                  data-ad-slot="6346246455"></ins>
-            <script>
+            <!-- <script>
                  (adsbygoogle = window.adsbygoogle || []).push({});
-            </script>
+            </script> -->
         </div>
     </section>
 </body>

@@ -12,8 +12,17 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   <script type="text/javascript" src="<?=base_url()?>assets/plugin/js/jquery.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9926134965337187"
-     crossorigin="anonymous"></script>
+
+    <!-- Blocked because we are using TC script -->
+    <!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9926134965337187" crossorigin="anonymous"></script> -->
+
+    <script type="text/javascript">
+        (adsbygoogle = window.adsbygoogle || []).push({
+        google_ad_client: "ca-pub-9926134965337187",
+        enable_page_level_ads: true
+        });
+    </script>
+    <script type="text/javascript" src="//c.pubguru.net/pg.angelgraceblessing.com.js" async></script>
 
   <link rel="stylesheet" type="text/css" href="<?=base_url()?>assets/css/app.css">
   <script type="text/javascript" src="<?=base_url()?>assets/js/app.js"></script>
@@ -32,9 +41,9 @@
                  data-ad-slot="2289784390"
                  data-ad-format="auto"
                  data-full-width-responsive="true"></ins>
-            <script>
+           <!--  <script>
                  (adsbygoogle = window.adsbygoogle || []).push({});
-            </script>
+            </script> -->
         </div>
         <div class="container">
             <div class="p-4 m-4 bx-desn">
@@ -45,7 +54,7 @@
                     <button class="send-btn mt-4 angel-number-btn">click here to receive your angel number</button>
                 </div>
             </div>
-            <div class="mt-5">
+            <div class="container mt-5">
                 <p>Angel numbers are a mystical and intriguing phenomenon that has fascinated people for centuries. If you've been seeing a particular number sequence repeatedly, it might be an angel number trying to convey a message to you from the spiritual realm. Each angel number carries its own unique vibration and significance, offering guidance and encouragement in different areas of your life.</p>
 
                 <p>One of the most common angel numbers is 111, which signifies manifestation and new beginnings. This number urges you to stay positive and focused on your goals, as your thoughts and intentions have the power to shape your reality. Seeing 111 is a reminder that you are a co-creator of your own destiny.</p>
@@ -61,7 +70,6 @@
                 <p>Remember, these are just a few examples of angel numbers and their meanings. Pay attention to the number sequences that frequently appear in your life, as they might hold valuable messages and insights tailored specifically for you. Trust in the guidance of your angels as you navigate through life's journey.</p>
             </div>
             <div class="mt-5 google-ads-place">
-                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6130278165783644" crossorigin="anonymous"></script>
                 <!-- angel number bottom -->
                 <ins class="adsbygoogle"
                      style="display:block"
@@ -69,9 +77,9 @@
                      data-ad-slot="8565400125"
                      data-ad-format="auto"
                      data-full-width-responsive="true"></ins>
-                <script>
+                <!-- <script>
                      (adsbygoogle = window.adsbygoogle || []).push({});
-                </script>
+                </script> -->
             </div>
         </div>
         

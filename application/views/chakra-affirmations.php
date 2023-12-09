@@ -14,9 +14,9 @@
                         data-ad-slot="6393526103"
                         data-ad-format="auto"
                         data-full-width-responsive="true"></ins>
-                    <script>
+                   <!--  <script>
                          (adsbygoogle = window.adsbygoogle || []).push({});
-                    </script>
+                    </script> -->
                 </div>
 
                 <div class="chakra-main">
@@ -98,9 +98,9 @@
                         data-ad-format="autorelaxed"
                         data-ad-client="ca-pub-9926134965337187"
                         data-ad-slot="3466311562"></ins>
-                    <script>
+                   <!--  <script>
                         (adsbygoogle = window.adsbygoogle || []).push({});
-                    </script>
+                    </script> -->
                 </div>
             </div>
         </section>

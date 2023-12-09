@@ -15,9 +15,9 @@
                      data-ad-slot="4888027575"
                      data-ad-format="auto"
                      data-full-width-responsive="true"></ins>
-                <script>
+                <!-- <script>
                      (adsbygoogle = window.adsbygoogle || []).push({});
-                </script>
+                </script> -->
             </div>
             
             <div class="row my-5"> 
@@ -99,9 +99,9 @@
                      data-ad-slot="7131047537"
                      data-ad-format="auto"
                      data-full-width-responsive="true"></ins>
-                <script>
+                <!-- <script>
                      (adsbygoogle = window.adsbygoogle || []).push({});
-                </script>
+                </script> -->
             </div>
         </div>
     </section>

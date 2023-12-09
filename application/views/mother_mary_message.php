@@ -13,9 +13,9 @@
                     data-ad-slot="4291951882"
                     data-ad-format="auto"
                     data-full-width-responsive="true"></ins>
-                <script>
+               <!--  <script>
                     (adsbygoogle = window.adsbygoogle || []).push({});
-                </script>
+                </script> -->
             </div>
 
 
@@ -37,9 +37,9 @@
                         data-ad-slot="2980785938"
                         data-ad-format="auto"
                         data-full-width-responsive="true"></ins>
-                    <script>
+                   <!--  <script>
                         (adsbygoogle = window.adsbygoogle || []).push({});
-                    </script>
+                    </script> -->
                 </div>
             </div>
 
@@ -86,9 +86,9 @@
                         data-ad-slot="8114241859"
                         data-ad-format="auto"
                         data-full-width-responsive="true"></ins>
-                    <script>
+                    <!-- <script>
                         (adsbygoogle = window.adsbygoogle || []).push({});
-                    </script>
+                    </script> -->
                 </div>
 
                 <div class="angels-category" id="archangels">
@@ -130,9 +130,9 @@
                         data-ad-slot="1876136569"
                         data-ad-format="auto"
                         data-full-width-responsive="true"></ins>
-                    <script>
+                    <!-- <script>
                         (adsbygoogle = window.adsbygoogle || []).push({});
-                    </script>
+                    </script> -->
                 </div>
             </div>
 
@@ -164,9 +164,9 @@
                         data-ad-format="autorelaxed"
                         data-ad-client="ca-pub-9926134965337187"
                         data-ad-slot="5623809887"></ins>
-                    <script>
+                   <!--  <script>
                         (adsbygoogle = window.adsbygoogle || []).push({});
-                    </script>
+                    </script> -->
                 </div>
             </div>
         </section>
