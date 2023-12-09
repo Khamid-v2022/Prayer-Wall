@@ -15,5 +15,16 @@ class MmPray_m extends CI_Model
 	   $this->db->insert($this->table, $info);
 		return $this->db->insert_id();
 	}
+
+	public function get_item_from2($where){
+        $this->db->where($where);
+        return $this->db->get("pray_mm2")->row_array();
+	}
+
+	public function add_item_to2($info){
+	   $this->db->insert("pray_mm2", $info);
+		return $this->db->insert_id();
+	}
+
 }
 ?>

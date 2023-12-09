@@ -24,6 +24,13 @@ class MmPrayer extends CI_Controller {
         $this->load->view('mm_prayer');
         $this->load->view('footer');
     }
+
+    public function mm_prayer2()
+    {
+        $this->load->view('header');
+        $this->load->view('mm_prayer2');
+        $this->load->view('footer');
+    }
     
     public function submit_pray(){
         $request = $this->input->post();
@@ -276,4 +283,162 @@ class MmPrayer extends CI_Controller {
         curl_close($ch);
     }
     
+
+    public function submit_pray2() {
+        $request = $this->input->post();
+
+        // subscriber check
+        $where['email'] = $request['email'];
+        $where['name'] = $request['first_name'];
+
+        $info['name'] = $request['first_name'];
+        $info['email'] = $request['email'];
+        $info['tag'] = $request['tag'];
+        $info['ip_address'] = $request['ip_address'];
+
+        $subscriber = $this->mmPray_m->get_item_from2($where);
+        if(empty($subscriber)){
+            // add subscriber            
+            $this->mmPray_m->add_item_to2($info);
+        }
+
+        echo 'ok';
+
+        // add subscriber
+        $this->sendConvetkit2($info);
+        $this->sendAWeber2($info);
+        $this->sendMailerlite2($info);
+    }
+
+    public function sendConvetkit2($info){      
+        if($info['tag']){
+            if($info['tag'] == "ctag")
+                $tag_name = array(CONVERTKIT_MM_TAG_ID2, CONVERTKIT_MM_CTAG_ID2);
+            else if($info['tag'] == "vtag")
+                $tag_name = array(CONVERTKIT_MM_TAG_ID2, CONVERTKIT_MM_VTAG_ID2);
+            else if($info['tag'] == "ltag")
+                $tag_name = array(CONVERTKIT_MM_TAG_ID2, CONVERTKIT_MM_LTAG_ID2);
+            else 
+                $tag_name = CONVERTKIT_MM_TAG_ID2;
+        }
+        else
+            $tag_name = CONVERTKIT_MM_TAG_ID2;
+
+        $api = new \ConvertKit_API\ConvertKit_API(CONVERTKIT_API_KEY, CONVERTKIT_API_SECRET);
+        $options = [
+                    'email'      => $info['email'],
+                    'name'       => $info['name'],
+                    'tags'       => $tag_name
+                ];
+        
+        $subscribed = $api->form_subscribe(CONVERTKIT_MM_FORM_ID, $options);
+        
+        return true;    
+    }
+
+    public function sendAWeber2($info){
+       // refresh token update
+        $this->getRefreshToken();
+        
+        // get Credentials
+        $credentials = parse_ini_file('credentials.ini');
+        $accessToken = $credentials['accessToken'];
+
+        $list_name = AWEBER_MM_LIST_NAME;
+        
+        if($info['tag'])
+            $tag_name = array(AWEBER_MMPRAYER_TAG_NAME2, "mm2_" . $info['tag']);
+        else
+            $tag_name = array(AWEBER_MMPRAYER_TAG_NAME2);
+        
+        $client = new GuzzleHttp\Client();
+        $BASE_URL = 'https://api.aweber.com/1.0/';
+        
+        // get all the accounts entries
+        $accounts = $this->getCollection($client, $accessToken, $BASE_URL . 'accounts');
+        $accountUrl = $accounts[0]['self_link'];
+        
+        // get all the list entries for the first account
+        $listsUrl = $accounts[0]['lists_collection_link'];
+        $lists = $this->getCollection($client, $accessToken, $listsUrl);
+        
+        $my_list = [];
+        foreach($lists as $item){
+            if($item['name'] == $list_name){
+                $my_list = $item;
+            }
+        }
+        
+        $subsUrl = $my_list['subscribers_collection_link'];
+        
+        $data = array(
+            'email' => $info['email'],
+            'name' => $info['name'],
+            'tags' => $tag_name
+        );
+         
+        try { 
+            $body = $client->post($subsUrl, [
+                'json' => $data, 
+                'headers' => ['Authorization' => 'Bearer ' . $accessToken]
+            ]);
+        
+            // get the subscriber entry using the Location header from the post request
+            $subscriberUrl = $body->getHeader('Location')[0];
+            $subscriberResponse = $client->get($subscriberUrl,
+                ['headers' => ['Authorization' => 'Bearer ' . $accessToken]])->getBody();
+            $subscriber = json_decode($subscriberResponse, true);
+        }
+        catch (Exception $e) {
+            var_dump($e->getMessage());
+        }        
+    }
+
+    public function sendMailerlite2($info){
+        $tag_name = array(MAILERLITE_ALL2);
+        if($info['tag']){
+            if($info['tag'] == "ctag")
+                $tag_name = array(MAILERLITE_ALL2, MAILERLITE_CTAG_ID2);
+            else if($info['tag'] == "vtag")
+                $tag_name = array(MAILERLITE_ALL2, MAILERLITE_VTAG_ID2);
+            else if($info['tag'] == "ltag")
+                $tag_name = array(MAILERLITE_ALL2, MAILERLITE_LTAG_ID2);
+            else 
+                $tag_name = array(MAILERLITE_ALL2);
+        }
+
+        $data = array (
+            'email' => $info['email'],
+            'fields' => array (
+                            "name"=> $info['name']
+                        ),
+            'groups' => $tag_name
+        );
+
+        $jsonData = json_encode($data);
+
+        // API endpoint URL
+        $url = 'https://connect.mailerlite.com/api/subscribers';
+
+        // Initialize cURL session
+        $ch = curl_init($url);
+
+        // Set cURL options for the POST request
+        curl_setopt($ch, CURLOPT_POST, 1);
+        curl_setopt($ch, CURLOPT_POSTFIELDS, $jsonData);
+
+        // Set the appropriate headers
+        curl_setopt($ch, CURLOPT_HTTPHEADER, array(
+            'Authorization: Bearer ' . MAILERLITE_KEY,
+            'Content-Type: application/json', 
+            'Content-Length: ' . strlen($jsonData) 
+        ));
+
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+
+        // Execute the cURL request
+        $response = curl_exec($ch);
+
+        curl_close($ch);
+    }
 }

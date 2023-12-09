@@ -48,6 +48,16 @@ $(function() {
         }
         submit_mm_form();
     })
+
+    $("#mm_pray_form2").submit(function(e){
+        e.preventDefault();
+        $(".dpm-response").addClass('d-none');
+        $(".dpm-response .alert").addClass('d-none');
+        if (!event.target.checkValidity()) {
+            return false;
+        }
+        submit_mm_form2();
+    })
     
     $(".card_main").on('click', function(){
         var _url = site_url + "oraclecard/random_article";
@@ -301,4 +311,27 @@ function submit_mm_form(){
             $(".dpm-response .alert-danger").removeClass('d-none');
         }
     })   
+}
+
+function submit_mm_form2(){
+    $("#mm_pray_form2").addClass('d-none');
+    $(".loader").removeClass('d-none');
+    $(".dpm-response .alert-success").removeClass('d-none');
+
+    let current_url = window.location;
+    let params = (new URL(current_url)).searchParams;
+    let tid = params.get('tid');
+    
+    var url = site_url + 'mmPrayer/submit_pray2';
+    
+    $.post(url, {
+            ip_address: $("#ip_address").val(),
+            email: $("#email").val(),
+            first_name: $("#first_name").val(),
+            tag: tid
+        }, 
+        function(resp){
+    })
+    window.location.href = "https://angelgraceblessing.com/thank-you-for-getting-your-powerful-mother-mary-prayer/";
+        
 }
