@@ -15,7 +15,7 @@
 
   <!-- Blocked because we are using TC script -->
   <!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9926134965337187" crossorigin="anonymous"></script> -->
- <script type="text/javascript">
+  <script type="text/javascript">
       (adsbygoogle = window.adsbygoogle || []).push({
       google_ad_client: "ca-pub-9926134965337187",
       enable_page_level_ads: true

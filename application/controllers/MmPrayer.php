@@ -302,12 +302,12 @@ class MmPrayer extends CI_Controller {
             $this->mmPray_m->add_item_to2($info);
         }
 
-        echo 'ok';
-
         // add subscriber
         $this->sendConvetkit2($info);
         $this->sendAWeber2($info);
         $this->sendMailerlite2($info);
+
+        echo 'ok';
     }
 
     public function sendConvetkit2($info){      
@@ -344,7 +344,7 @@ class MmPrayer extends CI_Controller {
         $credentials = parse_ini_file('credentials.ini');
         $accessToken = $credentials['accessToken'];
 
-        $list_name = AWEBER_MM_LIST_NAME;
+        $list_name = AWEBER_MM_LIST_NAME2;
         
         if($info['tag'])
             $tag_name = array(AWEBER_MMPRAYER_TAG_NAME2, "mm2_" . $info['tag']);

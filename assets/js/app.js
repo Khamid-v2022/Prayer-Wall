@@ -331,7 +331,8 @@ function submit_mm_form2(){
             tag: tid
         }, 
         function(resp){
+            console.log(resp);
+            window.location.href = "https://angelgraceblessing.com/thank-you-for-getting-your-powerful-mother-mary-prayer/";
     })
-    window.location.href = "https://angelgraceblessing.com/thank-you-for-getting-your-powerful-mother-mary-prayer/";
-        
+       
 }
