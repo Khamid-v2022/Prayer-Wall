@@ -118,6 +118,10 @@ $(function() {
         var _url = site_url + "TarotCard/random_article";
         location.href = _url;
     })
+
+    $(".buddha-wisdom-btn").on('click', function(){
+        location.href = site_url + "BuddhaWisdom/random_article";
+    })
 });
 
 function numberWithCommas(x) {

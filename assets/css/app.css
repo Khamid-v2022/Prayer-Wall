@@ -885,7 +885,7 @@ p.magic-bx-sbheading {
     margin-right: auto;
 }
 
-.mother-mary-message .angel-icon, .horoscope-icon {
+.mother-mary-message .angel-icon, .horoscope-icon, .buddha-icon {
     width: 200px;
     padding: 0 10px;
     display: inline;
@@ -895,7 +895,10 @@ p.magic-bx-sbheading {
 
 
 
-a.archangel-post-btn:hover .angel-icon, a.horoscope-btn:hover .horoscope-icon{
+a.archangel-post-btn:hover .angel-icon, 
+a.horoscope-btn:hover .horoscope-icon,
+a.horoscope-sense:hover .horoscope-icon,
+a.buddha-wisdom-btn:hover .buddha-icon {
     transform: scale(1.2);
 }
 

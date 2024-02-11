@@ -95,20 +95,33 @@
             </li>   
             
             
-            <li class="nav-item dropdown <?=$title=='Earthly Angel Message' || $title=='Tarot Card' ? 'active':''?>">
+            <li class="nav-item dropdown <?=$title=='Earthly Angel Message' 
+            || $title=='Tarot Card'
+            || $title=='Choose Your Buddha Wisdom Today'
+            || $title=='Amazon Designs' ? 'active':''
+            ?>">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 Earthly Angel Message
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown2">
                     <li><a class="dropdown-item <?=$title=='Earthly Angel Message'?'active':''?>" href="https://angelgraceblessing.com/pray/earthly-angel-message">Earthly Angel Message</a></li>
-                    <li ><a class="dropdown-item <?=$title=='Tarot Card'?'active':''?>" href="https://angelgraceblessing.com/pray/tarot-card">Tarot Card</a></li>
+                    <li><a class="dropdown-item <?=$title=='Tarot Card'?'active':''?>" href="https://angelgraceblessing.com/pray/tarot-card">Tarot Card</a></li>
+                    <li><a class="dropdown-item <?=$title=='Choose Your Buddha Wisdom Today'?'active':''?>" href="https://angelgraceblessing.com/pray/buddha-wisdom">Buddha Timeless Wisdom</a></li>
+                    <li><a class="dropdown-item <?=$title=='Amazon Designs'?'active':''?>" href="https://angelgraceblessing.com/pray/amazon-designs">Amazon Designs</a></li>
                 </ul>
             </li>   
-       
-            
-            <!-------------------- Add amazon designs-->
-            <li class="nav-item <?=$title=='Amazon Designs'?'active':''?>"><a href="https://angelgraceblessing.com/pray/amazon-designs">Amazon Designs</a></li>
 
+            <li class="nav-item dropdown <?=$title=='Daily Horoscope' 
+            || $title=='Horoscope Sixth Sense' ? 'active':''
+            ?>">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Daily Horoscope
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown2">
+                    <li><a class="dropdown-item <?=$title=='Daily Horoscope'?'active':''?>" href="https://angelgraceblessing.com/pray/daily-horoscope">Daily Horoscope</a></li>
+                    <li ><a class="dropdown-item <?=$title=='Horoscope Sixth Sense'?'active':''?>" href="https://angelgraceblessing.com/pray/horoscope-sixth-sense">Horoscope Sixth Sense</a></li>
+                </ul>
+            </li>
             
         </ul>
     </nav>
@@ -146,9 +159,6 @@
             <li class="nav-item">
               <a class="nav-link" href="https://angelgraceblessing.com/category/prayers/">Your Prayer of The Day</a>
             </li>
-            <!--<li class="nav-item <?=$title=='Daily Horoscope'?'active':''?>">-->
-            <!--  <a class="nav-link" href="https://angelgraceblessing.com/pray/daily-horoscope">Daily Horoscope</a>-->
-            <!--</li>-->
             <li class="nav-item <?=$title=='Chakra Affirmation'?'active':''?>">
               <a class="nav-link" href="https://angelgraceblessing.com/pray/chakra-affirmations">Chakra Affirmation</a>
             </li>
@@ -158,12 +168,16 @@
             <li class="nav-item <?=$title=='Earthly Angel Message'?'active':''?>">
               <a class="nav-link" href="https://angelgraceblessing.com/pray/earthly-angel-message">Earthly Angel Message</a>
             </li>
-            
             <li class="nav-item <?=$title=='Tarot Card'?'active':''?>"><a class="nav-link" href="https://angelgraceblessing.com/pray/tarot-card">Tarot Card</a></li>
-            
-            
+             <li class="nav-item <?=$title=='Choose Your Buddha Wisdom Today'?'active':''?>"><a class="nav-link" href="https://angelgraceblessing.com/pray/buddha-wisdom">Buddha Timeless Wisdom</a></li>
             <li class="nav-item <?=$title=='Amazon Designs'?'active':''?>">
               <a class="nav-link" href="https://angelgraceblessing.com/pray/amazon-designs">Amazon Designs</a>
+            </li>
+            <li class="nav-item <?=$title=='Daily Horoscope'?'active':''?>">
+              <a class="nav-link" href="https://angelgraceblessing.com/pray/daily-horoscope">Daily Horoscope</a>
+            </li>
+            <li class="nav-item <?=$title=='Horoscope Sixth Sense'?'active':''?>">
+              <a class="nav-link" href="https://angelgraceblessing.com/pray/horoscope-sixth-sense">Horoscope Sixth Sense</a>
             </li>
           </ul>
         </div>
