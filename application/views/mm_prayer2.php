@@ -7,12 +7,8 @@
             </div>
             <div class="haniel-description my-5">
                 <div class="form_wrapper bg-white shadow rounded ms-4 p-4">
-                	<div class="sub-headline">
-                        <h4>Recite This Simple Prayer to Receive Immediate Help</h4><br>
-    	            	<p>I discovered this prayer not long ago and I really liked how it sounded to summon the angel of joy.<br><br>
-                        When I started recite it, a very strange series of events happened.<br><br>
-                        Get this amazing prayer so you can listen to this over and over again.</p>
-    	            </div>
+                    <h4>Recite This Simple Prayer to Receive Immediate Help</h4>
+                	
                     <div class="mt-5" style="max-width: 400px; margin: 0 auto;">
     	            	<form method="post" id="mm_pray_form2">
                             <input type="hidden" id="ip_address" value="">
@@ -30,6 +26,11 @@
                             <p class="alert alert-info d-none">Validating your contact details...</p>
                             <p class="alert alert-success d-none">Valid Email address!</p>
                         </div>
+                    </div>
+                    <div class="sub-headline mt-5">
+                        <p>I discovered this prayer not long ago and I really liked how it sounded to summon the angel of joy.<br><br>
+                        When I started recite it, a very strange series of events happened.<br><br>
+                        Get this amazing prayer so you can listen to this over and over again.</p>
                     </div>
                 </div>
                 <div class="topic-img-wrapper mt-5 mb-5">
