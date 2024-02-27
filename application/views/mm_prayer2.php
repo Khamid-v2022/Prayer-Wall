@@ -6,9 +6,6 @@
                 <h1>Start Receiving <span class="text-danger">Unexpected Wealth & Miracles</span> Using This Powerful Prayer To Summon Archangel Haniel</h1>
             </div>
             <div class="haniel-description my-5">
-                <div class="topic-img-wrapper mt-5 mb-5">
-                    <img src="<?=base_url()?>assets/img/bundle-small-min.png" loading="lazy" sizes="(max-width: 479px) 88vw, 300px" alt="" class="image-4">
-                </div>
                 <div class="form_wrapper bg-white shadow rounded ms-4 p-4">
                 	<div class="sub-headline">
                         <h4>Recite This Simple Prayer to Receive Immediate Help</h4><br>
@@ -34,6 +31,9 @@
                             <p class="alert alert-success d-none">Valid Email address!</p>
                         </div>
                     </div>
+                </div>
+                <div class="topic-img-wrapper mt-5 mb-5">
+                    <img src="<?=base_url()?>assets/img/bundle-small-min.png" loading="lazy" sizes="(max-width: 479px) 88vw, 300px" alt="" class="image-4">
                 </div>
             </div>
         </div>
