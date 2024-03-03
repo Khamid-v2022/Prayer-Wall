@@ -122,6 +122,18 @@ $(function() {
     $(".buddha-wisdom-btn").on('click', function(){
         location.href = site_url + "BuddhaWisdom/random_article";
     })
+
+    $(".daily-bible-btn").on('click', function(){
+        var _url = site_url + "DailyBibleVerse/random_article";
+        location.href = _url;
+    })
+
+    $(".thomas-edison-btn").on('click', function(){
+        var _url = site_url + "ThomasEdison/random_article";
+        location.href = _url;
+    })
+
+    
 });
 
 function numberWithCommas(x) {

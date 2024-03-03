@@ -1285,3 +1285,16 @@ ul.text-msgs {
 .tarot-card .tarot-card-item img:hover {
    transform: scale(1.1);
 }
+
+.daily-bible-btn {
+    cursor: pointer;
+}
+.thomas-edison-btn img,
+.daily-bible-btn {
+    transition: all .2s ease-in-out;
+}
+
+.thomas-edison-btn img:hover,
+.daily-bible-btn:hover {
+   transform: scale(1.1);
+}
