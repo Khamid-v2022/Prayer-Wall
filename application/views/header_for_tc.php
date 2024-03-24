@@ -100,7 +100,8 @@
             || $title=='Tarot Card'
             || $title=='Choose Your Buddha Wisdom Today'
             || $title=='Thomas Edison Wisdom Today'
-            || $title=='Amazon Designs' ? 'active':''
+            || $title=='Amazon Designs'
+            || $title == 'Animal and Insect Reading' ? 'active':''
             ?>">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 Earthly Angel Message
@@ -110,6 +111,7 @@
                     <li><a class="dropdown-item <?=$title=='Tarot Card'?'active':''?>" href="https://angelgraceblessing.com/pray/tarot-card">Tarot Card</a></li>
                     <li><a class="dropdown-item <?=$title=='Choose Your Buddha Wisdom Today'?'active':''?>" href="https://angelgraceblessing.com/pray/buddha-wisdom">Buddha Timeless Wisdom</a></li>
                     <li><a class="dropdown-item <?=$title=='Thomas Edison Wisdom Today'?'active':''?>" href="https://angelgraceblessing.com/pray/thomas-edison">Thomas Edison Wisdom</a></li>
+                    <li><a class="dropdown-item <?=$title=='Animal and Insect Reading'?'active':''?>" href="https://angelgraceblessing.com/pray/animals-insects-reading">Animal and Insect Reading</a></li>
                     <li><a class="dropdown-item <?=$title=='Amazon Designs'?'active':''?>" href="https://angelgraceblessing.com/pray/amazon-designs">Amazon Designs</a></li>
                 </ul>
             </li>   
@@ -177,6 +179,7 @@
             <li class="nav-item <?=$title=='Tarot Card'?'active':''?>"><a class="nav-link" href="https://angelgraceblessing.com/pray/tarot-card">Tarot Card</a></li>
             <li class="nav-item <?=$title=='Choose Your Buddha Wisdom Today'?'active':''?>"><a class="nav-link" href="https://angelgraceblessing.com/pray/buddha-wisdom">Buddha Timeless Wisdom</a></li>
             <li class="nav-item <?=$title=='Thomas Edison Wisdom Today'?'active':''?>"><a class="nav-link" href="https://angelgraceblessing.com/pray/thomas-edison">Thomas Edison Wisdom</a></li>
+            <li class="nav-item <?=$title=='Animal and Insect Reading'?'active':''?>"><a class="nav-link" href="https://angelgraceblessing.com/pray/animals-insects-reading">Animal and Insect Reading</a></li>
             <li class="nav-item <?=$title=='Amazon Designs'?'active':''?>">
               <a class="nav-link" href="https://angelgraceblessing.com/pray/amazon-designs">Amazon Designs</a>
             </li>

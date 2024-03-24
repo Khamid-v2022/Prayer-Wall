@@ -1,10 +1,5 @@
     <div class="mother-mary-message">
         <section class="main">
-            <div class="d-flex justify-content-center pt-3">          
-                <img width="300" height="119" src="<?=base_url()?>assets/img/agb-logo-skyblue.png" alt="">
-
-            </div>
-
             <div class="google-ads-place">
                 <!-- angelgrace mmvp top -->
                 <ins class="adsbygoogle"
@@ -21,7 +16,7 @@
 
             <div class="container">  
                 <div class="d-flex align-items-center  flex-column">
-                    <h3>Your Mother Mary Message of The Day</h3>
+                    <h1>Your Mother Mary Message of The Day</h1>
                     <div class="image">
                         <a href="#archangels" class="main-img">
                             <img src="<?=base_url()?>assets/img/mothermarymessage.png" alt="Mother Mary Message" class="mt-4">

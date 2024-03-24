@@ -133,7 +133,16 @@ $(function() {
         location.href = _url;
     })
 
-    
+    $(".animall-item-btn").on('click', function(){
+        let animal_name = $(this).attr("data-animal_name");
+        var _url = site_url + "AnimalsInserctsReading/random_article/" + animal_name;
+        location.href = _url;
+    })
+
+    $(".animal-insect-card").on('click', function(){
+        var _url = site_url + "AnimalsInserctsReading/random_article_animals";
+        location.href = _url;
+    })
 });
 
 function numberWithCommas(x) {

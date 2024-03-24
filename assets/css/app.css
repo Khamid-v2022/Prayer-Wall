@@ -430,6 +430,8 @@ form > * {
     position: absolute;
     max-width: fit-content;
     transition: top 1s ease 0s;
+    max-height: 400px;
+    transition: top 0.5s ease 0s;
 }
 
 
@@ -503,7 +505,6 @@ form > * {
 
 .card_main:hover img {
     top: -25px;
-    transition: top 1s ease 0s;
 }
 
 
@@ -1297,4 +1298,72 @@ ul.text-msgs {
 .thomas-edison-btn img:hover,
 .daily-bible-btn:hover {
    transform: scale(1.1);
+}
+
+.animal-reading-page .main-wrapper {
+    background-image: url('/pray/assets/img/animalls/bg.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-bottom: 50px;
+}
+
+.animal-reading-page .animal-main-wrapper {
+    max-width: 800px;
+    margin-top: 20px;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 40px;
+    background-color: #fff;
+}
+
+.animal-reading-page .animal-main-wrapper .animall-img {
+    max-height: 500px;
+}
+
+.animal-reading-page .animal-description {
+    margin-top: 30px;
+}
+.animal-reading-page .animal-description h4.title {
+    text-align: center;
+}
+
+.animal-reading-page .animal-description h5.sub-title {
+    font-size: 18px;
+}
+
+.animal-reading-page .card-wrapper {
+    max-width: 800px;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.animal-reading-page .card-wrapper .card-item-wrapper {
+    text-align: center;
+}
+
+.animal-reading-page .card-wrapper .card-item-wrapper img {
+    width: 100%;
+    height: auto;
+    transition: all .2s ease-in-out;
+}
+
+.animal-reading-page .card-wrapper .card-item-wrapper a:hover img {
+    transform: scale(1.1);
+}
+
+.animal-insect-card {
+    position: relative;
+}
+
+.animal-insect-card img {
+    position: absolute;
+    max-width: fit-content;
+    transition: top 1s ease 0s;
+    max-height: 400px;
+    transition: top 0.5s ease 0s;
+}
+
+.animal-insect-card:hover img {
+    top: -25px;
 }
