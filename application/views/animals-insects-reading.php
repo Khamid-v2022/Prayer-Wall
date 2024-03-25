@@ -11,7 +11,7 @@
                 </div>
 
                 <div class="d-flex align-items-center flex-column mt-5">
-                    <h1>What does it mean to see a <?=$animal_name?>?</h1>
+                    <h1 style="color: mediumvioletred;">What does it mean to see a <?=$animal_name?>?</h1>
                 </div>
                 <div class="animal-main-wrapper">
                     <div class="text-center">
