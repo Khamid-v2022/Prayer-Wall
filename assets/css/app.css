@@ -1,0 +1,1444 @@
+body {
+    margin:  0;
+}
+
+@font-face {
+    font-family: 'Dancing Script Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Dancing Script Regular'), url('DancingScript-Regular.woff') format('woff');
+}
+    
+
+@font-face {
+    font-family: 'Dancing Script';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Dancing Script Bold'), url('DancingScript-Bold.woff') format('woff');
+}
+
+.transition {
+    transition: all .2s ease-in-out;
+}
+.transition:hover {
+    transform: scale(1.1);
+}
+
+.top-link-wrapper {
+    background-color: #00CCFF;
+    position: fixed;
+    width: 100%;
+    top: 0px;
+    z-index: 100;
+}
+@media(max-width: 992px){
+    .top-link-wrapper .container{
+        font-size: 12px;
+    }
+}
+
+.top-link-wrapper a {
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+/* Nav bar Menu */
+.navbar-nav .dropdown-menu {
+    position: absolute;
+    min-width: 100%;
+}
+.nav-link {
+    padding: 0;
+}
+.mobile-menu .brand-img {
+    width: 200px;
+    height: auto;
+}
+
+.mobile-menu .navbar-nav{
+    text-align: right;
+}
+.mobile-menu .navbar-light .navbar-nav .nav-link {
+    color: #494c4f;
+    font-weight: 600;
+    padding: 6px 0;
+}
+
+.mobile-menu .navbar-light .navbar-nav .nav-link:hover {
+    color: #00CCFF;
+}
+
+.mobile-menu .navbar-light .navbar-nav .nav-item.active .nav-link {
+    color: #00CCFF;
+}
+
+.window-menu, .mobile-menu {
+    margin-top: 50px;
+}
+
+.window-menu .navbar {
+    
+    border: solid 1px #636363;
+    border-width: 1px 0 1px 0;
+    padding: 0;
+}
+.window-menu .navbar .navbar-nav{
+    flex-direction: row;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+
+}
+
+.window-menu .navbar .navbar-nav .nav-item {
+    padding: 13px 20px;
+    line-height: 20px;
+    font-weight: 600;
+    transition: .3s;
+}
+
+.window-menu .navbar .navbar-nav .nav-item.active {
+    background-color: #00CCFF;
+}
+
+.window-menu .navbar .navbar-nav .nav-item.active>a,
+.window-menu .navbar .navbar-nav .nav-item.active ul li a.active {
+     color: white;
+}
+
+
+.window-menu .navbar .navbar-nav .nav-item:hover {
+    background-color: #00CCFF;
+}
+.window-menu .navbar .navbar-nav .nav-item:hover  a {
+     color: white;
+}
+.window-menu .navbar .navbar-nav .nav-item a{
+    color: #7A7A7A;
+    text-decoration:none;
+}
+
+.window-menu .navbar .navbar-nav .nav-item:hover a.dropdown-item {
+    color:#7A7A7A;
+}
+.dropdown-item.active, .dropdown-item:active {
+    color: white;
+    background-color: #00CCFF;
+}
+
+
+
+.main {
+    background-image: url(../img/new_sky.webp);
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+    /*min-height: 100vh;*/
+}
+
+.main.ourlordmessage {
+     background-image: unset;
+}
+
+.container {
+    padding:  1rem;
+}
+
+.main .heading h1 {
+    color: #ab1449;
+    font-family: "Dancing Script", cursive;
+    font-weight: 700;
+    font-size:  4rem;
+}
+
+.haniel-description {
+    display: block;
+}
+
+@media(min-width: 992px){
+    .haniel-description {
+        display: flex;
+    }
+
+    .haniel-description > div {
+        width: 50%;
+    }
+}
+
+
+
+.michael-prayer .main .heading h1 {
+    font-size:  3rem;
+}
+
+.main .heading p {
+    color: #ab1449;
+    font-size: 2rem;
+}
+
+@media (max-width: 600px){
+    .main .heading p {
+        font-size: 1.2rem;
+    }
+}
+
+.form_wrapper {
+    max-width: 75%;
+    margin: 0 auto;
+}
+
+.michael-prayer .form_wrapper {
+    border-radius: 30px!important;
+    background-image: url(../img/body-bg.jpg);
+    background-position: 50% 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding:  20px;
+}
+
+.michael-prayer .form_wrapper .sub-headline{
+/*    width: 80%;*/
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+}
+
+@media screen and (max-width: 991px) {
+    .michael-prayer .form_wrapper .sub-headline { 
+        width: 100%;
+    }
+}
+.michael-prayer .form_wrapper .sub-headline p {
+    margin-bottom: 0px;
+    padding: 10px 0px;
+    color: #1b1b1b;
+    font-size: 20px;
+    font-weight: 400;
+    text-align: center;
+}
+
+@media (max-width: 1020px) {
+    .form_wrapper {
+        max-width:  100%;
+    }
+}
+
+.topic-img-wrapper {
+    text-align: center;
+}
+
+.topic-img-wrapper img {
+    width: 100%;
+    max-width: 500px;
+}
+
+.submit-form-wrapper {
+    width: 100%;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+form > * {
+    margin-bottom: 10px;
+}
+
+.prayer-list {
+    max-height: 700px;
+    overflow-y: scroll;
+}
+
+.prayer-item img {
+    border-radius: 50px;
+    max-width: 70px;
+    height: 70px;
+}
+
+.prayer-count {
+    color: #ab1449;
+}
+
+
+.loader {
+    margin: 60px auto;
+    font-size: 10px;
+    position: relative;
+    text-indent: -9999em;
+    border-top: 1.1em solid rgba(128,0,64, 0.2);
+    border-right: 1.1em solid rgba(128,0,64, 0.2);
+    border-bottom: 1.1em solid rgba(128,0,64, 0.2);
+    border-left: 1.1em solid #800040;
+    -webkit-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-animation: load8 1.1s infinite linear;
+    animation: load8 1.1s infinite linear;
+}
+
+@keyframes load8 {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+.loader, .loader:after {
+    border-radius: 50%;
+    width: 10em;
+    height: 10em;
+}
+
+.request-form{
+    display: block;
+    transition: height 2s;
+}
+.request-form.minimize {
+    height: 0px;
+    display: none;
+}
+
+.fixed-bottom {
+    box-shadow: 1px 1px 18px 0 rgb(0 0 0 / 15%)
+}
+
+.btn-post-msg {
+    background-image: linear-gradient(to top, #ff7e02 15%, #ffd015 51%);
+    border: none;
+    font-size: 1.1rem;
+    color: #ab1449;
+    font-weight: 700;
+    border-radius: 12px;
+    padding: 12px 60px;
+}
+
+@media (max-width: 600px){
+    .btn-post-msg {
+        padding: 15px 42px;
+    }
+}
+
+@media (max-width: 1020px){
+    .btn-post-msg {
+        padding: 12px 38px;
+    }
+}
+
+::-webkit-scrollbar {
+    height: 12px;
+    width: 5px;
+    background: #eee;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #999;
+    -webkit-border-radius: 1ex;
+    -webkit-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.75);
+}
+
+::-webkit-scrollbar-corner {
+    background: #eee;
+}
+
+
+.footer {
+    background: rgba(00, 204, 255, .5);
+    color: #333333;
+    font-family: "Montserrat", Sans-serif;
+    font-weight: 400;
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+    position: relative;
+    
+}
+
+@media (max-width: 767px){
+    .footer {
+        padding-bottom: 5rem!important;
+    }
+}
+
+.footer-over {
+    background-image: url(https://angelgraceblessing.com/wp-content/uploads/2022/07/new_sky.webp);
+    opacity: 0.5;
+    transition: background 0.3s, border-radius 0.3s, opacity 0.3s;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+}
+
+.footer .nav ul {
+    list-style: none;
+    display: flex;
+}
+@media (max-width: 600px){
+    .footer .nav ul {
+        display: block;
+    }
+    .footer .nav ul li {
+        display: block;
+    }
+}
+.footer .nav ul li {
+    display: flex;
+
+}
+
+.footer .nav ul li::hover {
+    text-decoration: underline;
+}
+
+.footer .nav ul li a {
+    padding: 15px 30px;
+    text-decoration: none; 
+    color: black;
+    font-size: 16px;   
+}
+
+.footer .nav ul li a::hover {
+    text-decoration: none;
+}
+
+.copyright {
+    font-size: 16px;   
+}
+.footer-desc {
+    font-size: 12px;
+}
+
+
+/*oracle card*/
+
+.card-wrapper {
+    min-height: 500px;
+}
+
+.deck {
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+    padding: 3rem 11rem 5rem 0rem;
+}
+
+.card_main {
+    position: relative;
+}
+
+.card_main img {
+    position: absolute;
+    max-width: fit-content;
+    transition: top 1s ease 0s;
+    max-height: 400px;
+    transition: top 0.5s ease 0s;
+}
+
+
+.deck .card-0 {
+    transform: rotate(-16deg);
+    top: 125px;
+}
+
+.deck .card-1 {
+    transform: rotate(-14deg);
+    top: 90px;
+}
+
+.deck .card-2 {
+    transform: rotate(-12deg);
+    top: 60px;
+}
+
+.deck .card-3 {
+    transform: rotate(-10deg);
+    top: 30px;
+}
+
+.deck .card-4 {
+    transform: rotate(-8deg);
+    top: 10px;
+}
+
+.deck .card-5 {
+    transform: rotate(-6deg);
+    top: 6px;
+}
+
+.deck .card-6 {
+    transform: rotate(4deg);
+    top: -5px;
+}
+
+.deck .card-7 {
+    transform: rotate(8deg);
+    top: 0;
+}
+
+.deck .card-8 {
+    transform: rotate(10deg);
+    top: 20px;
+}
+
+.deck .card-9 {
+    transform: rotate(12deg);
+    top: 45px;
+}
+
+.deck .card-10 {
+    transform: rotate(14deg);
+    top: 66px;
+}
+
+.deck .card-11 {
+    transform: rotate(16deg);
+    top: 93px;
+}
+
+@media (max-width: 768px){
+   .deck .card-0, .deck .card-1, .deck .card-2, .deck .card-3, .deck .card-4, .deck .card-5, .deck .card-6, .deck .card-7, .deck .card-8, .deck .card-9, .deck .card-10, .deck .card-11 {
+        transform: none;
+        top: 0;
+        transition: top 1s ease 0s;
+    } 
+}
+
+.card_main:hover img {
+    top: -25px;
+}
+
+
+.btn-send, .btn-read-message {
+    font-size: 20px;
+    text-transform: uppercase;
+    fill: #58380f;
+    color: #58380f;
+    background-color: #FEBA3B;
+    border-radius: 15px 15px;
+    font-weight: 600;
+    border: 1px solid #FEBA3B;
+    border-radius: 10px;
+    padding: 1rem 2rem;
+    -webkit-box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 45%);
+    box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 45%);
+}
+
+.btn-read {
+    cursor: pointer;
+} 
+
+.btn-send:hover, .btn-send:active, .btn-send:focus {
+    border: 2px solid white;
+    color: white;
+    background-color: transparent;
+}
+
+.google-ads-place {
+    padding:  10px;
+    text-align: center;
+}
+
+
+.paginate_button {
+    padding: 5px 10px;
+    cursor: pointer;
+}
+.paginate_button.current{
+    color: red;
+}
+
+/*our-lord-message page*/
+.read-today-img {
+    background-image: url(../img/new_sky.webp);
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+}
+
+
+
+/* Hear your angels page */
+
+.hear-your-angel .container {
+    max-width: 1140px;
+}
+.bx-desn {
+    box-shadow: 0 0 8px #fff;
+    background-color: white;
+    /*background: #ffffff1f;*/
+    border-radius: 20px;
+    border: 1px solid #483c3c38;
+}
+
+h3.magic-bx-heading {
+    font-size: 32px;
+    text-align: center;
+    line-height: 2.2;
+    color: #fdfdfd;
+    text-shadow: 3px 1px 1px #a71367ba;
+    font-weight: 400;
+    font-family: 'Montserrat', sans-serif;
+    background: #c43185;
+    box-shadow: 0 2px 8px #000;
+    margin: auto 20px;
+    border-radius: 10px;
+    border: 3px solid #fff;
+    text-transform: capitalize;
+}
+
+p.magic-bx-sbheading {
+    font-size: 21px;
+    text-align: center;
+    line-height: 2;
+    font-family: 'Montserrat', sans-serif;
+    color: #1f013cd6;
+    padding: 20px;
+    font-weight: 500;
+}
+.wing-box {
+    animation: fly 3s ease-in infinite;
+}
+
+.wing-img {
+    width: 100%;
+    max-width: 550px;
+    display: block;
+    margin: auto;
+}
+.send-btn {
+    max-width: 430px;
+    width: 100%;
+    display: block;
+    margin: auto;
+    text-align: center;
+    background-color: #c43185;
+    padding: 17px 10px;
+    color: #fff;
+    border-radius: 9px;
+    text-transform: capitalize;
+    font-size: 20px;
+    border: 3px solid #ef55ad;
+    cursor: pointer;
+}
+/*------------end hire angel number*/
+
+.main.angel-number-v2 .title {
+    color: rgba(00, 204, 255);
+}
+
+.main.angel-number-v2 .title p {
+    font-size: 18px;
+}
+
+.main.angel-number-v2 .container{
+    max-width: 1140px;
+}
+
+.main.angel-number-v2 .tarot-spread {
+    display: block;
+    position: relative;
+    width: 100%;
+    max-width: 300px;
+    margin: auto;
+    opacity: .7;
+}
+
+.step {
+    background: #b7117a;
+    color: #fff;
+    padding: 2px 5px;
+    border-radius: 2px;
+    font-size: 14px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.font-18 {
+    font-size: 18px;
+}
+
+.main.angel-number-v2 nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+
+    border-bottom: 1px solid #e8e8e8;
+    background: #f8f8f8;
+    box-shadow: 0 5px 15px rgb(0 0 0 / 5%);
+    border-radius: 5px;
+}
+
+.main.angel-number-v2 nav .nav {
+    width:  100%;
+}
+.main.angel-number-v2 nav .nav-link {
+    color: #636363 !important;
+    font-family: 'Montserrat',sans-serif;
+    font-weight: 700;
+    font-size: 1.2em;
+
+    flex-basis: 0;
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    text-align: center;
+    border-radius: 5px;
+
+    display: block;
+    padding: 0.5rem 1rem;
+    color: #0d6efd;
+    text-decoration: none;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out;
+}
+
+.main.angel-number-v2 nav .nav-link:hover,
+.main.angel-number-v2 nav .nav-link.active {
+    background: rgba(00, 204, 255);
+    color: #fff !important;
+    transition: .4s;
+    cursor: pointer;
+}
+
+.main.angel-number-v2  .number {
+    padding: 0.5em 1em;
+    background: rgba(00, 204, 255);
+    color: #fff;
+    font-family: 'Montserrat',sans-serif;
+    font-weight: 700;
+    border-radius: 5px;
+    margin: 19px;
+    width: 20%;
+    display: inline-block;
+    text-align: center;
+    box-shadow: 0 0 20px rgb(199 30 255 / 50%);
+}
+
+.main.angel-number-v2 .number, 
+.main.angel-number-v2 .number:focus, 
+.main.angel-number-v2 .number:hover, 
+.main.angel-number-v2 .number:visited {
+    text-decoration: none;
+}
+
+.main.angel-number-v2  .number:hover {
+    background: #b7118a;
+    color: #fff;
+    transition: .4s;
+    -webkit-transition: .4s;
+    box-shadow: 0 0 15px rgb(183 16 138 / 75%);
+}
+
+.angel-number-btn, .hear-your-angel-btn {
+   cursor: pointer;
+}
+
+
+/* Prayer quiz */
+
+.love-quiz .main {
+    background-image: url(../img/Love-qn-tarot-bg.jpeg);
+    background-position: 50% 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.love-quiz .quiz-btn, .earthly-message-btn {
+    margin: 0 8px ;
+    text-decoration: none;
+}
+
+.love-quiz .quiz-btn .flip-container, .earthly-message-btn .flip-container{
+    background:white;
+}
+
+.love-quiz .quiz-btn .flip-container img, .earthly-message-btn .flip-container img {
+    margin:0;
+    width: 100%;
+}
+
+.love-quiz .quiz-btn .flip-box-title, .earthly-message-btn .flip-box-title{
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    height: 65px;
+    padding-right: 15px;
+    padding-left: 15px;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    grid-auto-columns: 1fr;
+    -ms-grid-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    -ms-grid-rows: auto auto;
+    grid-template-rows: auto auto;
+    text-align: center;
+    text-decoration: none;
+    color: #000;
+    font-size: 20px;
+    line-height: 1.2;
+    font-weight: 800;
+    text-align: center;
+}
+
+.love-quiz .quiz-btn:hover .flip-container, .earthly-message-btn:hover .flip-container {
+    background: rgba(00, 204, 255);
+}
+
+
+/* Tarot Card page */
+.love-quiz.tarot-page .select-card {
+    transform-style: preserve-3d; 
+    filter: saturate(100%);
+    width: 100%;
+}
+
+
+.love-quiz.tarot-page h1 {
+    margin-top: 0px;
+    font-family: Merriweather, serif;
+    color: #fff;
+    font-size: 70px;
+    line-height: 1.2;
+    text-align: center;
+    text-shadow: none;
+}
+
+.love-quiz.tarot-page h2 {
+    margin-top: 0px;
+    font-family: Merriweather, serif;
+    color: #fff;
+    font-size: 40px;
+    line-height: 1.2;
+    text-align: center;
+    text-shadow: none;
+}
+
+
+/* Mother Mary Message */
+.mother-mary-message {
+    font-family: Lora, serif;
+}
+
+.mother-mary-message p {
+    font-size: 20px;
+}
+
+.mother-mary-message .image img {
+    height: 280px;
+    transition: all .2s ease-in-out;
+}
+
+.mother-mary-message .image img:hover {
+/*     transform: scale(1.2);*/
+}
+
+.mother-mary-message .message-intro {
+    padding: 60px 0;
+    background: #85d3ff;
+}
+
+.mother-mary-message .message-intro .image {
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.mother-mary-message .message-intro .intro .btn {
+    text-transform: uppercase;
+}
+
+.mother-mary-message .btn-rev {
+    padding: 16px 40px;
+    border-radius: 50px;
+    border: none;
+    color: #fff;
+    font-size: 20px;
+} 
+
+.mother-mary-message .angels-category {
+    padding: 60px 0;
+}
+
+.mother-mary-message h3, .mother-mary-message h4 {
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.mother-mary-message .angels-category .angels {
+    max-width: 870px;
+    padding: 20px 0;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.mother-mary-message .angel-icon, .horoscope-icon, .buddha-icon {
+    width: 200px;
+    padding: 0 10px;
+    display: inline;
+    margin-bottom: 20px;
+    transition: all .2s ease-in-out;
+}
+
+
+
+a.archangel-post-btn:hover .angel-icon, 
+a.horoscope-btn:hover .horoscope-icon,
+a.horoscope-sense:hover .horoscope-icon,
+a.buddha-wisdom-btn:hover .buddha-icon {
+    transform: scale(1.2);
+}
+
+.mother-mary-message .popular-article {
+    background: #6495ed;
+    padding: 60px 0;
+}
+.mother-mary-message .popular-article h3 {
+    color: white;
+}
+.mother-mary-message .popular-article .col-md-4 .box {
+    height: 100%;
+}
+.mother-mary-message .popular-article .col-md-4 .box .image {
+    padding: 10px;
+    background: #fff;
+    border-radius: 4px 4px 0 0;
+}
+
+.mother-mary-message .popular-article .col-md-4 .box .text {
+    background-color: #01BEF0;
+    padding: 10px;
+    border-radius: 0 0 4px 4px;
+}
+.mother-mary-message .popular-article .col-md-4 .box .text a {
+    color: white;
+    text-decoration: none;
+}
+
+
+/*horoscope*/
+.daily-horoscope-description label.form-label {
+    min-width: 130px;
+    font-weight: 500;
+}
+
+.horoscope-detail-wrapper {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media(min-width: 576px){
+    .horoscope-detail-wrapper {
+        width: 100%;
+    }
+}
+
+.click-here-wrapper {
+    background-color: #ebecff;
+    border-radius: 0.5em;
+    padding: 0.3em;
+}
+
+.click-here-wrapper  p {
+    font-style: normal;
+    font-weight: 400;
+    /* font-size: 18px; */
+    /* line-height: 23px; */
+    display: flex;
+    align-items: center;
+    color: #51596b;
+}
+
+#click-here-btn {
+    /* background: linear-gradient(63.09deg, #5c31f6 -8.38%, #6169f6 39.09%, #bf8cfe 90.68%); */
+    background: rgba(91, 97, 207, 0.9);
+    border-radius: 6px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 19px;
+    color: #fff !important;
+    padding: 11px 21px;
+    display: inline-block;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+.side-horoscopes {
+    max-width: 500px;
+    background-color: #ebecff;
+    border-radius: 0.5em;
+}
+.side-horoscopes .horoscope-icon{
+    width: 150px;
+}
+
+
+/* chakra affirmation page */
+.chakra-main {
+    text-align: center;
+    max-width: 600px;
+    margin: 50px auto;
+    position: relative;
+}
+.chakra-main .main-img {
+    
+    width: 100%;
+    height: auto;
+    margin-top: 80px;
+    margin-bottom: 80px;
+}
+
+/*@media(max-width: 576px){
+    .chakra-main {
+        height: 500px;
+        width: 500px;
+    }
+}*/
+.chakra-img-wrapper {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%,0);
+}
+.chakra-item-img {
+    width: 100px;
+    height: 100px;
+    margin: 5px 0;
+    transition: all .2s ease-in-out;
+}
+
+@media(max-width: 576px){ 
+    .chakra-item-img {
+        width: 67px;
+        height: 67px;
+        margin: 2px 0;
+    }
+}
+
+.chakra-item-img-wrapper {
+    cursor: pointer;
+    display: block;
+}
+
+.chakra-item-img-wrapper:hover .chakra-item-img {
+    transform: scale(1.1);
+}
+
+/* Earthly angel message */
+.earthly-angel-message .container .btn-wrapper {
+    margin: 0 auto;
+    max-width: 1100px;
+}
+
+.earthly-angel-message .container .my-message-wrapper {
+    margin: 0 auto;
+    max-width: 800px;
+    border: 1px solid #333;
+    border-radius: 10px;
+    padding: 50px 30px;
+} 
+.earthly-angel-message .container .my-message-wrapper p {
+    white-space: pre-wrap;
+}
+
+.earthly-angel-message .container .my-message-wrapper .btn {
+   background-color: #01BEF0;
+   border-color: #01BEF0;
+}
+
+.earthly-angel-message .container .my-message-wrapper .btn:hover {
+
+}
+
+/* Chakra stone reading page */
+@media(max-width: 576px){
+    .chakra-stone .heading h1 {
+        font-size: 35px;
+    }
+}
+.chakra-stone-wrapper {
+    width: fit-content;
+    margin: 0 auto;
+}
+.chakra-stone-list-item {
+    align-items: center;
+}
+
+.chakra-stone-header .chakra-stone-header-img {
+    height: 120px;
+    width: auto;
+}
+
+@media(max-width: 576px){ 
+    .chakra-stone-header .chakra-stone-header-img {
+        height: 80px;
+    }
+}
+
+.chakra-stone-content {
+    margin-bottom: 10px;
+    margin-left: 10px;
+}
+.chakra-stone-content h3 {
+    margin-bottom: 0;
+}
+@media(max-width: 576px){ 
+    .chakra-stone-content {
+        margin-left: 5px;
+    }
+    .chakra-stone-content h3 {
+        font-size: 18px;
+    }
+}
+.chakra-stone-item .chakra-stone-name {
+    color: #333;
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 1px;
+    transition: .3s;
+}
+@media(max-width: 576px){  
+    .chakra-stone-item .chakra-stone-name {
+        font-size: 12px;
+    }
+}
+
+.chakra-stone-item:hover .chakra-stone-name {
+    color: red;
+}
+
+.chakra-stone-item .chakra-stone-img {
+    height: 80px;
+    width: auto;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    transition: .3s;
+}
+@media(max-width: 576px){ 
+    .chakra-stone-item .chakra-stone-img {
+        height: 50px;
+    }
+}
+
+.chakra-stone-item:hover .chakra-stone-img {
+    /* box-shadow */
+    -webkit-box-shadow: rgba(0,0,0,0.8) 0px 0 10px;
+    -moz-box-shadow: rgba(0,0,0,0.8) 0 0 10px;
+    box-shadow: rgba(0,0,0,0.8) 0 0 10px;
+}
+
+
+/*Ten commandment*/
+
+@media (min-width: 576px){
+    .ten-commandment .container,.ten-commandment  .container-sm {
+        width: 100%;
+        max-width: unset;
+    }
+}
+
+.main.ten-commandment{
+/*    background-image: url(../img/stone-parten.webp);*/
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    /*min-height: 100vh;*/
+}
+
+.main-content {
+    position: relative;
+    background-image: url(../img/red-stone.png);
+    background-size: contain;
+    background-position: top;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 500px;
+    margin: 0 auto;
+}
+
+
+.stone-img {
+    width: 1000px;
+}
+
+.text-msg-wrapper {
+   display: flex;
+   justify-content: center;
+   padding-top: 60px;
+   max-width: 670px;
+   margin: 0 auto;
+   text-align: left;
+}
+
+ul.text-msgs {
+    columns: 2;
+    column-gap: 50px;
+    list-style-type: upper-roman;
+    color: lightgray;
+    font-size: 22px;
+}
+
+.post-link {
+    font-size: 22px;
+    color: lightgray;
+    text-decoration: none !important;
+}
+
+.post-link:hover {
+    color: white;
+}
+
+@media (max-width: 987px){
+    .text-msg-wrapper {
+        max-width: 500px;
+    }
+    ul.text-msgs, .post-link {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 576px){
+    .main-content {
+        background-image: url(../img/red-stone-hori.png);
+        height: 700px;
+    }
+    ul.text-msgs {
+        columns: 1;
+        column-gap: 0px;
+    }
+
+    .text-msg-wrapper {
+        max-width: 280px;
+       
+    }
+
+    ul.text-msgs, .post-link{
+         font-size: 18px;
+    }
+}
+
+
+/* Tarot Card page */
+.tarot-card .card-wrapper {
+    margin: 20px auto;
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    padding: 3rem 9rem 3rem 0rem;
+    min-height: 700px;
+}
+
+.tarot-card .tarot-card-item {
+    position: relative;
+    height: fit-content;
+}
+
+.tarot-card-item-0, .tarot-card-item-6 {
+    margin-top: 300px;
+}
+.tarot-card-item-1, .tarot-card-item-5 {
+    margin-top: 200px;
+}
+.tarot-card-item-2, .tarot-card-item-4 {
+    margin-top: 100px;
+}
+
+.tarot-card-item img {
+    width: fit-content;
+    max-width: 200px;
+    transition: all .2s ease-in-out;
+    position: absolute;
+}
+
+@media (max-width: 768px){
+    .tarot-card-item img {
+        max-width: 150px;
+    }
+    .tarot-cards .card-wrapper {
+        min-height: 600px;
+    }
+}
+
+@media (max-width: 576px){
+    .tarot-card-item img {
+        max-width: 100px;
+    }
+    .tarot-card .card-wrapper {
+        min-height: 500px;
+    }
+}
+
+.tarot-card .tarot-card-item img:hover {
+   transform: scale(1.1);
+}
+
+.daily-bible-btn {
+    cursor: pointer;
+}
+.thomas-edison-btn img,
+.daily-bible-btn {
+    transition: all .2s ease-in-out;
+}
+
+.thomas-edison-btn img:hover,
+.daily-bible-btn:hover {
+   transform: scale(1.1);
+}
+
+.animal-reading-page .main-wrapper {
+    background-image: url('../img/animalls/bg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-bottom: 50px;
+}
+
+.animal-reading-page .animal-main-wrapper {
+    max-width: 800px;
+    margin-top: 20px;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 40px;
+    background-color: #fff;
+}
+
+.animal-reading-page .animal-main-wrapper .animall-img {
+    max-height: 500px;
+}
+
+.animal-reading-page .animal-description {
+    margin-top: 30px;
+}
+.animal-reading-page .animal-description h4.title {
+    text-align: center;
+}
+
+.animal-reading-page .animal-description h5.sub-title {
+    font-size: 18px;
+}
+
+.animal-reading-page .card-wrapper {
+    max-width: 800px;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.animal-reading-page .card-wrapper .card-item-wrapper {
+    text-align: center;
+}
+
+.animal-reading-page .card-wrapper .card-item-wrapper img {
+    width: 100%;
+    height: auto;
+    transition: all .2s ease-in-out;
+}
+
+.animal-reading-page .card-wrapper .card-item-wrapper a:hover img {
+    transform: scale(1.1);
+}
+
+.animal-insect-card {
+    position: relative;
+}
+
+.animal-insect-card img {
+    position: absolute;
+    max-width: fit-content;
+    transition: top 1s ease 0s;
+    max-height: 400px;
+    transition: top 0.5s ease 0s;
+}
+
+.animal-insect-card:hover img {
+    top: -25px;
+}
+
+.angel-stop-sign-page .title-wrapper {
+    background-image: url('../img/angel-stop-sign-bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+}
+
+.angel-stop-sign-page .title-wrapper h1,
+.surrender-to-god-page .title-wrapper h1,
+.mother-mary-appreciation-page .title-wrapper h1 {
+    font-size: 80px;
+    color: tomato;
+}
+
+.angel-stop-sign-page .title-wrapper h2,
+.surrender-to-god-page .title-wrapper h2,
+.mother-mary-appreciation-page .title-wrapper h2 {
+    font-size: 40px;
+    color: mediumorchid;
+}
+
+.angel-stop-sign-page .card-wrapper,
+.surrender-to-god-page .card-wrapper,
+.mother-mary-appreciation-page .card-wrapper {
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.angel-stop-sign-page .card-wrapper .angel-stop-card-item,
+.surrender-to-god-page .card-wrapper .surrender-card-item,
+.mother-mary-appreciation-page .card-wrapper .mother-mary-card-item {
+    display: block;
+   
+}
+
+.angel-stop-sign-page .card-wrapper .angel-stop-card-item img,
+.surrender-to-god-page .card-wrapper .surrender-card-item img,
+.mother-mary-appreciation-page .card-wrapper .mother-mary-card-item img {
+    width: 100%;
+    height: 100%;
+    transition: all .2s ease-in-out;
+}
+
+.angel-stop-sign-page .card-wrapper .angel-stop-card-item:hover img,
+.surrender-to-god-page .card-wrapper .surrender-card-item:hover img,
+.mother-mary-appreciation-page .card-wrapper .mother-mary-card-item:hover img {
+    transform: scale(1.1);
+}
+
+
+.surrender-to-god-page .title-wrapper {
+    background-image: url('../img/surrender-to-god.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    color: white;
+    background-position: center;
+}
+
+.fortune-cookie-page .fortune-cookie-btn img {
+    transition: all .2s ease-in-out;
+    width: 100%;
+}
+.fortune-cookie-page .fortune-cookie-btn:hover img {
+    transform: scale(1.2);
+}
