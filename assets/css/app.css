@@ -1404,14 +1404,13 @@ ul.text-msgs {
     margin-left: auto;
     margin-right: auto;
 }
-
+.card-item,
 .angel-stop-sign-page .card-wrapper .angel-stop-card-item,
 .surrender-to-god-page .card-wrapper .surrender-card-item,
 .mother-mary-appreciation-page .card-wrapper .mother-mary-card-item {
     display: block;
-   
 }
-
+.card-item img,
 .angel-stop-sign-page .card-wrapper .angel-stop-card-item img,
 .surrender-to-god-page .card-wrapper .surrender-card-item img,
 .mother-mary-appreciation-page .card-wrapper .mother-mary-card-item img {
@@ -1419,7 +1418,7 @@ ul.text-msgs {
     height: 100%;
     transition: all .2s ease-in-out;
 }
-
+.card-item:hover img,
 .angel-stop-sign-page .card-wrapper .angel-stop-card-item:hover img,
 .surrender-to-god-page .card-wrapper .surrender-card-item:hover img,
 .mother-mary-appreciation-page .card-wrapper .mother-mary-card-item:hover img {

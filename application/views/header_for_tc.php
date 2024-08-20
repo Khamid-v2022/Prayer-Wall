@@ -79,14 +79,16 @@
         <li class="nav-item dropdown <?=$title=='Angel Number' 
         || $title=='Hear Your Angels' 
         || $title=='Angel Stop Sign'
+        || $title=='Angel Welcoming Sign'
         ? 'active':''?>">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown3" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Hear Your Angels
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown3">
             <li><a class="dropdown-item <?=$title=='Hear Your Angels'?'active':''?>" href="https://angelgraceblessing.com/pray/hear-your-angels">Hear Your Angels</a></li>
-            <li ><a class="dropdown-item <?=$title=='Angel Number'?'active':''?>" href="https://angelgraceblessing.com/pray/angel-number-v2">Angel Numbers</a></li>
-            <li ><a class="dropdown-item <?=$title=='Angel Stop Sign'?'active':''?>" href="https://angelgraceblessing.com/pray/angel-stop-sign">Angel Stop Sign</a></li>
+            <li><a class="dropdown-item <?=$title=='Angel Number'?'active':''?>" href="https://angelgraceblessing.com/pray/angel-number-v2">Angel Numbers</a></li>
+            <li><a class="dropdown-item <?=$title=='Angel Stop Sign'?'active':''?>" href="https://angelgraceblessing.com/pray/angel-stop-sign">Angel Stop Sign</a></li>
+            <li><a class="dropdown-item <?=$title=='Angel Welcoming Sign'?'active':''?>" href="https://angelgraceblessing.com/pray/angel-welcoming-sign">Angel Welcoming Sign</a></li>
           </ul>
         </li>   
 
@@ -196,6 +198,9 @@
             </li>
             <li class="nav-item <?=$title=='Angel Stop Sign'?'active':''?>">
               <a class="nav-link" href="https://angelgraceblessing.com/pray/angel-stop-sign">Angel Stop Sign</a>
+            </li>
+            <li class="nav-item <?=$title=='Angel Welcoming Sign'?'active':''?>">
+              <a class="nav-link" href="https://angelgraceblessing.com/pray/angel-welcoming-sign">Angel Welcoming Sign</a>
             </li>
             <li class="nav-item <?=$title=='Chakra Affirmation'?'active':''?>">
               <a class="nav-link" href="https://angelgraceblessing.com/pray/chakra-affirmations">Chakra Affirmation</a>

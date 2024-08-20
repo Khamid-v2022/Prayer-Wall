@@ -173,6 +173,12 @@ $(function() {
         var _url = site_url + "HelenKellerWisdom/random_article";
         location.href = _url;
     })
+
+    $(".welcoming-sign-card-item").on('click', function(){
+        var _url = site_url + "AngelWelcomingSign/random_article";
+        location.href = _url;
+    })
+    
     
 });
 
