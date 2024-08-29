@@ -20,29 +20,29 @@
                 </div>
                 <div class="chakra-stone-wrapper">
                     <!-- CROWN -->
-                    <div class="chakra-stone-list-item d-flex" data-stone_category="Crown-Chakra-Stones">
+                    <div class="chakra-stone-list-item d-flex" data-stone_category="Crown Chakra Stones">
                         <div class="chakra-stone-header">
-                            <img class="chakra-stone-header-img" src="<?=base_url()?>assets/img/chakra-stone/crown-chakra.png">
+                            <img class="chakra-stone-header-img" src="<?=base_url()?>pray/assets/img/chakra-stone/crown-chakra.png">
                         </div>
                         <div class="chakra-stone-content">
                             <h3 style="color: #6c02e9">CROWN CHAKRA</h3>
                             <div class="chakra-stones d-flex">
-                                <a href="javascript:;" class="chakra-stone-item text-center mx-1">
+                                <a href="https://angelgraceblessing.com/the-chakra-stone-amethyst/" class="chakra-stone-item text-center mx-1">
                                     <label class="form-label chakra-stone-name">Amethyst</label>
                                     <div>
-                                        <img class="chakra-stone-img" src="<?=base_url()?>assets/img/chakra-stone/crown-chakra-Amethyst-stone.png">
+                                        <img class="chakra-stone-img" src="<?=base_url()?>pray/assets/img/chakra-stone/crown-chakra-Amethyst-stone.png">
                                     </div>
                                 </a>
-                                <a href="javascript:;" class="chakra-stone-item text-center mx-1">
+                                <a href="https://angelgraceblessing.com/the-chakra-stone-clear-quartz/" class="chakra-stone-item text-center mx-1">
                                     <label class="form-label chakra-stone-name">Clear Quartz</label>
                                     <div>
-                                        <img class="chakra-stone-img" src="<?=base_url()?>assets/img/chakra-stone/crown-chakra-Clear-Quartz-stone.png">
+                                        <img class="chakra-stone-img" src="<?=base_url()?>pray/assets/img/chakra-stone/crown-chakra-Clear-Quartz-stone.png">
                                     </div>
                                 </a>
-                                <a href="javascript:;" class="chakra-stone-item text-center mx-1">
+                                <a href="https://angelgraceblessing.com/the-chakra-stone-moonstone/" class="chakra-stone-item text-center mx-1">
                                     <label class="form-label chakra-stone-name">Moonstone</label>
                                     <div>
-                                        <img class="chakra-stone-img" src="<?=base_url()?>assets/img/chakra-stone/crown-chakra-Moonstone-stone.png">
+                                        <img class="chakra-stone-img" src="<?=base_url()?>pray/assets/img/chakra-stone/crown-chakra-Moonstone-stone.png">
                                     </div>
                                 </a>
                             </div>
@@ -52,27 +52,27 @@
                     <!-- THIRD EYE -->
                     <div class="chakra-stone-list-item d-flex" data-stone_category="Third Eye Chakra Stones">
                         <div class="chakra-stone-header">
-                            <img class="chakra-stone-header-img" src="<?=base_url()?>assets/img/chakra-stone/third-eye-chakra.png">
+                            <img class="chakra-stone-header-img" src="<?=base_url()?>pray/assets/img/chakra-stone/third-eye-chakra.png">
                         </div>
                         <div class="chakra-stone-content">
                             <h3 style="color:#0a02e9">THIRD EYE CHAKRA</h3>
                             <div class="chakra-stones d-flex">
-                                <a href="javascript:;" class="chakra-stone-item text-center mx-1">
+                                <a href="https://angelgraceblessing.com/lapis-lazuli-the-third-eye-chakra-stone-for-self-discovery-and-inner-peace/" class="chakra-stone-item text-center mx-1">
                                     <label class="form-label chakra-stone-name">Lapis Lazuli</label>
                                     <div>
-                                        <img class="chakra-stone-img" src="<?=base_url()?>assets/img/chakra-stone/third-eye-chakra-Lapis-Lazuli-stone.png">
+                                        <img class="chakra-stone-img" src="<?=base_url()?>pray/assets/img/chakra-stone/third-eye-chakra-Lapis-Lazuli-stone.png">
                                     </div>
                                 </a>
-                                <a href="javascript:;" class="chakra-stone-item text-center mx-1">
+                                <a href="https://angelgraceblessing.com/sodalite-the-third-eye-chakra-stone-for-improved-intuition-and-self-awareness/" class="chakra-stone-item text-center mx-1">
                                     <label class="form-label chakra-stone-name">Sodalite</label>
                                     <div>
-                                        <img class="chakra-stone-img" src="<?=base_url()?>assets/img/chakra-stone/third-eye-chakra-sodalite-stone.png">
+                                        <img class="chakra-stone-img" src="<?=base_url()?>pray/assets/img/chakra-stone/third-eye-chakra-sodalite-stone.png">
                                     </div>
                                 </a>
-                                <a href="javascript:;" class="chakra-stone-item text-center mx-1">
+                                <a href="https://angelgraceblessing.com/azurite-the-third-eye-chakra-stone-for-intuition-and-spiritual-growth/" class="chakra-stone-item text-center mx-1">
                                     <label class="form-label chakra-stone-name">Azurite</label>
                                     <div>
-                                        <img class="chakra-stone-img" src="<?=base_url()?>assets/img/chakra-stone/third-eye-Azurite-stone.png">
+                                        <img class="chakra-stone-img" src="<?=base_url()?>pray/assets/img/chakra-stone/third-eye-Azurite-stone.png">
                                     </div>
                                 </a>
                             </div>
@@ -82,27 +82,27 @@
                     <!-- THROAT -->
                     <div class="chakra-stone-list-item d-flex" data-stone_category="Throat Chakra Stones">
                         <div class="chakra-stone-header">
-                            <img class="chakra-stone-header-img" src="<?=base_url()?>assets/img/chakra-stone/throat-chakra.png">
+                            <img class="chakra-stone-header-img" src="<?=base_url()?>pray/assets/img/chakra-stone/throat-chakra.png">
                         </div>
                         <div class="chakra-stone-content">
                             <h3 style="color:#02a8e9">THROAT CHAKRA</h3>
                             <div class="chakra-stones d-flex">
-                                <a href="javascript:;" class="chakra-stone-item text-center mx-1">
+                                <a href="https://angelgraceblessing.com/aquamarine-a-stone-for-the-throat-chakra/" class="chakra-stone-item text-center mx-1">
                                     <label class="form-label chakra-stone-name">Aquamarine</label>
                                     <div>
-                                        <img class="chakra-stone-img" src="<?=base_url()?>assets/img/chakra-stone/throat-chakra-aquamarine-stone.png">
+                                        <img class="chakra-stone-img" src="<?=base_url()?>pray/assets/img/chakra-stone/throat-chakra-aquamarine-stone.png">
                                     </div>
                                 </a>
-                                <a href="javascript:;" class="chakra-stone-item text-center mx-1">
+                                <a href="https://angelgraceblessing.com/blue-lace-agate-the-healing-stone-of-the-throat-chakra/" class="chakra-stone-item text-center mx-1">
                                     <label class="form-label chakra-stone-name">Blue Lace Agate</label>
                                     <div>
-                                        <img class="chakra-stone-img" src="<?=base_url()?>assets/img/chakra-stone/throat-chakra-blue-lace-agate-stone.png">
+                                        <img class="chakra-stone-img" src="<?=base_url()?>pray/assets/img/chakra-stone/throat-chakra-blue-lace-agate-stone.png">
                                     </div>
                                 </a>
-                                <a href="javascript:;" class="chakra-stone-item text-center mx-1">
+                                <a href="https://angelgraceblessing.com/turquoise-and-the-throat-chakra-the-stone-of-communication-and-self-expression/" class="chakra-stone-item text-center mx-1">
                                     <label class="form-label chakra-stone-name">Turquoise</label>
                                     <div>
-                                        <img class="chakra-stone-img" src="<?=base_url()?>assets/img/chakra-stone/throat-chakra-turquoise-stone.png">
+                                        <img class="chakra-stone-img" src="<?=base_url()?>pray/assets/img/chakra-stone/throat-chakra-turquoise-stone.png">
                                     </div>
                                 </a>
                             </div>
@@ -112,27 +112,27 @@
                     <!-- HEART -->
                     <div class="chakra-stone-list-item d-flex" data-stone_category="Heart Chakra Stones">
                         <div class="chakra-stone-header">
-                            <img class="chakra-stone-header-img" src="<?=base_url()?>assets/img/chakra-stone/heart-chakra.png">
+                            <img class="chakra-stone-header-img" src="<?=base_url()?>pray/assets/img/chakra-stone/heart-chakra.png">
                         </div>
                         <div class="chakra-stone-content">
                             <h3 style="color:#49e902">HEART CHAKRA</h3>
                             <div class="chakra-stones d-flex">
-                                <a href="javascript:;" class="chakra-stone-item text-center mx-1">
+                                <a href="https://angelgraceblessing.com/the-heart-chakra-stone-green-agate/" class="chakra-stone-item text-center mx-1">
                                     <label class="form-label chakra-stone-name">Green Agate</label>
                                     <div>
-                                        <img class="chakra-stone-img" src="<?=base_url()?>assets/img/chakra-stone/heart-chakra-green-agate-stone.png">
+                                        <img class="chakra-stone-img" src="<?=base_url()?>pray/assets/img/chakra-stone/heart-chakra-green-agate-stone.png">
                                     </div>
                                 </a>
-                                <a href="javascript:;" class="chakra-stone-item text-center mx-1">
+                                <a href="https://angelgraceblessing.com/the-heart-chakra-stone-rhodonite/" class="chakra-stone-item text-center mx-1">
                                     <label class="form-label chakra-stone-name">Rhodonite</label>
                                     <div>
-                                        <img class="chakra-stone-img" src="<?=base_url()?>assets/img/chakra-stone/heart-chakra-rhodonite-stone.png">
+                                        <img class="chakra-stone-img" src="<?=base_url()?>pray/assets/img/chakra-stone/heart-chakra-rhodonite-stone.png">
                                     </div>
                                 </a>
-                                <a href="javascript:;" class="chakra-stone-item text-center mx-1">
+                                <a href="https://angelgraceblessing.com/the-heart-chakra-stone-rose-quartz/" class="chakra-stone-item text-center mx-1">
                                     <label class="form-label chakra-stone-name">Rose Quartz</label>
                                     <div>
-                                        <img class="chakra-stone-img" src="<?=base_url()?>assets/img/chakra-stone/heart-chakra-rose-quartz-stone.png">
+                                        <img class="chakra-stone-img" src="<?=base_url()?>pray/assets/img/chakra-stone/heart-chakra-rose-quartz-stone.png">
                                     </div>
                                 </a>
                             </div>
@@ -142,27 +142,27 @@
                     <!-- SOLAR PLEXUS -->
                     <div class="chakra-stone-list-item d-flex" data-stone_category="Solar Plexus Chakra Stones">
                         <div class="chakra-stone-header">
-                            <img class="chakra-stone-header-img" src="<?=base_url()?>assets/img/chakra-stone/solar-plexus-chakra.png">
+                            <img class="chakra-stone-header-img" src="<?=base_url()?>pray/assets/img/chakra-stone/solar-plexus-chakra.png">
                         </div>
                         <div class="chakra-stone-content">
                             <h3 style="color:#e9dd02">SOLAR PLEXUS CHAKRA</h3>
                             <div class="chakra-stones d-flex">
-                                <a href="javascript:;" class="chakra-stone-item text-center mx-1">
+                                <a href="https://angelgraceblessing.com/the-radiant-and-refreshing-crystal-topaz/" class="chakra-stone-item text-center mx-1">
                                     <label class="form-label chakra-stone-name">Topaz</label>
                                     <div>
-                                        <img class="chakra-stone-img" src="<?=base_url()?>assets/img/chakra-stone/solar-plexus-chakra-Topaz-stone.png">
+                                        <img class="chakra-stone-img" src="<?=base_url()?>pray/assets/img/chakra-stone/solar-plexus-chakra-Topaz-stone.png">
                                     </div>
                                 </a>
-                                <a href="javascript:;" class="chakra-stone-item text-center mx-1">
+                                <a href="https://angelgraceblessing.com/the-bright-and-sunny-chakra-stone-citrine/" class="chakra-stone-item text-center mx-1">
                                     <label class="form-label chakra-stone-name">Citrine</label>
                                     <div>
-                                        <img class="chakra-stone-img" src="<?=base_url()?>assets/img/chakra-stone/solar-plexus-Citrine-stone.png">
+                                        <img class="chakra-stone-img" src="<?=base_url()?>pray/assets/img/chakra-stone/solar-plexus-Citrine-stone.png">
                                     </div>
                                 </a>
-                                <a href="javascript:;" class="chakra-stone-item text-center mx-1">
+                                <a href="https://angelgraceblessing.com/the-vibrant-and-rejuvenating-gemstone-heliolite/" class="chakra-stone-item text-center mx-1">
                                     <label class="form-label chakra-stone-name">Heliolite</label>
                                     <div>
-                                        <img class="chakra-stone-img" src="<?=base_url()?>assets/img/chakra-stone/solar-plexus-Heliolite-stone.png">
+                                        <img class="chakra-stone-img" src="<?=base_url()?>pray/assets/img/chakra-stone/solar-plexus-Heliolite-stone.png">
                                     </div>
                                 </a>
                             </div>
@@ -172,27 +172,27 @@
                     <!-- SACRAL -->
                     <div class="chakra-stone-list-item d-flex" data-stone_category="Sacral Chakra Stones">
                         <div class="chakra-stone-header">
-                            <img class="chakra-stone-header-img" src="<?=base_url()?>assets/img/chakra-stone/sacral-chakra.png">
+                            <img class="chakra-stone-header-img" src="<?=base_url()?>pray/assets/img/chakra-stone/sacral-chakra.png">
                         </div>
                         <div class="chakra-stone-content">
                             <h3 style="color:#e98a02">SACRAL CHAKRA</h3>
                             <div class="chakra-stones d-flex">
-                                <a href="javascript:;" class="chakra-stone-item text-center mx-1">
+                                <a href="https://angelgraceblessing.com/unlock-your-full-potential-with-garnet-spessartine/" class="chakra-stone-item text-center mx-1">
                                     <label class="form-label chakra-stone-name">Garnet Spessartine</label>
                                     <div>
-                                        <img class="chakra-stone-img" src="<?=base_url()?>assets/img/chakra-stone/sacral-chakra-Garnet-Spessartine-stone.png">
+                                        <img class="chakra-stone-img" src="<?=base_url()?>pray/assets/img/chakra-stone/sacral-chakra-Garnet-Spessartine-stone.png">
                                     </div>
                                 </a>
-                                <a href="javascript:;" class="chakra-stone-item text-center mx-1">
+                                <a href="https://angelgraceblessing.com/unlock-your-inner-creativity-and-emotional-balance-with-orange-carnelian/" class="chakra-stone-item text-center mx-1">
                                     <label class="form-label chakra-stone-name">Orange Carnelian</label>
                                     <div>
-                                        <img class="chakra-stone-img" src="<?=base_url()?>assets/img/chakra-stone/sacral-chakra-Orange-Carnelian-stone.png">
+                                        <img class="chakra-stone-img" src="<?=base_url()?>pray/assets/img/chakra-stone/sacral-chakra-Orange-Carnelian-stone.png">
                                     </div>
                                 </a>
-                                <a href="javascript:;" class="chakra-stone-item text-center mx-1">
+                                <a href="https://angelgraceblessing.com/unleash-your-inner-power-with-golden-tiger-eye/" class="chakra-stone-item text-center mx-1">
                                     <label class="form-label chakra-stone-name">Golden Tiger Eye</label>
                                     <div>
-                                        <img class="chakra-stone-img" src="<?=base_url()?>assets/img/chakra-stone/sacral-chakra-Golden-Tiger-Eye-stone.png">
+                                        <img class="chakra-stone-img" src="<?=base_url()?>pray/assets/img/chakra-stone/sacral-chakra-Golden-Tiger-Eye-stone.png">
                                     </div>
                                 </a>
                             </div>
@@ -202,27 +202,27 @@
                     <!-- ROOT -->
                     <div class="chakra-stone-list-item d-flex" data-stone_category="Root Chakra Stones">
                         <div class="chakra-stone-header">
-                            <img class="chakra-stone-header-img" src="<?=base_url()?>assets/img/chakra-stone/root-chakra.png">
+                            <img class="chakra-stone-header-img" src="<?=base_url()?>pray/assets/img/chakra-stone/root-chakra.png">
                         </div>
                         <div class="chakra-stone-content">
                             <h3 style="color:#e90206">ROOT CHAKRA</h3>
                             <div class="chakra-stones d-flex">
-                                <a href="javascript:;" class="chakra-stone-item text-center mx-1">
+                                <a href="https://angelgraceblessing.com/black-obsidian-the-stone-of-protection-and-healing/" class="chakra-stone-item text-center mx-1">
                                     <label class="form-label chakra-stone-name">Black Obsidian</label>
                                     <div>
-                                        <img class="chakra-stone-img" src="<?=base_url()?>assets/img/chakra-stone/root-chakra-Black-Obsidian-stone.png">
+                                        <img class="chakra-stone-img" src="<?=base_url()?>pray/assets/img/chakra-stone/root-chakra-Black-Obsidian-stone.png">
                                     </div>
                                 </a>
-                                <a href="javascript:;" class="chakra-stone-item text-center mx-1">
+                                <a href="https://angelgraceblessing.com/mahogany-obsidian-the-stone-for-balancing-and-grounding/" class="chakra-stone-item text-center mx-1">
                                     <label class="form-label chakra-stone-name">Mahogany Obsidian</label>
                                     <div>
-                                        <img class="chakra-stone-img" src="<?=base_url()?>assets/img/chakra-stone/root-chakra-Mahogany-Obsidian-stone.png">
+                                        <img class="chakra-stone-img" src="<?=base_url()?>pray/assets/img/chakra-stone/root-chakra-Mahogany-Obsidian-stone.png">
                                     </div>
                                 </a>
-                                <a href="javascript:;" class="chakra-stone-item text-center mx-1">
+                                <a href="https://angelgraceblessing.com/red-coral-the-stone-for-stability-and-grounding/" class="chakra-stone-item text-center mx-1">
                                     <label class="form-label chakra-stone-name">Red Coral</label>
                                     <div>
-                                        <img class="chakra-stone-img" src="<?=base_url()?>assets/img/chakra-stone/root-chakra-Red-Coral-stone.png">
+                                        <img class="chakra-stone-img" src="<?=base_url()?>pray/assets/img/chakra-stone/root-chakra-Red-Coral-stone.png">
                                     </div>
                                 </a>
                             </div>

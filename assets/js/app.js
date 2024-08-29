@@ -108,11 +108,11 @@ $(function() {
         location.href = site_url + "ChakraAffirmations/random_article/" + category_name;
     })
 
-    $(".chakra-stone-item").on("click", function(){
-        let category_name = $(this).parents(".chakra-stone-list-item").attr("data-stone_category");
-        category_name = category_name.replaceAll(' ', '-2-');
-        location.href = site_url + "ChakraStone/random_article/" + category_name;
-    })
+    // $(".chakra-stone-item").on("click", function(){
+    //     let category_name = $(this).parents(".chakra-stone-list-item").attr("data-stone_category");
+    //     category_name = category_name.replaceAll(' ', '-2-');
+    //     location.href = site_url + "ChakraStone/random_article/" + category_name;
+    // })
 
     $(".tarot-card-item").on("click", function(){
         var _url = site_url + "TarotCard/random_article";
