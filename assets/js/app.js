@@ -179,6 +179,15 @@ $(function() {
         location.href = _url;
     })
     
+    $(".dream-big-card-item").on('click', function(){
+        var _url = site_url + "AngelDreamBigMessage/random_article";
+        location.href = _url;
+    })
+
+    $(".oprah-winfrey-btn").on('click', function(){
+        var _url = site_url + "OprahWinfreyWisdom/random_article";
+        location.href = _url;
+    })
     
 });
 

@@ -80,6 +80,7 @@
         || $title=='Hear Your Angels' 
         || $title=='Angel Stop Sign'
         || $title=='Angel Welcoming Sign'
+        || $title=='Angel Dream Big Messages'
         ? 'active':''?>">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown3" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Hear Your Angels
@@ -89,6 +90,7 @@
             <li><a class="dropdown-item <?=$title=='Angel Number'?'active':''?>" href="https://angelgraceblessing.com/pray/angel-number-v2">Angel Numbers</a></li>
             <li><a class="dropdown-item <?=$title=='Angel Stop Sign'?'active':''?>" href="https://angelgraceblessing.com/pray/angel-stop-sign">Angel Stop Sign</a></li>
             <li><a class="dropdown-item <?=$title=='Angel Welcoming Sign'?'active':''?>" href="https://angelgraceblessing.com/pray/angel-welcoming-sign">Angel Welcoming Sign</a></li>
+            <li><a class="dropdown-item <?=$title=='Angel Dream Big Messages'?'active':''?>" href="https://angelgraceblessing.com/pray/angel-dream-big-message">Angel Dream Big Messages</a></li>
           </ul>
         </li>   
 
@@ -113,6 +115,7 @@
         || $title=='Animal and Insect Reading' 
         || $title=='Albert Einstein Message of the Day'
         || $title=='Helen Keller Wisdom'
+        || $title=='Oprah Winfrey Wisdom'
         || $title=='Fortune Cookie Essence'
         || $title=='Devotional T-Shirts for Sale'
         ? 'active':''
@@ -126,8 +129,9 @@
               <li><a class="dropdown-item <?=$title=='Choose Your Buddha Wisdom Today'?'active':''?>" href="https://angelgraceblessing.com/pray/buddha-wisdom">Buddha Timeless Wisdom</a></li>
               <li><a class="dropdown-item <?=$title=='Thomas Edison Wisdom Today'?'active':''?>" href="https://angelgraceblessing.com/pray/thomas-edison">Thomas Edison Wisdom</a></li>
               <li><a class="dropdown-item <?=$title=='Albert Einstein Message of the Day' ? 'active' : ''?>" href="https://angelgraceblessing.com/pray/albert-einstein-wisdom">Albert Einstein Wisdom</a></li>
-
               <li><a class="dropdown-item <?=$title=='Helen Keller Wisdom' ? 'active' : ''?>" href="https://angelgraceblessing.com/pray/helen-keller-wisdom">Helen Keller Wisdom</a></li>
+
+              <li><a class="dropdown-item <?=$title=='Oprah Winfrey Wisdom' ? 'active' : ''?>" href="https://angelgraceblessing.com/pray/oprah-winfrey-wisdom">Oprah Winfrey Wisdom</a></li>
               
               <li><a class="dropdown-item <?=$title=='Animal and Insect Reading'?'active':''?>" href="https://angelgraceblessing.com/pray/animals-insects-reading">Animal and Insect Reading</a></li>
               <li><a class="dropdown-item <?=$title=='Fortune Cookie Essence'?'active':''?>" href="https://angelgraceblessing.com/pray/fortune-cookie-essence">Fortune Cookie Essence</a></li>
@@ -202,6 +206,9 @@
             <li class="nav-item <?=$title=='Angel Welcoming Sign'?'active':''?>">
               <a class="nav-link" href="https://angelgraceblessing.com/pray/angel-welcoming-sign">Angel Welcoming Sign</a>
             </li>
+            <li class="nav-item <?=$title=='Angel Dream Big Messages'?'active':''?>">
+              <a class="nav-link" href="https://angelgraceblessing.com/pray/angel-dream-big-message">Angel Dream Big Messages</a>
+            </li>
             <li class="nav-item <?=$title=='Chakra Affirmation'?'active':''?>">
               <a class="nav-link" href="https://angelgraceblessing.com/pray/chakra-affirmations">Chakra Affirmation</a>
             </li>
@@ -219,6 +226,7 @@
             <li class="nav-item <?=$title=='Thomas Edison Wisdom Today'?'active':''?>"><a class="nav-link" href="https://angelgraceblessing.com/pray/thomas-edison">Thomas Edison Wisdom</a></li>
             <li class="nav-item <?=$title=='Albert Einstein Message of the Day'?'active':''?>"><a class="nav-link" href="https://angelgraceblessing.com/pray/albert-einstein-wisdom">Albert Einstein Wisdom</a></li>
             <li class="nav-item <?=$title=='Helen Keller Wisdom'?'active':''?>"><a class="nav-link" href="https://angelgraceblessing.com/pray/helen-keller-wisdom">Helen Keller Wisdom</a></li>
+            <li class="nav-item <?=$title=='Oprah Winfrey Wisdom'?'active':''?>"><a class="nav-link" href="https://angelgraceblessing.com/pray/oprah-winfrey-wisdom">Oprah Winfrey Wisdom</a></li>
             <li class="nav-item <?=$title=='Animal and Insect Reading'?'active':''?>"><a class="nav-link" href="https://angelgraceblessing.com/pray/animals-insects-reading">Animal and Insect Reading</a></li>
             <li class="nav-item <?=$title=='Fortune Cookie Essence'?'active':''?>"><a class="nav-link" href="https://angelgraceblessing.com/pray/fortune-cookie-essence">Fortune Cookie Essence</a></li>
             <li class="nav-item <?=$title=='Devotional T-Shirts for Sale'?'active':''?>">
