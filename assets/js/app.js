@@ -188,6 +188,11 @@ $(function() {
         var _url = site_url + "OprahWinfreyWisdom/random_article";
         location.href = _url;
     })
+
+    $(".sacred-animal-card-item").on('click', function(){
+        var _url = site_url + "SacredSpiritAnimalsReading/random_article";
+        location.href = _url;
+    })
     
 });
 

@@ -142,6 +142,7 @@
         <li class="nav-item dropdown <?=$title=='Daily Horoscope' 
         || $title=='Horoscope Sixth Sense' 
         || $title=='Prayer Quiz'
+        || $title=='Sacred Spirit Animals Reading'
         ? 'active':''?>">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown6" role="button" data-bs-toggle="dropdown" aria-expanded="false">
           Daily Horoscope
@@ -151,6 +152,7 @@
             <li ><a class="dropdown-item <?=$title=='Horoscope Sixth Sense'?'active':''?>" href="https://angelgraceblessing.com/pray/horoscope-sixth-sense">Horoscope Sixth Sense</a></li>
             <li><a class="dropdown-item <?=$title=='Prayer Quiz'?'active':''?>" href="https://angelgraceblessing.com/pray/your-area-of-prayer">Your Area of Prayer</a></li>
             <li><a class="dropdown-item" href="https://angelgraceblessing.com/category/prayers/">Your Prayer of The Day</a></li>
+            <li><a class="dropdown-item <?=$title=='Sacred Spirit Animals Reading'?'active':''?>" href="https://angelgraceblessing.com/pray/sacred-spirit-animals-reading">Sacred Spirit Animals Reading</a></li>
           </ul>
         </li>
         <li class="nav-item">
@@ -243,6 +245,9 @@
             </li>
             <li class="nav-item">
               <a class="nav-link" href="https://angelgraceblessing.com/category/prayers/">Your Prayer of The Day</a>
+            </li>
+            <li class="nav-item <?=$title=='Sacred Spirit Animals Reading'?'active':''?>">
+              <a class="nav-link" href="https://angelgraceblessing.com/pray/sacred-spirit-animals-reading">Sacred Spirit Animals Reading</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="https://angelgraceblessing.com/pray/?tid=vtag">
