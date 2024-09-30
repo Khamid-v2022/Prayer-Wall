@@ -97,6 +97,7 @@
         <li class="nav-item dropdown <?=$title=='Chakra Affirmation' 
         || $title=='Chakra Stones Reading' 
         || $title == "Chakra Prayers"
+        || $title == "Chakra Blocked Sign"
         ? 'active':''?>">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown4" role="button" data-bs-toggle="dropdown" aria-expanded="false">
           Chakra Affirmation
@@ -104,7 +105,8 @@
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown4">
             <li><a class="dropdown-item <?=$title=='Chakra Affirmation'?'active':''?>" href="https://angelgraceblessing.com/pray/chakra-affirmations">Chakra Affirmation</a></li>
             <li><a class="dropdown-item <?=$title=='Chakra Prayers'?'active':''?>" href="https://angelgraceblessing.com/pray/chakra-prayers">Chakra Prayers</a></li>
-            <li ><a class="dropdown-item <?=$title=='Chakra Stones Reading'?'active':''?>" href="https://angelgraceblessing.com/pray/chakra-stone">Chakra Stones Reading</a></li>
+            <li><a class="dropdown-item <?=$title=='Chakra Stones Reading'?'active':''?>" href="https://angelgraceblessing.com/pray/chakra-stone">Chakra Stones Reading</a></li>
+            <li><a class="dropdown-item <?=$title=='Chakra Blocked Sign'?'active':''?>" href="https://angelgraceblessing.com/pray/chakra-blocked-sign">Chakra Blocked Sign</a></li>
           </ul>
         </li>   
 
@@ -219,6 +221,9 @@
             </li>
             <li class="nav-item <?=$title=='Chakra Stones Reading'?'active':''?>">
               <a class="nav-link" href="https://angelgraceblessing.com/pray/chakra-stone">Chakra Stones Reading</a>
+            </li>
+            <li class="nav-item <?=$title=='Chakra Blocked Sign'?'active':''?>">
+              <a class="nav-link" href="https://angelgraceblessing.com/pray/chakra-blocked-sign">Chakra Blocked Sign</a>
             </li>
             <li class="nav-item <?=$title=='Earthly Angel Message'?'active':''?>">
               <a class="nav-link" href="https://angelgraceblessing.com/pray/earthly-angel-message">Earthly Angel Message</a>

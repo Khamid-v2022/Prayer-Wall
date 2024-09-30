@@ -194,6 +194,11 @@ $(function() {
         location.href = _url;
     })
     
+    $(".chakra-blocked-card-item").on('click', function(){
+        var _url = site_url + "ChakraBlockedSign/random_article";
+        location.href = _url;
+    })
+
 });
 
 function numberWithCommas(x) {

@@ -1383,6 +1383,10 @@ ul.text-msgs {
     color: white;
 }
 
+.angel-stop-sign-page.chakra-blocked-sign .title-wrapper {
+    background-image: url('../img/chakra-blocked-sign.jpg');
+}
+
 .angel-stop-sign-page .title-wrapper h1,
 .surrender-to-god-page .title-wrapper h1,
 .mother-mary-appreciation-page .title-wrapper h1 {
