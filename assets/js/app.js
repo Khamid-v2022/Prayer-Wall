@@ -199,6 +199,20 @@ $(function() {
         location.href = _url;
     })
 
+    $(".mother-teresa-btn").on('click', function(){
+        var _url = site_url + "MotherTeresaWisdom/random_article";
+        location.href = _url;
+    })
+
+    $(".jimrohn-btn").on('click', function(){
+        var _url = site_url + "JimRohnWisdom/random_article";
+        location.href = _url;
+    })
+
+    $(".mahatma-gandhi-btn").on('click', function(){
+        var _url = site_url + "MahatmaGandhiWisdom/random_article";
+        location.href = _url;
+    })  
 });
 
 function numberWithCommas(x) {
