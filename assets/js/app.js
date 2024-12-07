@@ -213,6 +213,11 @@ $(function() {
         var _url = site_url + "MahatmaGandhiWisdom/random_article";
         location.href = _url;
     })  
+
+    $(".jodie-btn").on('click', function(){
+        var _url = site_url + "JodieFosterWisdom/random_article";
+        location.href = _url;
+    })  
 });
 
 function numberWithCommas(x) {
