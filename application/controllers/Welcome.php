@@ -105,9 +105,11 @@ class Welcome extends CI_Controller {
 
         // add subscriber
         $this->sendConvetkit($info);
-        $this->sendAWeber($info);
+        // $this->sendAWeber($info);
     }
     
+
+    // Do not using for Now
     public function sendAWeber($info){
        // refresh token update
         $this->getRefreshToken();
@@ -274,7 +276,7 @@ class Welcome extends CI_Controller {
         // $this->sendConvetkit($info);
         var_dump($info);
         $this->getTagList($request['tid']);
-        $this->sendAWeber($info);
+        // $this->sendAWeber($info);
     }
 
     public function getTagList($tag){

@@ -46,8 +46,8 @@ class HanielPrayer extends CI_Controller {
         echo 'ok';
 
         // add subscriber
-        // $this->sendConvetkit($info);
-        $this->sendAWeber($info);
+        $this->sendConvetkit($info);
+        // $this->sendAWeber($info);
     }
 
     public function verify_email(){
@@ -85,63 +85,63 @@ class HanielPrayer extends CI_Controller {
         return $data;
     }
     
-    public function sendAWeber($info){
-       // refresh token update
-        $this->getRefreshToken();
+    // public function sendAWeber($info){
+    //    // refresh token update
+    //     $this->getRefreshToken();
         
-        // get Credentials
-        $credentials = parse_ini_file('credentials.ini');
-        $accessToken = $credentials['accessToken'];
+    //     // get Credentials
+    //     $credentials = parse_ini_file('credentials.ini');
+    //     $accessToken = $credentials['accessToken'];
 
-        $list_name = AWEBER_HANIEL_LIST_NAME;
+    //     $list_name = AWEBER_HANIEL_LIST_NAME;
         
-        if($info['tag'])
-            $tag_name = array(AWEBER_HANIEL_TAG_NAME, $info['tag']);
-        else
-            $tag_name = array(AWEBER_HANIEL_TAG_NAME);
+    //     if($info['tag'])
+    //         $tag_name = array(AWEBER_HANIEL_TAG_NAME, $info['tag']);
+    //     else
+    //         $tag_name = array(AWEBER_HANIEL_TAG_NAME);
         
-        $client = new GuzzleHttp\Client();
-        $BASE_URL = 'https://api.aweber.com/1.0/';
+    //     $client = new GuzzleHttp\Client();
+    //     $BASE_URL = 'https://api.aweber.com/1.0/';
         
-        // get all the accounts entries
-        $accounts = $this->getCollection($client, $accessToken, $BASE_URL . 'accounts');
-        $accountUrl = $accounts[0]['self_link'];
+    //     // get all the accounts entries
+    //     $accounts = $this->getCollection($client, $accessToken, $BASE_URL . 'accounts');
+    //     $accountUrl = $accounts[0]['self_link'];
         
-        // get all the list entries for the first account
-        $listsUrl = $accounts[0]['lists_collection_link'];
-        $lists = $this->getCollection($client, $accessToken, $listsUrl);
+    //     // get all the list entries for the first account
+    //     $listsUrl = $accounts[0]['lists_collection_link'];
+    //     $lists = $this->getCollection($client, $accessToken, $listsUrl);
         
-        $my_list = [];
-        foreach($lists as $item){
-            if($item['name'] == $list_name){
-                $my_list = $item;
-            }
-        }
+    //     $my_list = [];
+    //     foreach($lists as $item){
+    //         if($item['name'] == $list_name){
+    //             $my_list = $item;
+    //         }
+    //     }
         
-        $subsUrl = $my_list['subscribers_collection_link'];
+    //     $subsUrl = $my_list['subscribers_collection_link'];
         
-        $data = array(
-            'email' => $info['email'],
-            'name' => $info['name'],
-            'tags' => $tag_name
-        );
+    //     $data = array(
+    //         'email' => $info['email'],
+    //         'name' => $info['name'],
+    //         'tags' => $tag_name
+    //     );
          
-        try { 
-            $body = $client->post($subsUrl, [
-                'json' => $data, 
-                'headers' => ['Authorization' => 'Bearer ' . $accessToken]
-            ]);
+    //     try { 
+    //         $body = $client->post($subsUrl, [
+    //             'json' => $data, 
+    //             'headers' => ['Authorization' => 'Bearer ' . $accessToken]
+    //         ]);
         
-            // get the subscriber entry using the Location header from the post request
-            $subscriberUrl = $body->getHeader('Location')[0];
-            $subscriberResponse = $client->get($subscriberUrl,
-                ['headers' => ['Authorization' => 'Bearer ' . $accessToken]])->getBody();
-            $subscriber = json_decode($subscriberResponse, true);
-        }
-        catch (Exception $e) {
-            var_dump($e->getMessage());
-        }        
-    }
+    //         // get the subscriber entry using the Location header from the post request
+    //         $subscriberUrl = $body->getHeader('Location')[0];
+    //         $subscriberResponse = $client->get($subscriberUrl,
+    //             ['headers' => ['Authorization' => 'Bearer ' . $accessToken]])->getBody();
+    //         $subscriber = json_decode($subscriberResponse, true);
+    //     }
+    //     catch (Exception $e) {
+    //         var_dump($e->getMessage());
+    //     }        
+    // }
     
     
     private function getCollection($client, $accessToken, $url) {

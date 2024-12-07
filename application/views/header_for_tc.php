@@ -119,6 +119,7 @@
         || $title=='Albert Einstein Message of the Day'
         || $title=='Helen Keller Wisdom'
         || $title=='Oprah Winfrey Wisdom'
+        || $title=='Melania Trump Wisdom'
         || $title=='Jodie Foster Wisdom'
         || $title=='Mahatma Gandhi Wisdom'
         || $title=='Jim Rohn Wisdom'
@@ -138,6 +139,7 @@
               <li><a class="dropdown-item <?=$title=='Albert Einstein Message of the Day' ? 'active' : ''?>" href="https://angelgraceblessing.com/pray/albert-einstein-wisdom">Albert Einstein Wisdom</a></li>
               <li><a class="dropdown-item <?=$title=='Helen Keller Wisdom' ? 'active' : ''?>" href="https://angelgraceblessing.com/pray/helen-keller-wisdom">Helen Keller Wisdom</a></li>
               <li><a class="dropdown-item <?=$title=='Oprah Winfrey Wisdom' ? 'active' : ''?>" href="https://angelgraceblessing.com/pray/oprah-winfrey-wisdom">Oprah Winfrey Wisdom</a></li>
+              <li><a class="dropdown-item <?=$title=='Melania Trump Wisdom' ? 'active' : ''?>" href="https://angelgraceblessing.com/pray/melania-trump-wisdom">Melania Trump Wisdom</a></li>
               <li><a class="dropdown-item <?=$title=='Jodie Foster Wisdom' ? 'active' : ''?>" href="https://angelgraceblessing.com/pray/jodie-foster-wisdom">Jodie Foster Wisdom</a></li>
               <li><a class="dropdown-item <?=$title=='Mahatma Gandhi Wisdom' ? 'active' : ''?>" href="https://angelgraceblessing.com/pray/mahatma-gandhi-wisdom">Mahatma Gandhi Wisdom</a></li> 
               <li><a class="dropdown-item <?=$title=='Jim Rohn Wisdom' ? 'active' : ''?>" href="https://angelgraceblessing.com/pray/jim-rohn-wisdom">Jim Rohn Wisdom</a></li>
@@ -244,6 +246,7 @@
             <li class="nav-item <?=$title=='Albert Einstein Message of the Day'?'active':''?>"><a class="nav-link" href="https://angelgraceblessing.com/pray/albert-einstein-wisdom">Albert Einstein Wisdom</a></li>
             <li class="nav-item <?=$title=='Helen Keller Wisdom'?'active':''?>"><a class="nav-link" href="https://angelgraceblessing.com/pray/helen-keller-wisdom">Helen Keller Wisdom</a></li>
             <li class="nav-item <?=$title=='Oprah Winfrey Wisdom'?'active':''?>"><a class="nav-link" href="https://angelgraceblessing.com/pray/oprah-winfrey-wisdom">Oprah Winfrey Wisdom</a></li>
+            <li class="nav-item <?=$title=='Melania Trump Wisdom'?'active':''?>"><a class="nav-link" href="https://angelgraceblessing.com/pray/melania-trump-wisdom">Melania Trump Wisdom</a></li>
             <li class="nav-item <?=$title=='Jodie Foster Wisdom'?'active':''?>"><a class="nav-link" href="https://angelgraceblessing.com/pray/jodie-foster-wisdom">Jodie Foster Wisdom</a></li>
             <li class="nav-item <?=$title=='Mahatma Gandhi Wisdom'?'active':''?>"><a class="nav-link" href="https://angelgraceblessing.com/pray/mahatma-gandhi-wisdom">Mahatma Gandhi Wisdom</a></li>
             <li class="nav-item <?=$title=='Jim Rohn Wisdom'?'active':''?>"><a class="nav-link" href="https://angelgraceblessing.com/pray/jim-rohn-wisdom">Jim Rohn Wisdom</a></li>
