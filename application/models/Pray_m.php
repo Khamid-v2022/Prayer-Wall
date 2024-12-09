@@ -26,6 +26,10 @@ class Pray_m extends CI_Model
 		return $this->db->get($this->table)->num_rows();
 	}
 
+	public function get_item($where){
+        $this->db->where($where);
+        return $this->db->get($this->table)->result_array();
+    }
 
 	public function add_pray_note($req){
 		$this->db->insert($this->table, $req);

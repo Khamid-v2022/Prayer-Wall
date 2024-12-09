@@ -48,6 +48,7 @@ class HanielPrayer extends CI_Controller {
         // add subscriber
         $this->sendConvetkit($info);
         // $this->sendAWeber($info);
+        $this->sendGetResponse($info);
     }
 
     public function verify_email(){
@@ -142,6 +143,54 @@ class HanielPrayer extends CI_Controller {
     //         var_dump($e->getMessage());
     //     }        
     // }
+
+    public function sendGetResponse($info) {
+        // common List;
+        $list_id = GETRESPONSE_LIST_TOKEN;
+
+        if($info['tag']) {
+            if($info['tag'] == 'ctag') {
+                $list_id = GETRESPONSE_HAINEL_CTAG_TOKEN;
+            } else if($info['tag'] == 'ltag') {
+                $list_id = GETRESPONSE_HAINEL_LTAG_TOKEN;
+            } else if($info['tag'] == 'vtag') {
+                $list_id = GETRESPONSE_HAINEL_VTAG_TOKEN;
+            }
+        }
+
+        $apiKey = GETRESPONSE_KEY;
+        $url = 'https://api.getresponse.com/v3';
+        $end_point = '/contacts';
+
+        $contactData = [
+            "name" => $info['name'],        
+            "email" => $info['email'],
+            "campaign" => [
+                "campaignId" => $list_id,
+            ]
+        ];
+
+        $ch = curl_init();
+        curl_setopt($ch, CURLOPT_URL, $url.$end_point);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+        curl_setopt($ch, CURLOPT_POST, true);
+        curl_setopt($ch, CURLOPT_HTTPHEADER, [
+            "Content-Type: application/json",
+            "X-Auth-Token: api-key $apiKey",
+        ]);
+        curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($contactData));
+
+        $response = curl_exec($ch);
+        $httpCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+        curl_close($ch);
+
+        if ($httpCode === 202) {
+            return true;
+        } else {
+            return false;
+            // echo "Failed to add contact. Response: $response";
+        }
+    }
     
     
     private function getCollection($client, $accessToken, $url) {

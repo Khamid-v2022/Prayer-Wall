@@ -75,7 +75,7 @@ class Welcome extends CI_Controller {
         $request = $this->input->post();
         
         
-        //      check duplicate note
+        // check duplicate note
         $where_du['email'] = strtolower($request['email']);
         $where_du['note'] = $request['note'];
         $is_exist = $this->pray_m->get_item($where_du);
@@ -94,7 +94,6 @@ class Welcome extends CI_Controller {
         $info['name'] = $request['first_name'];
         $info['email'] = $request['email'];
         $info['tag'] = $request['tag'];
-
         $subscriber = $this->subscriber_m->get_item($where);
         if(empty($subscriber)){
             // add subscriber            
@@ -106,72 +105,162 @@ class Welcome extends CI_Controller {
         // add subscriber
         $this->sendConvetkit($info);
         // $this->sendAWeber($info);
+        $this->sendGetResponse($info);
     }
     
+    public function getGetResponseTags() {
+        $apiKey = GETRESPONSE_KEY;
+        $url = "https://api.getresponse.com/v3/tags";
 
-    // Do not using for Now
-    public function sendAWeber($info){
-       // refresh token update
-        $this->getRefreshToken();
-        
-        // get Credentials
-        $credentials = parse_ini_file('credentials.ini');
-        $accessToken = $credentials['accessToken'];
+        $ch = curl_init($url);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+        curl_setopt($ch, CURLOPT_HTTPHEADER, [
+            "Content-Type: application/json",
+            "X-Auth-Token: api-key $apiKey",
+        ]);
 
-        $list_name = AWEBER_PRAY_LIST_NAME;
-        
-        if($info['tag'])
-            $tag_name = array(AWEBER_TAG_NAME, $info['tag']);
-        else
-            $tag_name = array(AWEBER_TAG_NAME);
-        
-        $client = new GuzzleHttp\Client();
-        $BASE_URL = 'https://api.aweber.com/1.0/';
-        
-        // get all the accounts entries
-        $accounts = $this->getCollection($client, $accessToken, $BASE_URL . 'accounts');
-        $accountUrl = $accounts[0]['self_link'];
-        
-        // get all the list entries for the first account
-        $listsUrl = $accounts[0]['lists_collection_link'];
-        $lists = $this->getCollection($client, $accessToken, $listsUrl);
-        
-        
-        // $foundLists = $lists->find(array('name' => $list_name));
-        $my_list = [];
-        
-        foreach($lists as $item){
-            if($item['name'] == $list_name){
-                $my_list = $item;
+        $response = curl_exec($ch);
+        $httpCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+        curl_close($ch);
+
+        if ($httpCode === 200) {
+            $tags = json_decode($response, true);
+           
+            return $tags;
+        } else {
+            // echo "Failed to fetch tags. Response: $response";
+            return [];
+        }
+        return [];
+    }
+
+    public function sendGetResponse($info) {
+        // $tagID = "";
+        // $tags = $this->getGetResponseTags();
+        // if(count($tags) > 0) {
+        //     foreach($tags as $tag) {
+        //         if($tag['name'] == $info['tag']) {
+        //             $tagID = $tag['tagId'];
+        //         }
+        //     }
+        // }
+
+        // common List;
+        $list_id = GETRESPONSE_LIST_TOKEN;
+
+        if($info['tag']) {
+            if($info['tag'] == 'ctag') {
+                $list_id = GETRESPONSE_LIST_CTAG_TOKEN;
+            } else if($info['tag'] == 'ltag') {
+                $list_id = GETRESPONSE_LIST_LTAG_TOKEN;
+            } else if($info['tag'] == 'vtag') {
+                $list_id = GETRESPONSE_LIST_VTAG_TOKEN;
             }
         }
+
+        $apiKey = GETRESPONSE_KEY;
+        $url = 'https://api.getresponse.com/v3';
+        $end_point = '/contacts';
+
+        $contactData = [
+            "name" => $info['name'],        
+            "email" => $info['email'],
+            "campaign" => [
+                "campaignId" => $list_id,
+            ]
+        ];
+
+        // if($tagID) {
+        //     $contactData['tags'] =  [
+        //         ["tagId" => $tagID],
+        //     ];
+        // }
+
+        $ch = curl_init();
+        curl_setopt($ch, CURLOPT_URL, $url.$end_point);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+        curl_setopt($ch, CURLOPT_POST, true);
+        curl_setopt($ch, CURLOPT_HTTPHEADER, [
+            "Content-Type: application/json",
+            "X-Auth-Token: api-key $apiKey",
+        ]);
+        curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($contactData));
+
+        $response = curl_exec($ch);
+        $httpCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+        curl_close($ch);
+
+        if ($httpCode === 202) {
+            return true;
+        } else {
+            return false;
+            // echo "Failed to add contact. Response: $response";
+        }
+    }
+
+    // // Do not using for Now
+    // public function sendAWeber($info){
+    //    // refresh token update
+    //     $this->getRefreshToken();
         
-        $subsUrl = $my_list['subscribers_collection_link'];
+    //     // get Credentials
+    //     $credentials = parse_ini_file('credentials.ini');
+    //     $accessToken = $credentials['accessToken'];
+
+    //     $list_name = AWEBER_PRAY_LIST_NAME;
         
-        $data = array(
-            'email' => $info['email'],
-            'name' => $info['name'],
-            'tags' => $tag_name
-        );
+    //     if($info['tag'])
+    //         $tag_name = array(AWEBER_TAG_NAME, $info['tag']);
+    //     else
+    //         $tag_name = array(AWEBER_TAG_NAME);
+        
+    //     $client = new GuzzleHttp\Client();
+    //     $BASE_URL = 'https://api.aweber.com/1.0/';
+        
+    //     // get all the accounts entries
+    //     $accounts = $this->getCollection($client, $accessToken, $BASE_URL . 'accounts');
+    //     $accountUrl = $accounts[0]['self_link'];
+        
+    //     // get all the list entries for the first account
+    //     $listsUrl = $accounts[0]['lists_collection_link'];
+    //     $lists = $this->getCollection($client, $accessToken, $listsUrl);
+        
+        
+    //     // $foundLists = $lists->find(array('name' => $list_name));
+    //     $my_list = [];
+        
+    //     foreach($lists as $item){
+    //         if($item['name'] == $list_name){
+    //             $my_list = $item;
+    //         }
+    //     }
+        
+    //     $subsUrl = $my_list['subscribers_collection_link'];
+        
+    //     $data = array(
+    //         'email' => $info['email'],
+    //         'name' => $info['name'],
+    //         'tags' => $tag_name
+    //     );
          
-        try { 
-            $body = $client->post($subsUrl, [
-                'json' => $data, 
-                'headers' => ['Authorization' => 'Bearer ' . $accessToken]
-            ]);
+    //     try { 
+    //         $body = $client->post($subsUrl, [
+    //             'json' => $data, 
+    //             'headers' => ['Authorization' => 'Bearer ' . $accessToken]
+    //         ]);
         
-            // get the subscriber entry using the Location header from the post request
-            $subscriberUrl = $body->getHeader('Location')[0];
-            $subscriberResponse = $client->get($subscriberUrl,
-                ['headers' => ['Authorization' => 'Bearer ' . $accessToken]])->getBody();
-            $subscriber = json_decode($subscriberResponse, true);
-        }
-        catch (Exception $e) {
-            var_dump($e->getMessage());
-        }
+    //         // get the subscriber entry using the Location header from the post request
+    //         $subscriberUrl = $body->getHeader('Location')[0];
+    //         $subscriberResponse = $client->get($subscriberUrl,
+    //             ['headers' => ['Authorization' => 'Bearer ' . $accessToken]])->getBody();
+    //         $subscriber = json_decode($subscriberResponse, true);
+    //     }
+    //     catch (Exception $e) {
+    //         var_dump($e->getMessage());
+    //     }
 
         
-    }
+    // }
     
     
     private function getCollection($client, $accessToken, $url) {
