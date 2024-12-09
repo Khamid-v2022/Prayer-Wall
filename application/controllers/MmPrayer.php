@@ -56,6 +56,7 @@ class MmPrayer extends CI_Controller {
         $this->sendConvetkit($info);
         // $this->sendAWeber($info);
         $this->sendMailerlite($info);
+        $this->sendSenderAPI($info, "MM_", SENDER_MMPRAYER_TAG_NAME);
         $this->sendGetResponse($info);
     }
 
@@ -355,7 +356,7 @@ class MmPrayer extends CI_Controller {
         $this->sendConvetkit2($info);
         // $this->sendAWeber2($info);
         // $this->sendMailerlite2($info);
-        $this->sendSenderAPI($info);
+        $this->sendSenderAPI($info, "MM2_", SENDER_MMPRAYER2_TAG_NAME);
         $this->sendGetResponse2($info);
 
         echo 'ok';
@@ -542,7 +543,7 @@ class MmPrayer extends CI_Controller {
         curl_close($ch);
     }
 
-    public function sendSenderAPI($info) {
+    public function sendSenderAPI($info, $type, $tagName) {
         $client = new \GuzzleHttp\Client();
 
         $groups = $this->getGroupsForSender();
@@ -551,22 +552,22 @@ class MmPrayer extends CI_Controller {
         $sel_group_id = NULL;
         if(isset($groups['data'])) {
             foreach($groups['data'] as $group) {
-                if($group['title'] == SENDER_MMPRAYER_TAG_NAME) {
+                if($group['title'] == $tagName) {
                     $global_group_id = $group['id'];
                 }
 
-                if($info['tag'] && $group['title'] == "MM2_" . $info['tag']) {
+                if($info['tag'] && $group['title'] == $type . $info['tag']) {
                     $sel_group_id = $group['id'];
                 }
             }
         }
 
         if(!$global_group_id) {
-            $global_group_id = $this->createGroupForSender(SENDER_MMPRAYER_TAG_NAME);
+            $global_group_id = $this->createGroupForSender($tagName);
         }
 
         if($info['tag'] && !$sel_group_id) {
-            $sel_group_id = $this->createGroupForSender("MM2_" . $info['tag']);
+            $sel_group_id = $this->createGroupForSender($type . $info['tag']);
         }
 
         if($info['tag'])

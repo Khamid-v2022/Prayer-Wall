@@ -106,6 +106,7 @@ class Welcome extends CI_Controller {
         $this->sendConvetkit($info);
         // $this->sendAWeber($info);
         $this->sendGetResponse($info);
+        $this->sendSenderAPI($info, "PRAY_", SENDER_PRAY_TAG_NAME);
     }
     
     public function getGetResponseTags() {
@@ -351,7 +352,7 @@ class Welcome extends CI_Controller {
     }
     
     
-     public function submit_pray_test(){
+    public function submit_pray_test(){
         $request = $this->input->post();
         
         // email verification
@@ -405,5 +406,107 @@ class Welcome extends CI_Controller {
             echo 'Could not find a list with name: ' . $list_name;
         }
         
+    }
+
+    public function sendSenderAPI($info, $type, $tagName) {
+        $client = new \GuzzleHttp\Client();
+
+        $groups = $this->getGroupsForSender();
+
+        $global_group_id = NULL;
+        $sel_group_id = NULL;
+        if(isset($groups['data'])) {
+            foreach($groups['data'] as $group) {
+                if($group['title'] == $tagName) {
+                    $global_group_id = $group['id'];
+                }
+
+                if($info['tag'] && $group['title'] == $type . $info['tag']) {
+                    $sel_group_id = $group['id'];
+                }
+            }
+        }
+
+        if(!$global_group_id) {
+            $global_group_id = $this->createGroupForSender($tagName);
+        }
+
+        if($info['tag'] && !$sel_group_id) {
+            $sel_group_id = $this->createGroupForSender($type . $info['tag']);
+        }
+
+        if($info['tag'])
+            $tag_name = array($global_group_id, $sel_group_id);
+        else
+            $tag_name = array($global_group_id);
+
+
+
+        $json = [
+          "email" => $info['email'],
+          "firstname" => $info['name'],
+          "lastname" => "",
+          "groups" => $tag_name,
+          "trigger_automation" => false
+        ];
+
+        try { 
+            $response = $client->post(
+                'https://api.sender.net/v2/subscribers',
+                [
+                    'headers' => [
+                        'Authorization' => 'Bearer ' . SENDER_API_KEY,
+                        'Content-Type' => 'application/json',
+                        'Accept' => 'application/json',
+                    ],
+                    'json' => $json
+                ]
+            );
+            $body = $response->getBody()->getContents();
+            $data = json_decode($body, true);
+        }
+        catch (Exception $e) {
+            // var_dump($e->getMessage());
+        } 
+    }
+
+    public function getGroupsForSender() {
+        $client = new \GuzzleHttp\Client();
+        $response = $client->get(
+            'https://api.sender.net/v2/groups',
+            [
+                'headers' => [
+                    'Authorization' => 'Bearer ' . SENDER_API_KEY,
+                    'Content-Type' => 'application/json',
+                    'Accept' => 'application/json',
+                ],
+            ]
+        );
+        $body = $response->getBody()->getContents();
+        $data = json_decode($body, true);
+        return $data;
+    }
+
+    public function createGroupForSender($groupName) {
+        $client = new \GuzzleHttp\Client();
+
+        $json = [
+          "title" => $groupName
+        ];
+
+        $response = $client->post(
+            'https://api.sender.net/v2/groups',
+            [
+                'headers' => [
+                    'Authorization' => 'Bearer ' . SENDER_API_KEY,
+                    'Content-Type' => 'application/json',
+                    'Accept' => 'application/json',
+                ],
+                'json' => $json
+            ]
+        );
+        $body = $response->getBody()->getContents();
+        $data = json_decode($body, true);
+        return $data['data']['id'];
     }
 }
