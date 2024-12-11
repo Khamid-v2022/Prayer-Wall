@@ -168,7 +168,8 @@ class Welcome extends CI_Controller {
             "email" => $info['email'],
             "campaign" => [
                 "campaignId" => $list_id,
-            ]
+            ],
+            "dayOfCycle"=> "0"
         ];
 
         // if($tagID) {

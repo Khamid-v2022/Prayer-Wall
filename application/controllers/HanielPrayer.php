@@ -168,7 +168,8 @@ class HanielPrayer extends CI_Controller {
             "email" => $info['email'],
             "campaign" => [
                 "campaignId" => $list_id,
-            ]
+            ],
+            "dayOfCycle"=> "0"
         ];
 
         $ch = curl_init();
